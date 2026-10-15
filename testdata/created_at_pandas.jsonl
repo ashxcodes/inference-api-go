@@ -1,0 +1,121 @@
+{"input": "2024-06-15 08:30:00", "ok": true, "dow": 5, "hour": 8}
+{"input": "2024-12-17 08:53:45.450213 UTC", "ok": true, "dow": 1, "hour": 8}
+{"input": "2024-03-10T22:15:00+03:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00Z", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00.123Z", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00.123456789+05:30", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00.1234567891Z", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00+0300", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00+03", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00-05", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 +03:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 +0300", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 Z", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10", "ok": true, "dow": 6, "hour": 0}
+{"input": "2024-03", "ok": true, "dow": 4, "hour": 0}
+{"input": "2024", "ok": true, "dow": 0, "hour": 0}
+{"input": "2024-03-10T22:15:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10t22:15:00z", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 utc", "ok": false}
+{"input": "2024-03-10 22:15:00UTC", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00 UTC", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 GMT", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00.5", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00,5", "ok": true, "dow": 6, "hour": 22}
+{"input": "  2024-03-10 22:15:00  ", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T23:59:59-11:00", "ok": true, "dow": 6, "hour": 23}
+{"input": "2024-03-11T01:30:00+14:00", "ok": true, "dow": 0, "hour": 1}
+{"input": "2024-12-31 23:59:59.999999 UTC", "ok": true, "dow": 1, "hour": 23}
+{"input": "2024-03-10T22:15:00+03:30", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00.000+00:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00.123+0300", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T221500", "ok": true, "dow": 6, "hour": 22}
+{"input": "20240310T221500", "ok": true, "dow": 6, "hour": 22}
+{"input": "20240310", "ok": true, "dow": 6, "hour": 0}
+{"input": "2024-3-1 5:07:09", "ok": true, "dow": 4, "hour": 5}
+{"input": "2024-03-10 22:15:00 +03:00 UTC", "ok": false}
+{"input": "2024-03-10 22:15:00 AST", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024/03/10 22:15:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024/03/10", "ok": true, "dow": 6, "hour": 0}
+{"input": "2024.03.10 22:15:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "03/10/2024 22:15", "ok": true, "dow": 6, "hour": 22}
+{"input": "13/03/2024 22:15", "ok": true, "dow": 2, "hour": 22}
+{"input": "10-03-2024 22:15", "ok": true, "dow": 3, "hour": 22}
+{"input": "Mar 10 2024 10:15 PM", "ok": true, "dow": 6, "hour": 22}
+{"input": "Sun, 10 Mar 2024 22:15:00 +0300", "ok": true, "dow": 6, "hour": 22}
+{"input": "Sun, 10 Mar 2024 22:15:00 GMT", "ok": true, "dow": 6, "hour": 22}
+{"input": "10 Mar 2024 22:15", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 10:15:00 PM", "ok": true, "dow": 6, "hour": 22}
+{"input": "1710098100", "ok": false}
+{"input": "now", "ok": true, "dow": 6, "hour": 12}
+{"input": "garbage", "ok": false}
+{"input": "2024-13-01 00:00:00", "ok": false}
+{"input": "2024-02-30 10:00:00", "ok": false}
+{"input": "2024-03-10 25:00:00", "ok": false}
+{"input": "2024-03-10 22:61:00", "ok": false}
+{"input": "2024-03-10 22:15:60", "ok": false}
+{"input": "2024-02-29 12:00:00", "ok": true, "dow": 3, "hour": 12}
+{"input": "2023-02-29 12:00:00", "ok": false}
+{"input": "2024-03-10T24:00:00", "ok": false}
+{"input": "2024-03-10 22:15:00+25:00", "ok": false}
+{"input": "2024-03-10 22:15:00 +03:00:00", "ok": false}
+{"input": "2024-03-10 22:15:00 XYZ", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 +3:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00.Z", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:", "ok": false}
+{"input": "2024-03-10T", "ok": true, "dow": 6, "hour": 0}
+{"input": "2024-03-10 22:15:00 +", "ok": false}
+{"input": "2024-03-10Z", "ok": false}
+{"input": "2024-03-10 Z", "ok": false}
+{"input": "2024-03-10 UTC", "ok": false}
+{"input": "2024-03-10+03:00", "ok": false}
+{"input": "2024-03-10 +03:00", "ok": false}
+{"input": "2024-03-10T", "ok": true, "dow": 6, "hour": 0}
+{"input": "2024-03-10 22:15:00 PM", "ok": false}
+{"input": "2024-03-10 10:15:00 pm", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 10:15:00 AM", "ok": true, "dow": 6, "hour": 10}
+{"input": "2024-03-10 10:15:00 A", "ok": true, "dow": 6, "hour": 10}
+{"input": "2024-03-10 10:15:00 P", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 M", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00UTC+3", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10\t22:15:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10  22:15:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00  UTC", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00+24:00", "ok": false}
+{"input": "2024-03-10 22:15:00+23:59", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00+03:60", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00-0000", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00+00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 ZZ", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 ABCDEF", "ok": false}
+{"input": "2024-03-10 22:15:00 ABCDE", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 Utc", "ok": false}
+{"input": "2024-03-10 22:5", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:5", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 2:15", "ok": true, "dow": 6, "hour": 2}
+{"input": "2024-03-10 22:15.5", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00-00:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00+3", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 +03:00Z", "ok": false}
+{"input": "2024-03-10 22:15:00 T", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 AST+3", "ok": true, "dow": 6, "hour": 22}
+{"input": "Sun, 10 Mar 2024 19:15:00 UTC", "ok": true, "dow": 6, "hour": 19}
+{"input": "Sun, 03 Mar 2024 19:15:00 GMT", "ok": true, "dow": 6, "hour": 19}
+{"input": "Sun, 3 Mar 2024 19:15:00 GMT", "ok": true, "dow": 6, "hour": 19}
+{"input": "Mon, 10 Mar 2024 22:15:00 +0300", "ok": true, "dow": 6, "hour": 22}
+{"input": "Sun, 10 Mar 2024 22:15:00 AST", "ok": true, "dow": 6, "hour": 22}
+{"input": "Sun, 10 Mar 2024 22:15:00 -0000", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03/10 22:15:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024/3/1 5:07:09", "ok": true, "dow": 4, "hour": 5}
+{"input": "2024.3.1", "ok": true, "dow": 4, "hour": 0}
+{"input": "2024-03-10 22:15:00.123456 +03:00", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10T22:15:00.123456789123Z", "ok": true, "dow": 6, "hour": 22}
+{"input": "2024-03-10 22:15:00 GMT+3", "ok": true, "dow": 6, "hour": 22}
+{"input": "0024-03-10 22:15:00", "ok": false}
+{"input": "9999-12-31 23:59:59", "ok": false}
+{"input": "2024-03-10 22:15:00\n", "ok": true, "dow": 6, "hour": 22}
+{"input": "\n2024-03-10 22:15:00", "ok": true, "dow": 6, "hour": 22}

@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  AWS_REGION: ${{ vars.AWS_REGION_STAGING }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test in Docker (race + cgo)
+        run: docker build --target test -t ml-model-go-ci .
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: golangci/golangci-lint-action@v8
+        with:
+          version: v2.1.6
+        continue-on-error: true
+
+  image:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN_STAGING }}
+          aws-region: ${{ vars.AWS_REGION_STAGING }}
+      - name: Login to ECR
+        uses: aws-actions/amazon-ecr-login@v2
+      - name: Build and push
+        env:
+          ECR_REGISTRY: ${{ vars.AWS_ACCOUNT_ID_STAGING }}.dkr.ecr.${{ vars.AWS_REGION_STAGING }}.amazonaws.com
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -t "$ECR_REGISTRY/jeeny-ml-model-go:$IMAGE_TAG" .
+          docker push "$ECR_REGISTRY/jeeny-ml-model-go:$IMAGE_TAG"
+          echo "IMAGE_URI=$ECR_REGISTRY/jeeny-ml-model-go:$IMAGE_TAG" >> "$GITHUB_ENV"
+
+  gitops:
+    needs: image
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitOps staging bump
+        uses: jeenyme/jeeny-org-workflows/backend/common-actions/deploy-gitops@main
+        with:
+          image_uri: ${{ env.IMAGE_URI }}
+          gitops_pat: ${{ secrets.GITOPS_PAT }}
+        continue-on-error: true

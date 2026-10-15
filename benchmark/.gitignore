@@ -1,0 +1,4 @@
+.bench.env
+.bench.k6.env
+.bench.ml-model.env
+k6/results/*.json

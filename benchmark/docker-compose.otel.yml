@@ -1,0 +1,5 @@
+# Use with BENCH_OTLP=1 (host collector via ../.env merged into .bench.ml-model.env).
+services:
+  ml-model:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

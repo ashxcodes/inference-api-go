@@ -1,0 +1,4 @@
+.git
+third_party
+testdata/parity/AMM.txt
+testdata/parity/*.pkl
