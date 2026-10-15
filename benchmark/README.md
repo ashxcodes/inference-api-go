@@ -17,6 +17,8 @@ Loader pod image defaults to `debian:bookworm-slim` (`tar` required for `kubectl
 Refresh models on the PVC: `FORCE_MODEL_COPY=1 ./benchmark/run-inference-api-go.sh`  
 Models already in the image: `MODELS_FROM_IMAGE=1 ./benchmark/run-inference-api-go.sh`
 
+k6 multicity JSON uses PVC `inference-api-go-k6-fixtures` (not ConfigMaps). Refresh: `FORCE_FIXTURE_COPY=1`.
+
 **2. k6 multi-city** (same style as `location-engine/benchmark/run-k6-location-engine.sh`):
 
 ```bash
