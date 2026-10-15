@@ -2,16 +2,16 @@
 # In-cluster multi-city /predict load (same pattern as location-engine/benchmark/run-k6-location-engine.sh).
 #
 #   export NS=otel-collector
-#   export BASE_URL='http://jeeny-ml-model.jeeny-ml-model.svc.cluster.local:8456'
+#   export BASE_URL='http://ml-model.ml-model.svc.cluster.local:8456'
 #   export API_KEY='...'   # MODEL_API_KEY
 #   export BENCH_PER_CITY_RPS=50
 #   export BENCH_DURATION=5m
 #   ./benchmark/run-k6-ml-model.sh
 #
-# Fixtures: benchmark/k6/fixtures/multicity/ or FIXTURES_DIR or sibling jeeny-ml-model.
+# Fixtures: benchmark/k6/fixtures/multicity/ or FIXTURES_DIR.
 # First run: SKIP_DELETE=1 ./benchmark/run-k6-ml-model.sh
 #
-# App OTEL (your .env / gitops): OTEL_EXPORTER_OTLP_ENDPOINT=http://otelcol-gateway.otel-collector.svc.cluster.local:4317
+# App OTEL: OTEL_EXPORTER_OTLP_ENDPOINT=http://otelcol-gateway.otel-collector.svc.cluster.local:4317
 set -euo pipefail
 
 BENCH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -27,17 +27,12 @@ resolve_fixtures() {
     echo "${BENCH}/k6/fixtures/multicity"
     return
   fi
-  local jeeny="${JEENY_ML_MODEL_ROOT:-$(cd "${ROOT}/../jeeny-ml-model" 2>/dev/null && pwd || echo "")}"
-  if [[ -n "${jeeny}" && -f "${jeeny}/benchmark/k6/fixtures/multicity/RUH.json" ]]; then
-    echo "${jeeny}/benchmark/k6/fixtures/multicity"
-    return
-  fi
   echo ""
 }
 
 FIXTURE_DIR="$(resolve_fixtures)"
 if [[ -z "${FIXTURE_DIR}" ]]; then
-  echo "Multicity fixtures not found. Set FIXTURES_DIR or JEENY_ML_MODEL_ROOT, or generate under benchmark/k6/fixtures/multicity/." >&2
+  echo "Multicity fixtures not found. Set FIXTURES_DIR or generate under benchmark/k6/fixtures/multicity/." >&2
   exit 1
 fi
 
@@ -48,8 +43,8 @@ CONFIGMAP_PREFIX="${CONFIGMAP_PREFIX:-ml-model-go-k6}"
 WAIT_AFTER_CONFIGMAP_SEC="${WAIT_AFTER_CONFIGMAP_SEC:-5}"
 WAIT_BEFORE_LOGS_SEC="${WAIT_BEFORE_LOGS_SEC:-5}"
 
-ML_NS="${ML_MODEL_NAMESPACE:-jeeny-ml-model}"
-ML_SVC="${ML_MODEL_SERVICE:-jeeny-ml-model}"
+ML_NS="${ML_MODEL_NAMESPACE:-ml-model}"
+ML_SVC="${ML_MODEL_SERVICE:-ml-model}"
 DEFAULT_BASE="http://${ML_SVC}.${ML_NS}.svc.cluster.local:8456"
 
 BASE_URL="${BASE_URL:-${TARGET:-${DEFAULT_BASE}}}"

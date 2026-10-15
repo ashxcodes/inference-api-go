@@ -4,8 +4,8 @@ set -euo pipefail
 
 BENCH="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-NAMESPACE="${NAMESPACE:-jeeny-ml-model}"
-SERVICE="${SERVICE:-jeeny-ml-model}"
+NAMESPACE="${NAMESPACE:-ml-model}"
+SERVICE="${SERVICE:-ml-model}"
 LOCAL_PORT="${LOCAL_PORT:-8456}"
 REMOTE_PORT="${REMOTE_PORT:-8456}"
 RPS="${RPS:-50}"

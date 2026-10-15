@@ -6,15 +6,7 @@
 - **Docker (laptop):** `run-multicity-load.sh`
 - **Kubernetes:** `run-k6-ml-model.sh` (see [`in-cluster/README.md`](in-cluster/README.md))
 
-Fixtures (700 customers × 10 drivers per city) are usually generated from sibling **jeeny-ml-model**:
-
-```bash
-python3 ../jeeny-ml-model/benchmark/tools/gen_multicity_fixtures.py \
-  --out-dir benchmark/k6/fixtures/multicity \
-  --combine benchmark/k6/fixtures/multicity/manifest.json
-```
-
-Or set `FIXTURES_DIR` / `JEENY_ML_MODEL_ROOT` when running load scripts.
+Place per-city JSON under `benchmark/k6/fixtures/multicity/` (or set `FIXTURES_DIR` when running load scripts).
 
 ### Local smoke
 

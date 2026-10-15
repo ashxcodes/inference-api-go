@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Deploy bench server (local image or ECR) then run in-cluster k6.
+# Deploy bench server (local image) then run in-cluster k6.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 export API_KEY="${API_KEY:?Set API_KEY}"
 
-APP_NS="${APP_NS:-jeeny-ml-model}"
+APP_NS="${APP_NS:-ml-model}"
 SVC_NAME="${SVC_NAME:-ml-model-go-bench}"
 
 "${ROOT}/benchmark/k8s/deploy-bench-server.sh"

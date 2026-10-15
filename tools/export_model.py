@@ -20,12 +20,6 @@ _CHECK_ROW = np.array(
 
 AREAS = ("RUH", "JED", "AMM", "DMM", "MEC", "MAD", "OtherCities")
 
-BUCKETS = {
-    "staging": ("jeeny-ml-model-bucket-staging", "eu-west-1"),
-    "rc": ("jeeny-ml-model-bucket-rc", "eu-west-1"),
-    "production": ("jeeny-ml-model-bucket-replatform", "us-west-2"),
-}
-
 
 def _extract_booster(obj) -> lgb.Booster:
     if isinstance(obj, lgb.Booster):
@@ -78,12 +72,6 @@ def main() -> int:
         default=Path("out"),
         help="Directory for .txt and .sha256 outputs",
     )
-    parser.add_argument(
-        "--upload",
-        choices=sorted(BUCKETS.keys()),
-        nargs="*",
-        help="Upload exported .txt and .sha256 to S3 (requires aws CLI + credentials)",
-    )
     args = parser.parse_args()
 
     pkls = list(args.pkl)
@@ -102,32 +90,6 @@ def main() -> int:
         except Exception as e:
             print(f"FAIL {pkl}: {e}", file=sys.stderr)
             failed = True
-
-    if args.upload and not failed:
-        import subprocess
-
-        for env in args.upload:
-            bucket, region = BUCKETS[env]
-            for area in AREAS:
-                txt = args.output_dir / f"{area}.txt"
-                sha = args.output_dir / f"{area}.txt.sha256"
-                if not txt.is_file():
-                    continue
-                for path in (txt, sha):
-                    key = path.name
-                    subprocess.run(
-                        [
-                            "aws",
-                            "s3",
-                            "cp",
-                            str(path),
-                            f"s3://{bucket}/{key}",
-                            "--region",
-                            region,
-                        ],
-                        check=True,
-                    )
-                print(f"uploaded {area} to s3://{bucket}/ ({region})")
 
     return 1 if failed else 0
 

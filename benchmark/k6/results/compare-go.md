@@ -5,7 +5,7 @@
 - Date: 2026-10-11
 - Model: `testdata/parity/AMM.txt` (v4, ~133MB)
 - `PREDICT_CONCURRENCY=4`, `OTEL_SDK_DISABLED=true`
-- Artifact: `jeeny-ml-model/benchmark/k6/results/summary-go-concurrent-25vu-cpu0.7.json`
+- Artifact: `benchmark/k6/results/summary-go-concurrent-25vu-cpu0.7.json`
 
 | Service | CPU limit | RPS | Total | med (ms) | p95 (ms) | avg (ms) | fail % | MEM |
 |---------|----------:|----:|------:|---------:|---------:|---------:|-------:|-----|
@@ -24,6 +24,6 @@ Re-run Go bench from either repo:
 # ml-model-go
 BENCH_CPU=0.7 ./benchmark/run-benchmark.sh concurrent 25 2m
 
-# or from jeeny-ml-model (builds sibling ../ml-model-go)
+# from this repo: ./benchmark/server.sh build
 BENCH_CPU=0.7 bash ./benchmark/run-benchmark-go.sh concurrent 25 2m
 ```

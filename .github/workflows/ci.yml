@@ -2,15 +2,12 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   pull_request:
 
 permissions:
   contents: read
-  id-token: write
-
-env:
-  AWS_REGION: ${{ vars.AWS_REGION_STAGING }}
+  packages: write
 
 jobs:
   test:
@@ -31,34 +28,28 @@ jobs:
 
   image:
     needs: test
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Configure AWS
-        uses: aws-actions/configure-aws-credentials@v4
+      - name: Docker image metadata
+        id: meta
+        uses: docker/metadata-action@v5
         with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN_STAGING }}
-          aws-region: ${{ vars.AWS_REGION_STAGING }}
-      - name: Login to ECR
-        uses: aws-actions/amazon-ecr-login@v2
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=latest,enable=true
+            type=sha,prefix=
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
-        env:
-          ECR_REGISTRY: ${{ vars.AWS_ACCOUNT_ID_STAGING }}.dkr.ecr.${{ vars.AWS_REGION_STAGING }}.amazonaws.com
-          IMAGE_TAG: ${{ github.sha }}
-        run: |
-          docker build -t "$ECR_REGISTRY/jeeny-ml-model-go:$IMAGE_TAG" .
-          docker push "$ECR_REGISTRY/jeeny-ml-model-go:$IMAGE_TAG"
-          echo "IMAGE_URI=$ECR_REGISTRY/jeeny-ml-model-go:$IMAGE_TAG" >> "$GITHUB_ENV"
-
-  gitops:
-    needs: image
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: GitOps staging bump
-        uses: jeenyme/jeeny-org-workflows/backend/common-actions/deploy-gitops@main
+        uses: docker/build-push-action@v6
         with:
-          image_uri: ${{ env.IMAGE_URI }}
-          gitops_pat: ${{ secrets.GITOPS_PAT }}
-        continue-on-error: true
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

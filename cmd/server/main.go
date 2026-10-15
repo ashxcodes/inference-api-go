@@ -14,13 +14,13 @@ import (
 
 	_ "time/tzdata"
 
-	"github.com/jeenyme/ml-model-go/internal/config"
-	"github.com/jeenyme/ml-model-go/internal/eta"
-	"github.com/jeenyme/ml-model-go/internal/features"
-	"github.com/jeenyme/ml-model-go/internal/httpapi"
-	"github.com/jeenyme/ml-model-go/internal/inference"
-	"github.com/jeenyme/ml-model-go/internal/logging"
-	"github.com/jeenyme/ml-model-go/internal/telemetry"
+	"github.com/ashxcodes/inference-api-go/internal/config"
+	"github.com/ashxcodes/inference-api-go/internal/eta"
+	"github.com/ashxcodes/inference-api-go/internal/features"
+	"github.com/ashxcodes/inference-api-go/internal/httpapi"
+	"github.com/ashxcodes/inference-api-go/internal/inference"
+	"github.com/ashxcodes/inference-api-go/internal/logging"
+	"github.com/ashxcodes/inference-api-go/internal/telemetry"
 )
 
 var version = "dev"

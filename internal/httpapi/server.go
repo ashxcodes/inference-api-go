@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jeenyme/ml-model-go/internal/config"
-	"github.com/jeenyme/ml-model-go/internal/eta"
-	"github.com/jeenyme/ml-model-go/internal/logging"
+	"github.com/ashxcodes/inference-api-go/internal/config"
+	"github.com/ashxcodes/inference-api-go/internal/eta"
+	"github.com/ashxcodes/inference-api-go/internal/logging"
 )
 
 type Server struct {

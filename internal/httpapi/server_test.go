@@ -7,9 +7,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/jeenyme/ml-model-go/internal/config"
-	"github.com/jeenyme/ml-model-go/internal/eta"
-	"github.com/jeenyme/ml-model-go/internal/features"
+	"github.com/ashxcodes/inference-api-go/internal/config"
+	"github.com/ashxcodes/inference-api-go/internal/eta"
+	"github.com/ashxcodes/inference-api-go/internal/features"
 	"github.com/stretchr/testify/require"
 )
 

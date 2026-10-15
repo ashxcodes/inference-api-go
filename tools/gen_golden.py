@@ -4,16 +4,19 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 from unittest.mock import MagicMock
 
 import numpy as np
 
-# Run from jeeny-ml-model repo root so imports resolve.
-JEENY_ROOT = Path(__file__).resolve().parents[2] / "jeeny-ml-model"
-if str(JEENY_ROOT) not in sys.path:
-    sys.path.insert(0, str(JEENY_ROOT))
+# Optional: PYTHON_ML_MODEL_ROOT points at a Python reference implementation repo.
+_py_root = os.environ.get("PYTHON_ML_MODEL_ROOT")
+if _py_root:
+    _py_path = Path(_py_root)
+    if str(_py_path) not in sys.path:
+        sys.path.insert(0, str(_py_path))
 
 from models.Schema import PredictRequest  # noqa: E402
 from services.predict_eta import predict_eta_sync  # noqa: E402

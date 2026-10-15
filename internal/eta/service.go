@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jeenyme/ml-model-go/internal/features"
-	"github.com/jeenyme/ml-model-go/internal/inference"
+	"github.com/ashxcodes/inference-api-go/internal/features"
+	"github.com/ashxcodes/inference-api-go/internal/inference"
 )
 
 // Clock provides "now" for empty created_at (Asia/Riyadh).

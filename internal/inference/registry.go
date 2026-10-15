@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/jeenyme/ml-model-go/internal/lgbm"
+	"github.com/ashxcodes/inference-api-go/internal/lgbm"
 )
 
 type Model struct {

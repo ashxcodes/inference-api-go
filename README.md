@@ -1,6 +1,32 @@
-# jeeny-ml-model-go
+# inference-api-go
 
-Drop-in Go replacement for [jeeny-ml-model](https://github.com/jeenyme/jeeny-ml-model): same HTTP contract on port **8456**, LightGBM `.txt` models, pure-Go inference ([go-lgbm](https://github.com/zhongdai/go-lgbm)).
+HTTP inference API on port **8456** for LightGBM `.txt` models with pure-Go inference ([go-lgbm](https://github.com/zhongdai/go-lgbm)).
+
+## Container image (GHCR)
+
+CI publishes on every push to `main` or `master`:
+
+```text
+ghcr.io/ashxcodes/inference-api-go:latest
+```
+
+Pull (private package: use a GitHub PAT with `read:packages`):
+
+```bash
+echo "$GITHUB_TOKEN" | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-stdin
+docker pull ghcr.io/ashxcodes/inference-api-go:latest
+```
+
+Run (mount model `.txt` files into `/models`):
+
+```bash
+docker run --rm -p 8456:8456 \
+  -e MODEL_API_KEY=change-me \
+  -v "$PWD/ml-models:/models:ro" \
+  ghcr.io/ashxcodes/inference-api-go:latest
+```
+
+To pull without logging in, set the package visibility to **Public** under the repo’s **Packages** tab after the first CI publish.
 
 ## Build and test
 
@@ -111,11 +137,11 @@ BENCH_PER_CITY_RPS=50 BENCH_DURATION=30s ./benchmark/run-multicity-load.sh
 
 ```bash
 export NS=otel-collector API_KEY='…'
-export BASE_URL='http://jeeny-ml-model.jeeny-ml-model.svc.cluster.local:8456'
+export BASE_URL='http://ml-model.ml-model.svc.cluster.local:8456'
 BENCH_PER_CITY_RPS=20 BENCH_DURATION=30s ./benchmark/run-k6-ml-model.sh
 ```
 
-OTEL on the pod: `OTEL_EXPORTER_OTLP_ENDPOINT=http://otelcol-gateway.otel-collector.svc.cluster.local:4317` (see `env.sample`). Fixtures: generate via `jeeny-ml-model/benchmark/tools/gen_multicity_fixtures.py` or set `JEENY_ML_MODEL_ROOT`.
+OTEL on the pod: `OTEL_EXPORTER_OTLP_ENDPOINT=http://otelcol-gateway.otel-collector.svc.cluster.local:4317` (see `env.sample`). Multicity fixtures: set `FIXTURES_DIR` or generate under `benchmark/k6/fixtures/multicity/`.
 
 ### Compose (single k6 run)
 

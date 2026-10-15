@@ -1,23 +1,17 @@
 #!/usr/bin/env bash
-# Deploy a single-pod ml-model-go bench server in the cluster.
-#
-# Kubernetes cannot "mount" a Docker image like k6 scripts (ConfigMaps). You either:
-#   - LOCAL_K8S=1  — image built on your machine + imagePullPolicy IfNotPresent
-#                    (Docker Desktop K8s / kind after `kind load docker-image`)
-#   - PUSH_ECR=1   — docker push to ECR (required for EKS worker nodes)
-#
-# Models CAN be mounted like files (hostPath) when LOCAL_K8S=1 and MODEL_HOST_PATH
-# exists on the Kubernetes node (Docker Desktop file sharing / kind extraMounts).
+# Deploy a single-pod inference-api-go bench server in the cluster (local image or kind).
 #
 # Usage:
 #   export API_KEY='...'
-#   export MODEL_HOST_PATH=/path/to/dir/with/RUH.txt,...   # LOCAL_K8S=1
+#   export MODEL_HOST_PATH=/path/to/dir/with/RUH.txt,...   # hostPath on node
 #   LOCAL_K8S=1 ./benchmark/k8s/deploy-bench-server.sh
-#   PUSH_ECR=1 ECR_REPO=149536475649.dkr.ecr.eu-west-1.amazonaws.com/ml-model-go ./benchmark/k8s/deploy-bench-server.sh
+#
+# Or use a pre-built image (e.g. from GHCR):
+#   IMAGE=ghcr.io/ashxcodes/inference-api-go:latest ./benchmark/k8s/deploy-bench-server.sh
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-APP_NS="${APP_NS:-jeeny-ml-model}"
+APP_NS="${APP_NS:-ml-model}"
 POD_NAME="${POD_NAME:-ml-model-go-bench}"
 SVC_NAME="${SVC_NAME:-ml-model-go-bench}"
 LOCAL_IMAGE="${LOCAL_IMAGE:-ml-model-go:bench-local}"
@@ -27,25 +21,21 @@ KIND_CLUSTER="${KIND_CLUSTER:-kind}"
 
 API_KEY="${API_KEY:?Set API_KEY (MODEL_API_KEY)}"
 LOCAL_K8S="${LOCAL_K8S:-0}"
-PUSH_ECR="${PUSH_ECR:-0}"
 
-if [[ "${LOCAL_K8S}" == "1" && "${PUSH_ECR}" == "1" ]]; then
-  echo "Set only one of LOCAL_K8S=1 or PUSH_ECR=1" >&2
-  exit 1
-fi
-if [[ "${LOCAL_K8S}" != "1" && "${PUSH_ECR}" != "1" ]]; then
-  echo "EKS/remote cluster: set PUSH_ECR=1 (or LOCAL_K8S=1 for Docker Desktop / kind)." >&2
-  exit 1
-fi
-
-if [[ "${EMBED_MODELS:-0}" == "1" ]]; then
-  if [[ ! -d "${MODEL_HOST_PATH}" ]]; then
-    echo "EMBED_MODELS=1 requires MODEL_HOST_PATH with *.txt" >&2
+if [[ -z "${IMAGE:-}" ]]; then
+  if [[ "${LOCAL_K8S}" != "1" ]]; then
+    echo "Set LOCAL_K8S=1 to build/load a local image, or set IMAGE to an existing registry tag." >&2
     exit 1
   fi
-  echo "==> docker build (embed models from ${MODEL_HOST_PATH})"
-  tmpdf="$(mktemp)"
-  cat >"${tmpdf}" <<EOF
+
+  if [[ "${EMBED_MODELS:-0}" == "1" ]]; then
+    if [[ ! -d "${MODEL_HOST_PATH}" ]]; then
+      echo "EMBED_MODELS=1 requires MODEL_HOST_PATH with *.txt" >&2
+      exit 1
+    fi
+    echo "==> docker build (embed models from ${MODEL_HOST_PATH})"
+    tmpdf="$(mktemp)"
+    cat >"${tmpdf}" <<EOF
 FROM golang:1.25-bookworm AS builder
 WORKDIR /app
 COPY go.mod go.sum ./
@@ -60,39 +50,29 @@ USER nonroot:nonroot
 EXPOSE 8456
 ENTRYPOINT ["/server"]
 EOF
-  rm -rf "${ROOT}/.bench-docker-models"
-  cp -a "${MODEL_HOST_PATH}" "${ROOT}/.bench-docker-models/models"
-  docker build -t "${LOCAL_IMAGE}" -f "${tmpdf}" "${ROOT}"
-  rm -rf "${ROOT}/.bench-docker-models"
-  rm -f "${tmpdf}"
-else
-  echo "==> docker build -t ${LOCAL_IMAGE}"
-  docker build -t "${LOCAL_IMAGE}" -f "${DOCKERFILE}" "${ROOT}"
+    rm -rf "${ROOT}/.bench-docker-models"
+    cp -a "${MODEL_HOST_PATH}" "${ROOT}/.bench-docker-models/models"
+    docker build -t "${LOCAL_IMAGE}" -f "${tmpdf}" "${ROOT}"
+    rm -rf "${ROOT}/.bench-docker-models"
+    rm -f "${tmpdf}"
+  else
+    echo "==> docker build -t ${LOCAL_IMAGE}"
+    docker build -t "${LOCAL_IMAGE}" -f "${DOCKERFILE}" "${ROOT}"
+  fi
+  IMAGE="${LOCAL_IMAGE}"
 fi
 
-IMAGE="${LOCAL_IMAGE}"
 PULL_POLICY="IfNotPresent"
-
-if [[ "${PUSH_ECR}" == "1" ]]; then
-  ECR_REPO="${ECR_REPO:?Set ECR_REPO e.g. 149536475649.dkr.ecr.eu-west-1.amazonaws.com/ml-model-go}"
-  ECR_REGION="${ECR_REGION:-eu-west-1}"
-  TAG="${TAG:-bench-$(git -C "${ROOT}" rev-parse --short HEAD 2>/dev/null || date +%s)}"
-  REMOTE="${ECR_REPO}:${TAG}"
-  aws ecr get-login-password --region "${ECR_REGION}" \
-    | docker login --username AWS --password-stdin "${ECR_REPO%%/*}"
-  docker tag "${LOCAL_IMAGE}" "${REMOTE}"
-  docker push "${REMOTE}"
-  IMAGE="${REMOTE}"
+if [[ "${IMAGE}" != "${LOCAL_IMAGE}" ]]; then
   PULL_POLICY="Always"
-  echo "==> Pushed ${IMAGE}"
 fi
 
-if [[ "${LOCAL_K8S}" == "1" ]]; then
+if [[ "${LOCAL_K8S}" == "1" && "${IMAGE}" == "${LOCAL_IMAGE}" ]]; then
   if command -v kind >/dev/null 2>&1 && kind get clusters 2>/dev/null | grep -qx "${KIND_CLUSTER}"; then
     echo "==> kind load docker-image ${LOCAL_IMAGE}"
     kind load docker-image "${LOCAL_IMAGE}" --name "${KIND_CLUSTER}"
   else
-    echo "==> LOCAL_K8S: using image ${LOCAL_IMAGE} with imagePullPolicy=IfNotPresent (Docker Desktop K8s or node-local image)"
+    echo "==> LOCAL_K8S: using image ${LOCAL_IMAGE} with imagePullPolicy=IfNotPresent"
   fi
   if [[ ! -d "${MODEL_HOST_PATH}" ]]; then
     echo "MODEL_HOST_PATH not a directory: ${MODEL_HOST_PATH}" >&2
@@ -101,7 +81,6 @@ if [[ "${LOCAL_K8S}" == "1" ]]; then
   fi
 fi
 
-# OTEL in-cluster (override via env file merge if needed)
 OTEL_ENDPOINT="${OTEL_EXPORTER_OTLP_ENDPOINT:-http://otelcol-gateway.otel-collector.svc.cluster.local:4317}"
 
 MODEL_VOLUME_JSON='{"name":"models","emptyDir":{}}'
@@ -151,8 +130,8 @@ spec = {
       {"name": "OTEL_EXPORTER_OTLP_INSECURE", "value": "true"},
       {"name": "OTEL_TRACES_EXPORTER", "value": "otlp"},
       {"name": "OTEL_METRICS_EXPORTER", "value": "otlp"},
-      {"name": "OTEL_SERVICE_NAME", "value": "ml-model-go"},
-      {"name": "OTEL_RESOURCE_ATTRIBUTES", "value": "deployment.environment=staging,service.namespace=jeeny-ml-model"},
+      {"name": "OTEL_SERVICE_NAME", "value": "inference-api-go"},
+      {"name": "OTEL_RESOURCE_ATTRIBUTES", "value": "deployment.environment=staging,service.namespace=ml-model"},
     ],
     "readinessProbe": {
       "httpGet": {"path": "/readyz", "port": 8456},
@@ -176,6 +155,7 @@ print(json.dumps({"spec": spec}))
 PY
 )"
 
+
 kubectl expose pod "${POD_NAME}" -n "${APP_NS}" --name="${SVC_NAME}" --port=8456 --target-port=8456
 
 echo "==> Wait for ready"
@@ -185,7 +165,3 @@ kubectl wait -n "${APP_NS}" --for=condition=Ready "pod/${POD_NAME}" --timeout=30
 echo ""
 echo "In-cluster BASE_URL for k6:"
 echo "  http://${SVC_NAME}.${APP_NS}.svc.cluster.local:8456"
-echo ""
-echo "Example:"
-echo "  export BASE_URL='http://${SVC_NAME}.${APP_NS}.svc.cluster.local:8456'"
-echo "  ./benchmark/run-k6-ml-model.sh"

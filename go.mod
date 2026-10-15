@@ -1,4 +1,4 @@
-module github.com/jeenyme/ml-model-go
+module github.com/ashxcodes/inference-api-go
 
 go 1.25.0
 

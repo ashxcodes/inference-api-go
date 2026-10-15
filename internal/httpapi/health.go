@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jeenyme/ml-model-go/internal/eta"
+	"github.com/ashxcodes/inference-api-go/internal/eta"
 )
 
 const cacheTTL = 300 * time.Second
