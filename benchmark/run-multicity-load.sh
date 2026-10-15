@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Multi-city load test — see benchmark/README.md and benchmark/in-cluster/README.md.
-# Fixtures: benchmark/k6/fixtures/multicity or FIXTURES_DIR.
+# Fixtures: benchmark/k6/fixtures/multicity, FIXTURES_DIR, or JEENY_ML_MODEL_ROOT.
 set -euo pipefail
 
 BENCH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -9,7 +9,8 @@ if [[ -n "${FIXTURES_DIR:-}" ]]; then
 elif [[ -f "${BENCH}/k6/fixtures/multicity/RUH.json" ]]; then
   FIXTURES="${BENCH}/k6/fixtures/multicity"
 else
-  FIXTURES=""
+  JEENY_ROOT="${JEENY_ML_MODEL_ROOT:-$(cd "${BENCH}/../jeeny-ml-model" 2>/dev/null && pwd || echo "")}"
+  FIXTURES="${JEENY_ROOT}/benchmark/k6/fixtures/multicity"
 fi
 RESULTS="${BENCH}/k6/results"
 mkdir -p "${RESULTS}"
@@ -24,7 +25,7 @@ K6_CPUSET="${K6_CPUSET:-}"
 for c in RUH JED AMM DMM MAD MEC OtherCities; do
   if [[ ! -f "${FIXTURES}/${c}.json" ]]; then
     echo "Missing ${FIXTURES}/${c}.json" >&2
-    echo "Set FIXTURES_DIR or add JSON under benchmark/k6/fixtures/multicity/" >&2
+    echo "Set FIXTURES_DIR or JEENY_ML_MODEL_ROOT; generate with jeeny-ml-model/benchmark/tools/gen_multicity_fixtures.py" >&2
     exit 1
   fi
 done

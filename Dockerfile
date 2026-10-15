@@ -11,7 +11,7 @@ RUN go build -trimpath -ldflags="-s -w -X main.version=${VERSION}" -o /out/serve
 FROM builder AS test
 RUN go test -race ./...
 
-FROM gcr.io/distroless/static-debian12:nonroot
+FROM gcr.io/distroless/base-debian12:nonroot
 COPY --from=builder /out/server /server
 ENV MODEL_DIR=/models PORT=8456
 USER nonroot:nonroot

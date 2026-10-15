@@ -133,15 +133,16 @@ export API_KEY=…
 BENCH_PER_CITY_RPS=50 BENCH_DURATION=30s ./benchmark/run-multicity-load.sh
 ```
 
-**In-cluster k6** (like `location-engine/benchmark/run-k6-location-engine.sh`):
+**In-cluster** (`otel-collector` namespace, `ghcr.io/ashxcodes/inference-api-go:e378d03`):
 
 ```bash
-export NS=otel-collector API_KEY='…'
-export BASE_URL='http://ml-model.ml-model.svc.cluster.local:8456'
-BENCH_PER_CITY_RPS=20 BENCH_DURATION=30s ./benchmark/run-k6-ml-model.sh
+export API_KEY='…'   # optional: MODELS_DIR=./ml-models
+./benchmark/run-inference-api-go.sh
+export BENCH_PER_CITY_RPS=20 BENCH_DURATION=30s
+./benchmark/run-k6-inference-api-go.sh
 ```
 
-OTEL on the pod: `OTEL_EXPORTER_OTLP_ENDPOINT=http://otelcol-gateway.otel-collector.svc.cluster.local:4317` (see `env.sample`). Multicity fixtures: set `FIXTURES_DIR` or generate under `benchmark/k6/fixtures/multicity/`.
+Models: PVC + `kubectl cp` (see `benchmark/README.md`). OTLP: `otelcol-gateway.otel-collector.svc.cluster.local:4317`.
 
 ### Compose (single k6 run)
 
@@ -179,5 +180,6 @@ python3 benchmark/parity_compare.py http://127.0.0.1:8000 http://127.0.0.1:18456
 | `benchmark/run-benchmark.sh` | docker-compose + one k6 profile |
 | `benchmark/verify-otlp.sh` | quick OTLP span check via collector metrics |
 | `benchmark/run-multicity-load.sh` | Docker k6, 7-city `/predict` load |
-| `benchmark/run-k6-ml-model.sh` | in-cluster k6 pod + ConfigMaps |
+| `benchmark/run-inference-api-go.sh` | inference pod in `otel-collector` |
+| `benchmark/run-k6-inference-api-go.sh` | in-cluster k6 multi-city |
 | `benchmark/parity_compare.py` | `/predict` parity vs Python |

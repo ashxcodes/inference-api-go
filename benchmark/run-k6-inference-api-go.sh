@@ -2,16 +2,13 @@
 # In-cluster multi-city /predict load (same pattern as location-engine/benchmark/run-k6-location-engine.sh).
 #
 #   export NS=otel-collector
-#   export BASE_URL='http://ml-model.ml-model.svc.cluster.local:8456'
-#   export API_KEY='...'   # MODEL_API_KEY
-#   export BENCH_PER_CITY_RPS=50
-#   export BENCH_DURATION=5m
-#   ./benchmark/run-k6-ml-model.sh
+#   export BASE_URL='http://inference-api-go.otel-collector.svc.cluster.local:8456'
+#   export API_KEY='...'
+#   export BENCH_PER_CITY_RPS=20
+#   export BENCH_DURATION=30s
+#   ./benchmark/run-k6-inference-api-go.sh
 #
-# Fixtures: benchmark/k6/fixtures/multicity/ or FIXTURES_DIR.
-# First run: SKIP_DELETE=1 ./benchmark/run-k6-ml-model.sh
-#
-# App OTEL: OTEL_EXPORTER_OTLP_ENDPOINT=http://otelcol-gateway.otel-collector.svc.cluster.local:4317
+# First run: SKIP_DELETE=1 ./benchmark/run-k6-inference-api-go.sh
 set -euo pipefail
 
 BENCH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -27,29 +24,28 @@ resolve_fixtures() {
     echo "${BENCH}/k6/fixtures/multicity"
     return
   fi
+  local jeeny="${JEENY_ML_MODEL_ROOT:-$(cd "${ROOT}/../jeeny-ml-model" 2>/dev/null && pwd || echo "")}"
+  if [[ -n "${jeeny}" && -f "${jeeny}/benchmark/k6/fixtures/multicity/RUH.json" ]]; then
+    echo "${jeeny}/benchmark/k6/fixtures/multicity"
+    return
+  fi
   echo ""
 }
 
 FIXTURE_DIR="$(resolve_fixtures)"
 if [[ -z "${FIXTURE_DIR}" ]]; then
-  echo "Multicity fixtures not found. Set FIXTURES_DIR or generate under benchmark/k6/fixtures/multicity/." >&2
+  echo "Multicity fixtures not found. Set FIXTURES_DIR or JEENY_ML_MODEL_ROOT." >&2
   exit 1
 fi
 
 NS="${NS:-otel-collector}"
 K6_IMAGE="${K6_IMAGE:-grafana/k6:0.54.0}"
-K6_POD_NAME="${K6_POD_NAME:-k6-ml-model-go-multicity}"
-CONFIGMAP_PREFIX="${CONFIGMAP_PREFIX:-ml-model-go-k6}"
-WAIT_AFTER_CONFIGMAP_SEC="${WAIT_AFTER_CONFIGMAP_SEC:-5}"
-WAIT_BEFORE_LOGS_SEC="${WAIT_BEFORE_LOGS_SEC:-5}"
+K6_POD_NAME="${K6_POD_NAME:-k6-inference-api-go-multicity}"
+CONFIGMAP_PREFIX="${CONFIGMAP_PREFIX:-inference-api-go-k6}"
 
-ML_NS="${ML_MODEL_NAMESPACE:-ml-model}"
-ML_SVC="${ML_MODEL_SERVICE:-ml-model}"
-DEFAULT_BASE="http://${ML_SVC}.${ML_NS}.svc.cluster.local:8456"
-
-BASE_URL="${BASE_URL:-${TARGET:-${DEFAULT_BASE}}}"
+BASE_URL="${BASE_URL:-${TARGET:-http://inference-api-go.otel-collector.svc.cluster.local:8456}}"
 BASE_URL="${BASE_URL%/}"
-API_KEY="${API_KEY:?Set API_KEY (MODEL_API_KEY)}"
+API_KEY="${API_KEY:?Set API_KEY}"
 BENCH_PER_CITY_RPS="${BENCH_PER_CITY_RPS:-50}"
 BENCH_DURATION="${BENCH_DURATION:-5m}"
 BENCH_STRICT="${BENCH_STRICT:-0}"
@@ -84,9 +80,6 @@ for city in "${CITIES[@]}"; do
     --dry-run=client -o yaml | kubectl apply -n "${NS}" -f -
 done
 
-echo "==> Wait ${WAIT_AFTER_CONFIGMAP_SEC}s after ConfigMap apply"
-sleep "${WAIT_AFTER_CONFIGMAP_SEC}"
-
 PROJECTED_JSON="$(python3 - "${CONFIGMAP_PREFIX}" <<'PY'
 import json, sys
 prefix = sys.argv[1]
@@ -113,8 +106,7 @@ PY
 )"
 
 TOTAL_RPS=$((BENCH_PER_CITY_RPS * 7))
-echo "==> Fixtures: ${FIXTURE_DIR}"
-echo "==> Start k6 pod (${BENCH_PER_CITY_RPS} RPS × 7 = ${TOTAL_RPS} total, ${BENCH_DURATION}) -> ${BASE_URL}"
+echo "==> Start k6 pod (${BENCH_PER_CITY_RPS} RPS × 7 = ${TOTAL_RPS}, ${BENCH_DURATION}) -> ${BASE_URL}"
 
 kubectl run "${K6_POD_NAME}" -n "${NS}" --restart=Never \
   --image="${K6_IMAGE}" \
@@ -136,10 +128,6 @@ kubectl run "${K6_POD_NAME}" -n "${NS}" --restart=Never \
         {"name": "BENCH_STRICT", "value": "${BENCH_STRICT}"},
         {"name": "FIXTURE_DIR", "value": "/scripts/fixtures/multicity"}
       ],
-      "resources": {
-        "requests": {"cpu": "2", "memory": "2Gi"},
-        "limits": {"cpu": "8", "memory": "8Gi"}
-      },
       "volumeMounts": [
         {"name": "scripts", "mountPath": "/scripts"}
       ]
@@ -155,8 +143,7 @@ kubectl run "${K6_POD_NAME}" -n "${NS}" --restart=Never \
 EOF
 )"
 
-echo "==> Wait ${WAIT_BEFORE_LOGS_SEC}s for pod to start"
-sleep "${WAIT_BEFORE_LOGS_SEC}"
+kubectl wait -n "${NS}" --for=condition=Ready "pod/${K6_POD_NAME}" --timeout=120s 2>/dev/null || true
 
 echo "==> Stream logs: pod/${K6_POD_NAME}"
 kubectl logs -n "${NS}" -f "pod/${K6_POD_NAME}"
