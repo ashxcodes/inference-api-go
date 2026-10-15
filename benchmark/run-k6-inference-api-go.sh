@@ -15,6 +15,11 @@ BENCH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "${BENCH}/.." && pwd)"
 CITIES=(RUH JED AMM DMM MAD MEC OtherCities)
 
+# ConfigMap names must be lowercase RFC 1123 (no "RUH" / "OtherCities" in the name).
+city_cm_slug() {
+  echo "$1" | tr '[:upper:]' '[:lower:]'
+}
+
 resolve_fixtures() {
   if [[ -n "${FIXTURES_DIR:-}" ]]; then
     echo "${FIXTURES_DIR}"
@@ -65,19 +70,21 @@ else
 fi
 
 SCRIPT_CM="${CONFIGMAP_PREFIX}-script"
-echo "==> Apply ConfigMap ${SCRIPT_CM}"
+echo "==> ConfigMap ${SCRIPT_CM}"
+kubectl delete configmap "${SCRIPT_CM}" -n "${NS}" --ignore-not-found=true
 kubectl create configmap "${SCRIPT_CM}" \
   -n "${NS}" \
-  --from-file=predict-multicity.js="${BENCH}/k6/predict-multicity.js" \
-  --dry-run=client -o yaml | kubectl apply -n "${NS}" -f -
+  --from-file=predict-multicity.js="${BENCH}/k6/predict-multicity.js"
 
 for city in "${CITIES[@]}"; do
-  cm="${CONFIGMAP_PREFIX}-fixture-${city}"
-  echo "==> Apply ConfigMap ${cm}"
+  slug="$(city_cm_slug "${city}")"
+  cm="${CONFIGMAP_PREFIX}-fixture-${slug}"
+  echo "==> ConfigMap ${cm} (${city}.json)"
+  kubectl delete configmap "${cm}" -n "${NS}" --ignore-not-found=true
+  # Large fixtures: avoid kubectl apply (last-applied-configuration annotation >256KiB).
   kubectl create configmap "${cm}" \
     -n "${NS}" \
-    --from-file="${city}.json=${FIXTURE_DIR}/${city}.json" \
-    --dry-run=client -o yaml | kubectl apply -n "${NS}" -f -
+    --from-file="${city}.json=${FIXTURE_DIR}/${city}.json"
 done
 
 PROJECTED_JSON="$(python3 - "${CONFIGMAP_PREFIX}" <<'PY'
@@ -93,10 +100,11 @@ sources = [
     }
 ]
 for city in cities:
+    slug = city.lower()
     sources.append(
         {
             "configMap": {
-                "name": f"{prefix}-fixture-{city}",
+                "name": f"{prefix}-fixture-{slug}",
                 "items": [{"key": f"{city}.json", "path": f"fixtures/multicity/{city}.json"}],
             }
         }
