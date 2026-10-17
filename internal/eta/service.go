@@ -2,6 +2,7 @@ package eta
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"time"
 
@@ -58,6 +59,22 @@ func (s Service) Predict(ctx context.Context, req Request) (Response, error) {
 		return Response{}, err
 	}
 
+	if runner, ok := s.Predictor.(inference.Runner); ok {
+		var resp Response
+		err := runner.Run(ctx, func(ctx context.Context) error {
+			var e error
+			resp, e = s.predict(ctx, req, createdAt)
+			return e
+		})
+		if err != nil {
+			return Response{}, MapPredictError(err)
+		}
+		return resp, nil
+	}
+	return s.predict(ctx, req, createdAt)
+}
+
+func (s Service) predict(ctx context.Context, req Request, createdAt time.Time) (Response, error) {
 	wpLat, wpLng, hasWaypoint := waypointTruthy(req.WaypointLat, req.WaypointLng)
 
 	var eta float64
@@ -114,11 +131,17 @@ func MapPredictError(err error) error {
 	if err == nil {
 		return nil
 	}
-	if _, ok := err.(inference.NotFoundError); ok {
-		return ModelError{Msg: err.Error()}
+	var busy inference.BusyError
+	if errors.As(err, &busy) {
+		return busy
 	}
-	if _, ok := err.(inference.PredictError); ok {
-		return ModelError{Msg: err.Error()}
+	var notFound inference.NotFoundError
+	if errors.As(err, &notFound) {
+		return ModelError{Msg: notFound.Error()}
+	}
+	var predictErr inference.PredictError
+	if errors.As(err, &predictErr) {
+		return ModelError{Msg: predictErr.Error()}
 	}
 	return fmt.Errorf("%w", err)
 }

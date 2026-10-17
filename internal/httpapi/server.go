@@ -2,13 +2,16 @@ package httpapi
 
 import (
 	"encoding/json"
+	"errors"
 	"io"
 	"net/http"
+	"strconv"
 	"strings"
 	"time"
 
 	"github.com/ashxcodes/inference-api-go/internal/config"
 	"github.com/ashxcodes/inference-api-go/internal/eta"
+	"github.com/ashxcodes/inference-api-go/internal/inference"
 	"github.com/ashxcodes/inference-api-go/internal/logging"
 )
 
@@ -33,21 +36,17 @@ func NewServer(cfg config.Config, etaSvc eta.Service, log *logging.AccessLogger,
 }
 
 func (s *Server) Handler() http.Handler {
+	mux := http.NewServeMux()
+	mux.HandleFunc("GET /{$}", s.handleRoot)
+	mux.HandleFunc("GET /healthz", s.handleHealthz)
+	mux.HandleFunc("GET /readyz", s.handleReadyz)
+	mux.HandleFunc("POST /predict", s.handlePredict)
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		switch {
-		case r.Method == http.MethodGet && r.URL.Path == "/":
-			s.handleRoot(w, r)
-		case r.Method == http.MethodGet && r.URL.Path == "/healthz":
-			s.handleHealthz(w, r)
-		case r.Method == http.MethodGet && r.URL.Path == "/readyz":
-			s.handleReadyz(w, r)
-		case r.Method == http.MethodGet && strings.HasPrefix(r.URL.Path, "/health-check-"):
+		if r.Method == http.MethodGet && strings.HasPrefix(r.URL.Path, "/health-check-") {
 			s.handleHealthCheck(w, r)
-		case r.Method == http.MethodPost && r.URL.Path == "/predict":
-			s.handlePredict(w, r)
-		default:
-			http.NotFound(w, r)
+			return
 		}
+		mux.ServeHTTP(w, r)
 	})
 }
 
@@ -134,7 +133,20 @@ func (s *Server) handlePredict(w http.ResponseWriter, r *http.Request) {
 
 	resp, err := s.eta.Predict(r.Context(), etaReq)
 	if err != nil {
-		if me, ok := err.(eta.ModelError); ok {
+		var busy inference.BusyError
+		if errors.As(err, &busy) {
+			status = http.StatusServiceUnavailable
+			respBody = []byte(`{"detail":"predict queue full"}`)
+			retryAfter := s.cfg.PredictRetryAfter
+			if retryAfter < 1 {
+				retryAfter = 1
+			}
+			w.Header().Set("Retry-After", strconv.Itoa(retryAfter))
+			writeRaw(w, status, respBody)
+			return
+		}
+		var me eta.ModelError
+		if errors.As(err, &me) {
 			status = http.StatusBadRequest
 			b, _ := json.Marshal(map[string]string{"detail": me.Msg})
 			respBody = b

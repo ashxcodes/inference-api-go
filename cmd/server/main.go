@@ -47,7 +47,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("models: %v", err)
 	}
-	predictor := inference.NewPool(cfg.ModelDir, models, cfg.PredictConcurrency)
+	predictor := inference.NewPool(cfg.ModelDir, models, cfg.PredictConcurrency, cfg.PredictMaxInFlight, cfg.PredictMaxWaiters)
 
 	etaSvc := eta.Service{
 		Transform: features.Transform{},
@@ -92,11 +92,17 @@ func main() {
 	ready.Store(false)
 	time.Sleep(cfg.ShutdownDrain)
 
-	shutdownCtx, cancel := context.WithTimeout(context.Background(), telemetry.FlushTimeout())
-	defer cancel()
-	_ = telemetry.Shutdown(shutdownCtx)
+	{
+		ctx, cancel := context.WithTimeout(context.Background(), cfg.ShutdownHTTP)
+		_ = httpSrv.Shutdown(ctx)
+		cancel()
+	}
 	accessLog.Shutdown()
-	_ = httpSrv.Shutdown(shutdownCtx)
+	{
+		ctx, cancel := context.WithTimeout(context.Background(), telemetry.FlushTimeout())
+		_ = telemetry.Shutdown(ctx)
+		cancel()
+	}
 }
 
 func envOrDefault(key, fallback string) string {

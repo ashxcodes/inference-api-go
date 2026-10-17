@@ -49,7 +49,12 @@ func (e NotFoundError) Error() string {
 }
 
 type PredictError struct {
-	Msg string
+	City string
+	Err  error
 }
 
-func (e PredictError) Error() string { return e.Msg }
+func (e PredictError) Error() string {
+	return fmt.Sprintf("Prediction failed for model '%s': %v", e.City, e.Err)
+}
+
+func (e PredictError) Unwrap() error { return e.Err }

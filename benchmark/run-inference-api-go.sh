@@ -223,11 +223,13 @@ container = {
     "httpGet": {"path": "/readyz", "port": 8456},
     "initialDelaySeconds": 30,
     "periodSeconds": 10,
+    "timeoutSeconds": 2,
   },
   "livenessProbe": {
-    "httpGet": {"path": "/health-check-RUH", "port": 8456},
+    "httpGet": {"path": "/healthz", "port": 8456},
     "initialDelaySeconds": 60,
     "periodSeconds": 30,
+    "timeoutSeconds": 2,
   },
   "resources": {
     "requests": {"cpu": "1000m", "memory": "2Gi"},

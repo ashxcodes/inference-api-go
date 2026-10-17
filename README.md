@@ -42,7 +42,10 @@ make build
 | `MODEL_API_KEY` | (required) | `X-API-Key` |
 | `MODEL_DIR` | `/models` | Directory of `{AREA}.txt` models |
 | `PORT` | `8456` | HTTP port |
-| `PREDICT_CONCURRENCY` | `0` | Max concurrent predictions (`0` = off; set `N>0` only to cap in-process parallelism) |
+| `PREDICT_CONCURRENCY` | `0` | Max concurrent predictions (`0` = off; prefer leaving at `0`) |
+| `PREDICT_MAX_IN_FLIGHT` | `0` | Admission ceiling for `/predict` (`0` = off; recommend `320` on 1000m) |
+| `PREDICT_MAX_WAITERS` | `0` | Waiters when in-flight is full; then **503** + `Retry-After` |
+| `PREDICT_RETRY_AFTER_SECONDS` | `1` | `Retry-After` header value (seconds) on 503 |
 
 OpenTelemetry uses the standard Go SDK (`internal/telemetry`, `OTEL_*` env) with **`otelhttp`** for inbound traces and `http.server.*` metrics, **contrib/runtime** for `go_*`, and **contrib/host** for `process_*` / `system_*`. Images build with plain `go build`. Configure export with `OTEL_*` — see `env.sample`.
 
