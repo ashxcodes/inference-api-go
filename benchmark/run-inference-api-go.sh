@@ -3,7 +3,8 @@
 #
 # Models: PVC + one-time kubectl cp from MODELS_DIR (ConfigMaps cannot hold multi-MB .txt files).
 #
-#   export API_KEY='...'
+#   Application: repo .env (MODEL_API_KEY, OTEL_*, MODEL_DIR, …)
+#   K8s/bench: export IMAGE=… (and optional NS, MODELS_DIR, …) before running.
 #   ./benchmark/run-inference-api-go.sh
 #
 # Re-copy models: FORCE_MODEL_COPY=1 ./benchmark/run-inference-api-go.sh
@@ -14,17 +15,41 @@ set -euo pipefail
 BENCH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "${BENCH}/.." && pwd)"
 
+# shellcheck source=dotenv.sh
+source "${BENCH}/dotenv.sh"
+# --- K8s / bench (not application .env) ---
 NS="${NS:-otel-collector}"
+
+load_app_dotenv "${ROOT}" || exit 1
+print_app_env_summary "${ROOT}" "${NS}" || exit 1
 POD_NAME="${POD_NAME:-inference-api-go}"
 SVC_NAME="${SVC_NAME:-inference-api-go}"
 LOADER_POD="${LOADER_POD:-inference-api-go-models-loader}"
-IMAGE="${IMAGE:-ghcr.io/ashxcodes/inference-api-go:e378d03}"
 MODELS_DIR="${MODELS_DIR:-${ROOT}/ml-models}"
 PVC_NAME="${PVC_NAME:-inference-api-go-models}"
 PVC_SIZE="${PVC_SIZE:-2Gi}"
 # kubectl cp requires tar in the container (aws-cli image does not include it).
 LOADER_IMAGE="${LOADER_IMAGE:-public.ecr.aws/debian/debian:bookworm-slim}"
 CP_RETRIES="${CP_RETRIES:-3}"
+
+IMAGE="${IMAGE:-}"
+bench_prompt_nonempty IMAGE "Container IMAGE (ghcr.io/ashxcodes/inference-api-go:<git-sha>)" || exit 1
+
+echo ""
+echo "── Kubernetes / bench ──"
+echo "  NS:          ${NS}"
+echo "  IMAGE:       ${IMAGE}"
+echo "  MODELS_DIR:  ${MODELS_DIR}"
+echo "  MODELS_FROM_IMAGE: ${MODELS_FROM_IMAGE:-0}"
+echo ""
+
+if ! bench_confirm "Deploy inference-api-go with these settings?"; then
+  echo "Aborted."
+  exit 0
+fi
+
+MODEL_API_KEY="${MODEL_API_KEY:?Set MODEL_API_KEY in repo .env}"
+OTEL_EXPORTER_OTLP_ENDPOINT="${OTEL_EXPORTER_OTLP_ENDPOINT:?Set OTEL_EXPORTER_OTLP_ENDPOINT in repo .env}"
 
 copy_models_to_pod() {
   local pod="$1"
@@ -69,9 +94,6 @@ resolve_storage_class() {
 STORAGE_CLASS="$(resolve_storage_class)"
 MODELS_FROM_IMAGE="${MODELS_FROM_IMAGE:-0}"
 FORCE_MODEL_COPY="${FORCE_MODEL_COPY:-0}"
-
-API_KEY="${API_KEY:?Set API_KEY (MODEL_API_KEY)}"
-OTEL_ENDPOINT="${OTEL_EXPORTER_OTLP_ENDPOINT:-http://otelcol-gateway.otel-collector.svc.cluster.local:4317}"
 
 if [[ "${MODELS_FROM_IMAGE}" != "1" ]]; then
   if [[ ! -d "${MODELS_DIR}" ]]; then
@@ -172,7 +194,10 @@ EOF
   fi
 fi
 
-export IMAGE API_KEY OTEL_ENDPOINT USE_PVC PVC_NAME
+CONTAINER_APP_ENV_JSON="$(container_app_env_json "${ROOT}" "${NS}" "${POD_NAME}")"
+BENCH_POD_EXTRAS="$(bench_k8s_pod_extras inference)"
+export IMAGE USE_PVC PVC_NAME CONTAINER_APP_ENV_JSON BENCH_POD_EXTRAS
+echo "==> Pod anti-affinity: ${BENCH_POD_ANTIAFFINITY:-preferred} (not on same node as k6)"
 
 echo "==> Start pod/${POD_NAME} image=${IMAGE}"
 kubectl run "${POD_NAME}" -n "${NS}" --restart=Never \
@@ -183,28 +208,17 @@ kubectl run "${POD_NAME}" -n "${NS}" --restart=Never \
 import json, os
 
 image = os.environ["IMAGE"]
-api_key = os.environ["API_KEY"]
-otel = os.environ["OTEL_ENDPOINT"]
 use_pvc = os.environ["USE_PVC"] == "1"
 pvc = os.environ["PVC_NAME"]
+env_list = json.loads(os.environ["CONTAINER_APP_ENV_JSON"])
+extras = json.loads(os.environ["BENCH_POD_EXTRAS"])
 
 container = {
   "name": "app",
   "image": image,
   "imagePullPolicy": "Always",
   "ports": [{"containerPort": 8456}],
-  "env": [
-    {"name": "MODEL_API_KEY", "value": api_key},
-    {"name": "MODEL_DIR", "value": "/models"},
-    {"name": "PORT", "value": "8456"},
-    {"name": "OTEL_EXPORTER_OTLP_ENDPOINT", "value": otel},
-    {"name": "OTEL_EXPORTER_OTLP_PROTOCOL", "value": "grpc"},
-    {"name": "OTEL_EXPORTER_OTLP_INSECURE", "value": "true"},
-    {"name": "OTEL_TRACES_EXPORTER", "value": "otlp"},
-    {"name": "OTEL_METRICS_EXPORTER", "value": "otlp"},
-    {"name": "OTEL_SERVICE_NAME", "value": "inference-api-go"},
-    {"name": "OTEL_RESOURCE_ATTRIBUTES", "value": "deployment.environment=staging,service.namespace=otel-collector"},
-  ],
+  "env": env_list,
   "readinessProbe": {
     "httpGet": {"path": "/readyz", "port": 8456},
     "initialDelaySeconds": 30,
@@ -216,8 +230,8 @@ container = {
     "periodSeconds": 30,
   },
   "resources": {
-    "requests": {"cpu": "500m", "memory": "2Gi"},
-    "limits": {"cpu": "4", "memory": "8Gi"},
+    "requests": {"cpu": "1000m", "memory": "2Gi"},
+    "limits": {"cpu": "1000m", "memory": "2Gi"},
   },
 }
 
@@ -233,7 +247,11 @@ if use_pvc:
     "persistentVolumeClaim": {"claimName": pvc},
   }]
 
-print(json.dumps({"spec": spec}))
+if extras.get("spec", {}).get("affinity"):
+  spec["affinity"] = extras["spec"]["affinity"]
+
+pod = {"metadata": extras.get("metadata", {}), "spec": spec}
+print(json.dumps(pod))
 PY
 )"
 

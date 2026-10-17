@@ -25,7 +25,7 @@ K6_CPUSET="${K6_CPUSET:-}"
 for c in RUH JED AMM DMM MAD MEC OtherCities; do
   if [[ ! -f "${FIXTURES}/${c}.json" ]]; then
     echo "Missing ${FIXTURES}/${c}.json" >&2
-    echo "Set FIXTURES_DIR or JEENY_ML_MODEL_ROOT; generate with jeeny-ml-model/benchmark/tools/gen_multicity_fixtures.py" >&2
+    echo "git pull or set FIXTURES_DIR (benchmark/k6/fixtures/multicity/)" >&2
     exit 1
   fi
 done
@@ -56,6 +56,9 @@ docker run --rm "${k6_cpuset[@]}" \
   -e BENCH_STRICT="${BENCH_STRICT:-0}" \
   -e FIXTURE_DIR=/scripts/fixtures/multicity \
   -e K6_SUMMARY_FILE="/scripts/results/${OUT}" \
-  "${K6_IMAGE}" run --quiet /scripts/predict-multicity.js
+  "${K6_IMAGE}" run \
+    --summary-trend-stats="avg,min,med,p(90),p(95),p(99),max" \
+    /scripts/predict-multicity.js
 
 echo "Wrote ${RESULTS}/${OUT}"
+python3 "${BENCH}/summarize_results.py" "${RESULTS}/${OUT}" || true

@@ -1,0 +1,2760 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: /scripts/predict-multicity.js
+        output: -
+
+     scenarios: (100.00%) 7 scenarios, 1785 max VUs, 5m30s max duration (incl. graceful stop):
+              * load_AMM: 85.00 iterations/s for 5m0s (maxVUs: 43-255, exec: predict_AMM, gracefulStop: 30s)
+              * load_DMM: 85.00 iterations/s for 5m0s (maxVUs: 43-255, exec: predict_DMM, gracefulStop: 30s)
+              * load_JED: 85.00 iterations/s for 5m0s (maxVUs: 43-255, exec: predict_JED, gracefulStop: 30s)
+              * load_MAD: 85.00 iterations/s for 5m0s (maxVUs: 43-255, exec: predict_MAD, gracefulStop: 30s)
+              * load_MEC: 85.00 iterations/s for 5m0s (maxVUs: 43-255, exec: predict_MEC, gracefulStop: 30s)
+              * load_OtherCities: 85.00 iterations/s for 5m0s (maxVUs: 43-255, exec: predict_OtherCities, gracefulStop: 30s)
+              * load_RUH: 85.00 iterations/s for 5m0s (maxVUs: 43-255, exec: predict_RUH, gracefulStop: 30s)
+
+
+running (0m01.0s), 0000/0301 VUs, 560 complete and 0 interrupted iterations
+load_AMM           [   0% ] 000/043 VUs  0m00.9s/5m0s  85.00 iters/s
+load_DMM           [   0% ] 000/043 VUs  0m00.9s/5m0s  85.00 iters/s
+load_JED           [   0% ] 000/043 VUs  0m00.9s/5m0s  85.00 iters/s
+load_MAD           [   0% ] 000/043 VUs  0m00.9s/5m0s  85.00 iters/s
+load_MEC           [   0% ] 000/043 VUs  0m00.9s/5m0s  85.00 iters/s
+load_OtherCities   [   0% ] 000/043 VUs  0m00.9s/5m0s  85.00 iters/s
+load_RUH           [   0% ] 000/043 VUs  0m00.9s/5m0s  85.00 iters/s
+
+running (0m02.0s), 0000/0301 VUs, 1155 complete and 0 interrupted iterations
+load_AMM           [   1% ] 000/043 VUs  0m01.9s/5m0s  85.00 iters/s
+load_DMM           [   1% ] 000/043 VUs  0m01.9s/5m0s  85.00 iters/s
+load_JED           [   1% ] 000/043 VUs  0m01.9s/5m0s  85.00 iters/s
+load_MAD           [   1% ] 000/043 VUs  0m01.9s/5m0s  85.00 iters/s
+load_MEC           [   1% ] 000/043 VUs  0m01.9s/5m0s  85.00 iters/s
+load_OtherCities   [   1% ] 000/043 VUs  0m01.9s/5m0s  85.00 iters/s
+load_RUH           [   1% ] 000/043 VUs  0m01.9s/5m0s  85.00 iters/s
+
+running (0m03.0s), 0000/0301 VUs, 1750 complete and 0 interrupted iterations
+load_AMM           [   1% ] 000/043 VUs  0m02.9s/5m0s  85.00 iters/s
+load_DMM           [   1% ] 000/043 VUs  0m02.9s/5m0s  85.00 iters/s
+load_JED           [   1% ] 000/043 VUs  0m02.9s/5m0s  85.00 iters/s
+load_MAD           [   1% ] 000/043 VUs  0m02.9s/5m0s  85.00 iters/s
+load_MEC           [   1% ] 000/043 VUs  0m02.9s/5m0s  85.00 iters/s
+load_OtherCities   [   1% ] 000/043 VUs  0m02.9s/5m0s  85.00 iters/s
+load_RUH           [   1% ] 000/043 VUs  0m02.9s/5m0s  85.00 iters/s
+
+running (0m04.0s), 0000/0301 VUs, 2345 complete and 0 interrupted iterations
+load_AMM           [   1% ] 000/043 VUs  0m03.9s/5m0s  85.00 iters/s
+load_DMM           [   1% ] 000/043 VUs  0m03.9s/5m0s  85.00 iters/s
+load_JED           [   1% ] 000/043 VUs  0m03.9s/5m0s  85.00 iters/s
+load_MAD           [   1% ] 000/043 VUs  0m03.9s/5m0s  85.00 iters/s
+load_MEC           [   1% ] 000/043 VUs  0m03.9s/5m0s  85.00 iters/s
+load_OtherCities   [   1% ] 000/043 VUs  0m03.9s/5m0s  85.00 iters/s
+load_RUH           [   1% ] 000/043 VUs  0m03.9s/5m0s  85.00 iters/s
+
+running (0m05.0s), 0000/0301 VUs, 2940 complete and 0 interrupted iterations
+load_AMM           [   2% ] 000/043 VUs  0m04.9s/5m0s  85.00 iters/s
+load_DMM           [   2% ] 000/043 VUs  0m04.9s/5m0s  85.00 iters/s
+load_JED           [   2% ] 000/043 VUs  0m04.9s/5m0s  85.00 iters/s
+load_MAD           [   2% ] 000/043 VUs  0m04.9s/5m0s  85.00 iters/s
+load_MEC           [   2% ] 000/043 VUs  0m04.9s/5m0s  85.00 iters/s
+load_OtherCities   [   2% ] 000/043 VUs  0m04.9s/5m0s  85.00 iters/s
+load_RUH           [   2% ] 000/043 VUs  0m04.9s/5m0s  85.00 iters/s
+
+running (0m06.0s), 0000/0301 VUs, 3535 complete and 0 interrupted iterations
+load_AMM           [   2% ] 000/043 VUs  0m05.9s/5m0s  85.00 iters/s
+load_DMM           [   2% ] 000/043 VUs  0m05.9s/5m0s  85.00 iters/s
+load_JED           [   2% ] 000/043 VUs  0m05.9s/5m0s  85.00 iters/s
+load_MAD           [   2% ] 000/043 VUs  0m05.9s/5m0s  85.00 iters/s
+load_MEC           [   2% ] 000/043 VUs  0m05.9s/5m0s  85.00 iters/s
+load_OtherCities   [   2% ] 000/043 VUs  0m05.9s/5m0s  85.00 iters/s
+load_RUH           [   2% ] 000/043 VUs  0m05.9s/5m0s  85.00 iters/s
+
+running (0m07.0s), 0000/0301 VUs, 4130 complete and 0 interrupted iterations
+load_AMM           [   2% ] 000/043 VUs  0m06.9s/5m0s  85.00 iters/s
+load_DMM           [   2% ] 000/043 VUs  0m06.9s/5m0s  85.00 iters/s
+load_JED           [   2% ] 000/043 VUs  0m06.9s/5m0s  85.00 iters/s
+load_MAD           [   2% ] 000/043 VUs  0m06.9s/5m0s  85.00 iters/s
+load_MEC           [   2% ] 000/043 VUs  0m06.9s/5m0s  85.00 iters/s
+load_OtherCities   [   2% ] 000/043 VUs  0m06.9s/5m0s  85.00 iters/s
+load_RUH           [   2% ] 000/043 VUs  0m06.9s/5m0s  85.00 iters/s
+
+running (0m08.0s), 0000/0301 VUs, 4725 complete and 0 interrupted iterations
+load_AMM           [   3% ] 000/043 VUs  0m07.9s/5m0s  85.00 iters/s
+load_DMM           [   3% ] 000/043 VUs  0m07.9s/5m0s  85.00 iters/s
+load_JED           [   3% ] 000/043 VUs  0m07.9s/5m0s  85.00 iters/s
+load_MAD           [   3% ] 000/043 VUs  0m07.9s/5m0s  85.00 iters/s
+load_MEC           [   3% ] 000/043 VUs  0m07.9s/5m0s  85.00 iters/s
+load_OtherCities   [   3% ] 000/043 VUs  0m07.9s/5m0s  85.00 iters/s
+load_RUH           [   3% ] 000/043 VUs  0m07.9s/5m0s  85.00 iters/s
+
+running (0m09.0s), 0000/0301 VUs, 5320 complete and 0 interrupted iterations
+load_AMM           [   3% ] 000/043 VUs  0m08.9s/5m0s  85.00 iters/s
+load_DMM           [   3% ] 000/043 VUs  0m08.9s/5m0s  85.00 iters/s
+load_JED           [   3% ] 000/043 VUs  0m08.9s/5m0s  85.00 iters/s
+load_MAD           [   3% ] 000/043 VUs  0m08.9s/5m0s  85.00 iters/s
+load_MEC           [   3% ] 000/043 VUs  0m08.9s/5m0s  85.00 iters/s
+load_OtherCities   [   3% ] 000/043 VUs  0m08.9s/5m0s  85.00 iters/s
+load_RUH           [   3% ] 000/043 VUs  0m08.9s/5m0s  85.00 iters/s
+
+running (0m10.0s), 0000/0301 VUs, 5915 complete and 0 interrupted iterations
+load_AMM           [   3% ] 000/043 VUs  0m09.9s/5m0s  85.00 iters/s
+load_DMM           [   3% ] 000/043 VUs  0m09.9s/5m0s  85.00 iters/s
+load_JED           [   3% ] 000/043 VUs  0m09.9s/5m0s  85.00 iters/s
+load_MAD           [   3% ] 000/043 VUs  0m09.9s/5m0s  85.00 iters/s
+load_MEC           [   3% ] 000/043 VUs  0m09.9s/5m0s  85.00 iters/s
+load_OtherCities   [   3% ] 000/043 VUs  0m09.9s/5m0s  85.00 iters/s
+load_RUH           [   3% ] 000/043 VUs  0m09.9s/5m0s  85.00 iters/s
+
+running (0m11.0s), 0000/0301 VUs, 6510 complete and 0 interrupted iterations
+load_AMM           [   4% ] 000/043 VUs  0m10.9s/5m0s  85.00 iters/s
+load_DMM           [   4% ] 000/043 VUs  0m10.9s/5m0s  85.00 iters/s
+load_JED           [   4% ] 000/043 VUs  0m10.9s/5m0s  85.00 iters/s
+load_MAD           [   4% ] 000/043 VUs  0m10.9s/5m0s  85.00 iters/s
+load_MEC           [   4% ] 000/043 VUs  0m10.9s/5m0s  85.00 iters/s
+load_OtherCities   [   4% ] 000/043 VUs  0m10.9s/5m0s  85.00 iters/s
+load_RUH           [   4% ] 000/043 VUs  0m10.9s/5m0s  85.00 iters/s
+
+running (0m12.0s), 0000/0301 VUs, 7105 complete and 0 interrupted iterations
+load_AMM           [   4% ] 000/043 VUs  0m11.9s/5m0s  85.00 iters/s
+load_DMM           [   4% ] 000/043 VUs  0m11.9s/5m0s  85.00 iters/s
+load_JED           [   4% ] 000/043 VUs  0m11.9s/5m0s  85.00 iters/s
+load_MAD           [   4% ] 000/043 VUs  0m11.9s/5m0s  85.00 iters/s
+load_MEC           [   4% ] 000/043 VUs  0m11.9s/5m0s  85.00 iters/s
+load_OtherCities   [   4% ] 000/043 VUs  0m11.9s/5m0s  85.00 iters/s
+load_RUH           [   4% ] 000/043 VUs  0m11.9s/5m0s  85.00 iters/s
+
+running (0m13.0s), 0000/0301 VUs, 7700 complete and 0 interrupted iterations
+load_AMM           [   4% ] 000/043 VUs  0m12.9s/5m0s  85.00 iters/s
+load_DMM           [   4% ] 000/043 VUs  0m12.9s/5m0s  85.00 iters/s
+load_JED           [   4% ] 000/043 VUs  0m12.9s/5m0s  85.00 iters/s
+load_MAD           [   4% ] 000/043 VUs  0m12.9s/5m0s  85.00 iters/s
+load_MEC           [   4% ] 000/043 VUs  0m12.9s/5m0s  85.00 iters/s
+load_OtherCities   [   4% ] 000/043 VUs  0m12.9s/5m0s  85.00 iters/s
+load_RUH           [   4% ] 000/043 VUs  0m12.9s/5m0s  85.00 iters/s
+
+running (0m14.0s), 0000/0301 VUs, 8295 complete and 0 interrupted iterations
+load_AMM           [   5% ] 000/043 VUs  0m13.9s/5m0s  85.00 iters/s
+load_DMM           [   5% ] 000/043 VUs  0m13.9s/5m0s  85.00 iters/s
+load_JED           [   5% ] 000/043 VUs  0m13.9s/5m0s  85.00 iters/s
+load_MAD           [   5% ] 000/043 VUs  0m13.9s/5m0s  85.00 iters/s
+load_MEC           [   5% ] 000/043 VUs  0m13.9s/5m0s  85.00 iters/s
+load_OtherCities   [   5% ] 000/043 VUs  0m13.9s/5m0s  85.00 iters/s
+load_RUH           [   5% ] 000/043 VUs  0m13.9s/5m0s  85.00 iters/s
+
+running (0m15.0s), 0000/0301 VUs, 8890 complete and 0 interrupted iterations
+load_AMM           [   5% ] 000/043 VUs  0m14.9s/5m0s  85.00 iters/s
+load_DMM           [   5% ] 000/043 VUs  0m14.9s/5m0s  85.00 iters/s
+load_JED           [   5% ] 000/043 VUs  0m14.9s/5m0s  85.00 iters/s
+load_MAD           [   5% ] 000/043 VUs  0m14.9s/5m0s  85.00 iters/s
+load_MEC           [   5% ] 000/043 VUs  0m14.9s/5m0s  85.00 iters/s
+load_OtherCities   [   5% ] 000/043 VUs  0m14.9s/5m0s  85.00 iters/s
+load_RUH           [   5% ] 000/043 VUs  0m14.9s/5m0s  85.00 iters/s
+
+running (0m16.0s), 0000/0301 VUs, 9485 complete and 0 interrupted iterations
+load_AMM           [   5% ] 000/043 VUs  0m15.9s/5m0s  85.00 iters/s
+load_DMM           [   5% ] 000/043 VUs  0m15.9s/5m0s  85.00 iters/s
+load_JED           [   5% ] 000/043 VUs  0m15.9s/5m0s  85.00 iters/s
+load_MAD           [   5% ] 000/043 VUs  0m15.9s/5m0s  85.00 iters/s
+load_MEC           [   5% ] 000/043 VUs  0m15.9s/5m0s  85.00 iters/s
+load_OtherCities   [   5% ] 000/043 VUs  0m15.9s/5m0s  85.00 iters/s
+load_RUH           [   5% ] 000/043 VUs  0m15.9s/5m0s  85.00 iters/s
+
+running (0m17.0s), 0000/0301 VUs, 10080 complete and 0 interrupted iterations
+load_AMM           [   6% ] 000/043 VUs  0m16.9s/5m0s  85.00 iters/s
+load_DMM           [   6% ] 000/043 VUs  0m16.9s/5m0s  85.00 iters/s
+load_JED           [   6% ] 000/043 VUs  0m16.9s/5m0s  85.00 iters/s
+load_MAD           [   6% ] 000/043 VUs  0m16.9s/5m0s  85.00 iters/s
+load_MEC           [   6% ] 000/043 VUs  0m16.9s/5m0s  85.00 iters/s
+load_OtherCities   [   6% ] 000/043 VUs  0m16.9s/5m0s  85.00 iters/s
+load_RUH           [   6% ] 000/043 VUs  0m16.9s/5m0s  85.00 iters/s
+
+running (0m18.0s), 0000/0301 VUs, 10675 complete and 0 interrupted iterations
+load_AMM           [   6% ] 000/043 VUs  0m17.9s/5m0s  85.00 iters/s
+load_DMM           [   6% ] 000/043 VUs  0m17.9s/5m0s  85.00 iters/s
+load_JED           [   6% ] 000/043 VUs  0m17.9s/5m0s  85.00 iters/s
+load_MAD           [   6% ] 000/043 VUs  0m17.9s/5m0s  85.00 iters/s
+load_MEC           [   6% ] 000/043 VUs  0m17.9s/5m0s  85.00 iters/s
+load_OtherCities   [   6% ] 000/043 VUs  0m17.9s/5m0s  85.00 iters/s
+load_RUH           [   6% ] 000/043 VUs  0m17.9s/5m0s  85.00 iters/s
+
+running (0m19.0s), 0000/0301 VUs, 11270 complete and 0 interrupted iterations
+load_AMM           [   6% ] 000/043 VUs  0m18.9s/5m0s  85.00 iters/s
+load_DMM           [   6% ] 000/043 VUs  0m18.9s/5m0s  85.00 iters/s
+load_JED           [   6% ] 000/043 VUs  0m18.9s/5m0s  85.00 iters/s
+load_MAD           [   6% ] 000/043 VUs  0m18.9s/5m0s  85.00 iters/s
+load_MEC           [   6% ] 000/043 VUs  0m18.9s/5m0s  85.00 iters/s
+load_OtherCities   [   6% ] 000/043 VUs  0m18.9s/5m0s  85.00 iters/s
+load_RUH           [   6% ] 000/043 VUs  0m18.9s/5m0s  85.00 iters/s
+
+running (0m20.0s), 0000/0301 VUs, 11865 complete and 0 interrupted iterations
+load_AMM           [   7% ] 000/043 VUs  0m19.9s/5m0s  85.00 iters/s
+load_DMM           [   7% ] 000/043 VUs  0m19.9s/5m0s  85.00 iters/s
+load_JED           [   7% ] 000/043 VUs  0m19.9s/5m0s  85.00 iters/s
+load_MAD           [   7% ] 000/043 VUs  0m19.9s/5m0s  85.00 iters/s
+load_MEC           [   7% ] 000/043 VUs  0m19.9s/5m0s  85.00 iters/s
+load_OtherCities   [   7% ] 000/043 VUs  0m19.9s/5m0s  85.00 iters/s
+load_RUH           [   7% ] 000/043 VUs  0m19.9s/5m0s  85.00 iters/s
+
+running (0m21.0s), 0000/0301 VUs, 12460 complete and 0 interrupted iterations
+load_AMM           [   7% ] 000/043 VUs  0m20.9s/5m0s  85.00 iters/s
+load_DMM           [   7% ] 000/043 VUs  0m20.9s/5m0s  85.00 iters/s
+load_JED           [   7% ] 000/043 VUs  0m20.9s/5m0s  85.00 iters/s
+load_MAD           [   7% ] 000/043 VUs  0m20.9s/5m0s  85.00 iters/s
+load_MEC           [   7% ] 000/043 VUs  0m20.9s/5m0s  85.00 iters/s
+load_OtherCities   [   7% ] 000/043 VUs  0m20.9s/5m0s  85.00 iters/s
+load_RUH           [   7% ] 000/043 VUs  0m20.9s/5m0s  85.00 iters/s
+
+running (0m22.0s), 0000/0301 VUs, 13055 complete and 0 interrupted iterations
+load_AMM           [   7% ] 000/043 VUs  0m21.9s/5m0s  85.00 iters/s
+load_DMM           [   7% ] 000/043 VUs  0m21.9s/5m0s  85.00 iters/s
+load_JED           [   7% ] 000/043 VUs  0m21.9s/5m0s  85.00 iters/s
+load_MAD           [   7% ] 000/043 VUs  0m21.9s/5m0s  85.00 iters/s
+load_MEC           [   7% ] 000/043 VUs  0m21.9s/5m0s  85.00 iters/s
+load_OtherCities   [   7% ] 000/043 VUs  0m21.9s/5m0s  85.00 iters/s
+load_RUH           [   7% ] 000/043 VUs  0m21.9s/5m0s  85.00 iters/s
+
+running (0m23.0s), 0000/0301 VUs, 13650 complete and 0 interrupted iterations
+load_AMM           [   8% ] 000/043 VUs  0m22.9s/5m0s  85.00 iters/s
+load_DMM           [   8% ] 000/043 VUs  0m22.9s/5m0s  85.00 iters/s
+load_JED           [   8% ] 000/043 VUs  0m22.9s/5m0s  85.00 iters/s
+load_MAD           [   8% ] 000/043 VUs  0m22.9s/5m0s  85.00 iters/s
+load_MEC           [   8% ] 000/043 VUs  0m22.9s/5m0s  85.00 iters/s
+load_OtherCities   [   8% ] 000/043 VUs  0m22.9s/5m0s  85.00 iters/s
+load_RUH           [   8% ] 000/043 VUs  0m22.9s/5m0s  85.00 iters/s
+
+running (0m24.0s), 0000/0301 VUs, 14245 complete and 0 interrupted iterations
+load_AMM           [   8% ] 000/043 VUs  0m23.9s/5m0s  85.00 iters/s
+load_DMM           [   8% ] 000/043 VUs  0m23.9s/5m0s  85.00 iters/s
+load_JED           [   8% ] 000/043 VUs  0m23.9s/5m0s  85.00 iters/s
+load_MAD           [   8% ] 000/043 VUs  0m23.9s/5m0s  85.00 iters/s
+load_MEC           [   8% ] 000/043 VUs  0m23.9s/5m0s  85.00 iters/s
+load_OtherCities   [   8% ] 000/043 VUs  0m23.9s/5m0s  85.00 iters/s
+load_RUH           [   8% ] 000/043 VUs  0m23.9s/5m0s  85.00 iters/s
+
+running (0m25.0s), 0000/0301 VUs, 14840 complete and 0 interrupted iterations
+load_AMM           [   8% ] 000/043 VUs  0m24.9s/5m0s  85.00 iters/s
+load_DMM           [   8% ] 000/043 VUs  0m24.9s/5m0s  85.00 iters/s
+load_JED           [   8% ] 000/043 VUs  0m24.9s/5m0s  85.00 iters/s
+load_MAD           [   8% ] 000/043 VUs  0m24.9s/5m0s  85.00 iters/s
+load_MEC           [   8% ] 000/043 VUs  0m24.9s/5m0s  85.00 iters/s
+load_OtherCities   [   8% ] 000/043 VUs  0m24.9s/5m0s  85.00 iters/s
+load_RUH           [   8% ] 000/043 VUs  0m24.9s/5m0s  85.00 iters/s
+
+running (0m26.0s), 0000/0301 VUs, 15435 complete and 0 interrupted iterations
+load_AMM           [   9% ] 000/043 VUs  0m25.9s/5m0s  85.00 iters/s
+load_DMM           [   9% ] 000/043 VUs  0m25.9s/5m0s  85.00 iters/s
+load_JED           [   9% ] 000/043 VUs  0m25.9s/5m0s  85.00 iters/s
+load_MAD           [   9% ] 000/043 VUs  0m25.9s/5m0s  85.00 iters/s
+load_MEC           [   9% ] 000/043 VUs  0m25.9s/5m0s  85.00 iters/s
+load_OtherCities   [   9% ] 000/043 VUs  0m25.9s/5m0s  85.00 iters/s
+load_RUH           [   9% ] 000/043 VUs  0m25.9s/5m0s  85.00 iters/s
+
+running (0m27.0s), 0000/0301 VUs, 16030 complete and 0 interrupted iterations
+load_AMM           [   9% ] 000/043 VUs  0m26.9s/5m0s  85.00 iters/s
+load_DMM           [   9% ] 000/043 VUs  0m26.9s/5m0s  85.00 iters/s
+load_JED           [   9% ] 000/043 VUs  0m26.9s/5m0s  85.00 iters/s
+load_MAD           [   9% ] 000/043 VUs  0m26.9s/5m0s  85.00 iters/s
+load_MEC           [   9% ] 000/043 VUs  0m26.9s/5m0s  85.00 iters/s
+load_OtherCities   [   9% ] 000/043 VUs  0m26.9s/5m0s  85.00 iters/s
+load_RUH           [   9% ] 000/043 VUs  0m26.9s/5m0s  85.00 iters/s
+
+running (0m28.0s), 0000/0301 VUs, 16625 complete and 0 interrupted iterations
+load_AMM           [   9% ] 000/043 VUs  0m27.9s/5m0s  85.00 iters/s
+load_DMM           [   9% ] 000/043 VUs  0m27.9s/5m0s  85.00 iters/s
+load_JED           [   9% ] 000/043 VUs  0m27.9s/5m0s  85.00 iters/s
+load_MAD           [   9% ] 000/043 VUs  0m27.9s/5m0s  85.00 iters/s
+load_MEC           [   9% ] 000/043 VUs  0m27.9s/5m0s  85.00 iters/s
+load_OtherCities   [   9% ] 000/043 VUs  0m27.9s/5m0s  85.00 iters/s
+load_RUH           [   9% ] 000/043 VUs  0m27.9s/5m0s  85.00 iters/s
+
+running (0m29.0s), 0000/0301 VUs, 17220 complete and 0 interrupted iterations
+load_AMM           [  10% ] 000/043 VUs  0m28.9s/5m0s  85.00 iters/s
+load_DMM           [  10% ] 000/043 VUs  0m28.9s/5m0s  85.00 iters/s
+load_JED           [  10% ] 000/043 VUs  0m28.9s/5m0s  85.00 iters/s
+load_MAD           [  10% ] 000/043 VUs  0m28.9s/5m0s  85.00 iters/s
+load_MEC           [  10% ] 000/043 VUs  0m28.9s/5m0s  85.00 iters/s
+load_OtherCities   [  10% ] 000/043 VUs  0m28.9s/5m0s  85.00 iters/s
+load_RUH           [  10% ] 000/043 VUs  0m28.9s/5m0s  85.00 iters/s
+
+running (0m30.0s), 0000/0301 VUs, 17815 complete and 0 interrupted iterations
+load_AMM           [  10% ] 000/043 VUs  0m29.9s/5m0s  85.00 iters/s
+load_DMM           [  10% ] 000/043 VUs  0m29.9s/5m0s  85.00 iters/s
+load_JED           [  10% ] 000/043 VUs  0m29.9s/5m0s  85.00 iters/s
+load_MAD           [  10% ] 000/043 VUs  0m29.9s/5m0s  85.00 iters/s
+load_MEC           [  10% ] 000/043 VUs  0m29.9s/5m0s  85.00 iters/s
+load_OtherCities   [  10% ] 000/043 VUs  0m29.9s/5m0s  85.00 iters/s
+load_RUH           [  10% ] 000/043 VUs  0m29.9s/5m0s  85.00 iters/s
+
+running (0m31.0s), 0000/0301 VUs, 18410 complete and 0 interrupted iterations
+load_AMM           [  10% ] 000/043 VUs  0m30.9s/5m0s  85.00 iters/s
+load_DMM           [  10% ] 000/043 VUs  0m30.9s/5m0s  85.00 iters/s
+load_JED           [  10% ] 000/043 VUs  0m30.9s/5m0s  85.00 iters/s
+load_MAD           [  10% ] 000/043 VUs  0m30.9s/5m0s  85.00 iters/s
+load_MEC           [  10% ] 000/043 VUs  0m30.9s/5m0s  85.00 iters/s
+load_OtherCities   [  10% ] 000/043 VUs  0m30.9s/5m0s  85.00 iters/s
+load_RUH           [  10% ] 000/043 VUs  0m30.9s/5m0s  85.00 iters/s
+
+running (0m32.0s), 0000/0301 VUs, 19005 complete and 0 interrupted iterations
+load_AMM           [  11% ] 000/043 VUs  0m31.9s/5m0s  85.00 iters/s
+load_DMM           [  11% ] 000/043 VUs  0m31.9s/5m0s  85.00 iters/s
+load_JED           [  11% ] 000/043 VUs  0m31.9s/5m0s  85.00 iters/s
+load_MAD           [  11% ] 000/043 VUs  0m31.9s/5m0s  85.00 iters/s
+load_MEC           [  11% ] 000/043 VUs  0m31.9s/5m0s  85.00 iters/s
+load_OtherCities   [  11% ] 000/043 VUs  0m31.9s/5m0s  85.00 iters/s
+load_RUH           [  11% ] 000/043 VUs  0m31.9s/5m0s  85.00 iters/s
+
+running (0m33.0s), 0000/0301 VUs, 19600 complete and 0 interrupted iterations
+load_AMM           [  11% ] 000/043 VUs  0m32.9s/5m0s  85.00 iters/s
+load_DMM           [  11% ] 000/043 VUs  0m32.9s/5m0s  85.00 iters/s
+load_JED           [  11% ] 000/043 VUs  0m32.9s/5m0s  85.00 iters/s
+load_MAD           [  11% ] 000/043 VUs  0m32.9s/5m0s  85.00 iters/s
+load_MEC           [  11% ] 000/043 VUs  0m32.9s/5m0s  85.00 iters/s
+load_OtherCities   [  11% ] 000/043 VUs  0m32.9s/5m0s  85.00 iters/s
+load_RUH           [  11% ] 000/043 VUs  0m32.9s/5m0s  85.00 iters/s
+
+running (0m34.0s), 0000/0301 VUs, 20195 complete and 0 interrupted iterations
+load_AMM           [  11% ] 000/043 VUs  0m33.9s/5m0s  85.00 iters/s
+load_DMM           [  11% ] 000/043 VUs  0m33.9s/5m0s  85.00 iters/s
+load_JED           [  11% ] 000/043 VUs  0m33.9s/5m0s  85.00 iters/s
+load_MAD           [  11% ] 000/043 VUs  0m33.9s/5m0s  85.00 iters/s
+load_MEC           [  11% ] 000/043 VUs  0m33.9s/5m0s  85.00 iters/s
+load_OtherCities   [  11% ] 000/043 VUs  0m33.9s/5m0s  85.00 iters/s
+load_RUH           [  11% ] 000/043 VUs  0m33.9s/5m0s  85.00 iters/s
+
+running (0m35.0s), 0000/0301 VUs, 20790 complete and 0 interrupted iterations
+load_AMM           [  12% ] 000/043 VUs  0m34.9s/5m0s  85.00 iters/s
+load_DMM           [  12% ] 000/043 VUs  0m34.9s/5m0s  85.00 iters/s
+load_JED           [  12% ] 000/043 VUs  0m34.9s/5m0s  85.00 iters/s
+load_MAD           [  12% ] 000/043 VUs  0m34.9s/5m0s  85.00 iters/s
+load_MEC           [  12% ] 000/043 VUs  0m34.9s/5m0s  85.00 iters/s
+load_OtherCities   [  12% ] 000/043 VUs  0m34.9s/5m0s  85.00 iters/s
+load_RUH           [  12% ] 000/043 VUs  0m34.9s/5m0s  85.00 iters/s
+
+running (0m36.0s), 0004/0301 VUs, 21381 complete and 0 interrupted iterations
+load_AMM           [  12% ] 001/043 VUs  0m35.9s/5m0s  85.00 iters/s
+load_DMM           [  12% ] 000/043 VUs  0m35.9s/5m0s  85.00 iters/s
+load_JED           [  12% ] 001/043 VUs  0m35.9s/5m0s  85.00 iters/s
+load_MAD           [  12% ] 000/043 VUs  0m35.9s/5m0s  85.00 iters/s
+load_MEC           [  12% ] 001/043 VUs  0m35.9s/5m0s  85.00 iters/s
+load_OtherCities   [  12% ] 000/043 VUs  0m35.9s/5m0s  85.00 iters/s
+load_RUH           [  12% ] 001/043 VUs  0m35.9s/5m0s  85.00 iters/s
+
+running (0m37.0s), 0000/0301 VUs, 21980 complete and 0 interrupted iterations
+load_AMM           [  12% ] 000/043 VUs  0m36.9s/5m0s  85.00 iters/s
+load_DMM           [  12% ] 000/043 VUs  0m36.9s/5m0s  85.00 iters/s
+load_JED           [  12% ] 000/043 VUs  0m36.9s/5m0s  85.00 iters/s
+load_MAD           [  12% ] 000/043 VUs  0m36.9s/5m0s  85.00 iters/s
+load_MEC           [  12% ] 000/043 VUs  0m36.9s/5m0s  85.00 iters/s
+load_OtherCities   [  12% ] 000/043 VUs  0m36.9s/5m0s  85.00 iters/s
+load_RUH           [  12% ] 000/043 VUs  0m36.9s/5m0s  85.00 iters/s
+
+running (0m38.0s), 0000/0301 VUs, 22575 complete and 0 interrupted iterations
+load_AMM           [  13% ] 000/043 VUs  0m37.9s/5m0s  85.00 iters/s
+load_DMM           [  13% ] 000/043 VUs  0m37.9s/5m0s  85.00 iters/s
+load_JED           [  13% ] 000/043 VUs  0m37.9s/5m0s  85.00 iters/s
+load_MAD           [  13% ] 000/043 VUs  0m37.9s/5m0s  85.00 iters/s
+load_MEC           [  13% ] 000/043 VUs  0m37.9s/5m0s  85.00 iters/s
+load_OtherCities   [  13% ] 000/043 VUs  0m37.9s/5m0s  85.00 iters/s
+load_RUH           [  13% ] 000/043 VUs  0m37.9s/5m0s  85.00 iters/s
+
+running (0m39.0s), 0000/0301 VUs, 23170 complete and 0 interrupted iterations
+load_AMM           [  13% ] 000/043 VUs  0m38.9s/5m0s  85.00 iters/s
+load_DMM           [  13% ] 000/043 VUs  0m38.9s/5m0s  85.00 iters/s
+load_JED           [  13% ] 000/043 VUs  0m38.9s/5m0s  85.00 iters/s
+load_MAD           [  13% ] 000/043 VUs  0m38.9s/5m0s  85.00 iters/s
+load_MEC           [  13% ] 000/043 VUs  0m38.9s/5m0s  85.00 iters/s
+load_OtherCities   [  13% ] 000/043 VUs  0m38.9s/5m0s  85.00 iters/s
+load_RUH           [  13% ] 000/043 VUs  0m38.9s/5m0s  85.00 iters/s
+
+running (0m40.0s), 0000/0301 VUs, 23765 complete and 0 interrupted iterations
+load_AMM           [  13% ] 000/043 VUs  0m39.9s/5m0s  85.00 iters/s
+load_DMM           [  13% ] 000/043 VUs  0m39.9s/5m0s  85.00 iters/s
+load_JED           [  13% ] 000/043 VUs  0m39.9s/5m0s  85.00 iters/s
+load_MAD           [  13% ] 000/043 VUs  0m39.9s/5m0s  85.00 iters/s
+load_MEC           [  13% ] 000/043 VUs  0m39.9s/5m0s  85.00 iters/s
+load_OtherCities   [  13% ] 000/043 VUs  0m39.9s/5m0s  85.00 iters/s
+load_RUH           [  13% ] 000/043 VUs  0m39.9s/5m0s  85.00 iters/s
+
+running (0m41.0s), 0000/0301 VUs, 24360 complete and 0 interrupted iterations
+load_AMM           [  14% ] 000/043 VUs  0m40.9s/5m0s  85.00 iters/s
+load_DMM           [  14% ] 000/043 VUs  0m40.9s/5m0s  85.00 iters/s
+load_JED           [  14% ] 000/043 VUs  0m40.9s/5m0s  85.00 iters/s
+load_MAD           [  14% ] 000/043 VUs  0m40.9s/5m0s  85.00 iters/s
+load_MEC           [  14% ] 000/043 VUs  0m40.9s/5m0s  85.00 iters/s
+load_OtherCities   [  14% ] 000/043 VUs  0m40.9s/5m0s  85.00 iters/s
+load_RUH           [  14% ] 000/043 VUs  0m40.9s/5m0s  85.00 iters/s
+
+running (0m42.0s), 0000/0301 VUs, 24955 complete and 0 interrupted iterations
+load_AMM           [  14% ] 000/043 VUs  0m41.9s/5m0s  85.00 iters/s
+load_DMM           [  14% ] 000/043 VUs  0m41.9s/5m0s  85.00 iters/s
+load_JED           [  14% ] 000/043 VUs  0m41.9s/5m0s  85.00 iters/s
+load_MAD           [  14% ] 000/043 VUs  0m41.9s/5m0s  85.00 iters/s
+load_MEC           [  14% ] 000/043 VUs  0m41.9s/5m0s  85.00 iters/s
+load_OtherCities   [  14% ] 000/043 VUs  0m41.9s/5m0s  85.00 iters/s
+load_RUH           [  14% ] 000/043 VUs  0m41.9s/5m0s  85.00 iters/s
+
+running (0m43.0s), 0000/0301 VUs, 25550 complete and 0 interrupted iterations
+load_AMM           [  14% ] 000/043 VUs  0m42.9s/5m0s  85.00 iters/s
+load_DMM           [  14% ] 000/043 VUs  0m42.9s/5m0s  85.00 iters/s
+load_JED           [  14% ] 000/043 VUs  0m42.9s/5m0s  85.00 iters/s
+load_MAD           [  14% ] 000/043 VUs  0m42.9s/5m0s  85.00 iters/s
+load_MEC           [  14% ] 000/043 VUs  0m42.9s/5m0s  85.00 iters/s
+load_OtherCities   [  14% ] 000/043 VUs  0m42.9s/5m0s  85.00 iters/s
+load_RUH           [  14% ] 000/043 VUs  0m42.9s/5m0s  85.00 iters/s
+
+running (0m44.0s), 0000/0301 VUs, 26145 complete and 0 interrupted iterations
+load_AMM           [  15% ] 000/043 VUs  0m43.9s/5m0s  85.00 iters/s
+load_DMM           [  15% ] 000/043 VUs  0m43.9s/5m0s  85.00 iters/s
+load_JED           [  15% ] 000/043 VUs  0m43.9s/5m0s  85.00 iters/s
+load_MAD           [  15% ] 000/043 VUs  0m43.9s/5m0s  85.00 iters/s
+load_MEC           [  15% ] 000/043 VUs  0m43.9s/5m0s  85.00 iters/s
+load_OtherCities   [  15% ] 000/043 VUs  0m43.9s/5m0s  85.00 iters/s
+load_RUH           [  15% ] 000/043 VUs  0m43.9s/5m0s  85.00 iters/s
+
+running (0m45.0s), 0003/0301 VUs, 26737 complete and 0 interrupted iterations
+load_AMM           [  15% ] 000/043 VUs  0m44.9s/5m0s  85.00 iters/s
+load_DMM           [  15% ] 000/043 VUs  0m44.9s/5m0s  85.00 iters/s
+load_JED           [  15% ] 000/043 VUs  0m44.9s/5m0s  85.00 iters/s
+load_MAD           [  15% ] 001/043 VUs  0m44.9s/5m0s  85.00 iters/s
+load_MEC           [  15% ] 001/043 VUs  0m44.9s/5m0s  85.00 iters/s
+load_OtherCities   [  15% ] 000/043 VUs  0m44.9s/5m0s  85.00 iters/s
+load_RUH           [  15% ] 001/043 VUs  0m44.9s/5m0s  85.00 iters/s
+
+running (0m46.0s), 0000/0301 VUs, 27335 complete and 0 interrupted iterations
+load_AMM           [  15% ] 000/043 VUs  0m45.9s/5m0s  85.00 iters/s
+load_DMM           [  15% ] 000/043 VUs  0m45.9s/5m0s  85.00 iters/s
+load_JED           [  15% ] 000/043 VUs  0m45.9s/5m0s  85.00 iters/s
+load_MAD           [  15% ] 000/043 VUs  0m45.9s/5m0s  85.00 iters/s
+load_MEC           [  15% ] 000/043 VUs  0m45.9s/5m0s  85.00 iters/s
+load_OtherCities   [  15% ] 000/043 VUs  0m45.9s/5m0s  85.00 iters/s
+load_RUH           [  15% ] 000/043 VUs  0m45.9s/5m0s  85.00 iters/s
+
+running (0m47.0s), 0000/0301 VUs, 27930 complete and 0 interrupted iterations
+load_AMM           [  16% ] 000/043 VUs  0m46.9s/5m0s  85.00 iters/s
+load_DMM           [  16% ] 000/043 VUs  0m46.9s/5m0s  85.00 iters/s
+load_JED           [  16% ] 000/043 VUs  0m46.9s/5m0s  85.00 iters/s
+load_MAD           [  16% ] 000/043 VUs  0m46.9s/5m0s  85.00 iters/s
+load_MEC           [  16% ] 000/043 VUs  0m46.9s/5m0s  85.00 iters/s
+load_OtherCities   [  16% ] 000/043 VUs  0m46.9s/5m0s  85.00 iters/s
+load_RUH           [  16% ] 000/043 VUs  0m46.9s/5m0s  85.00 iters/s
+
+running (0m48.0s), 0000/0301 VUs, 28525 complete and 0 interrupted iterations
+load_AMM           [  16% ] 000/043 VUs  0m47.9s/5m0s  85.00 iters/s
+load_DMM           [  16% ] 000/043 VUs  0m47.9s/5m0s  85.00 iters/s
+load_JED           [  16% ] 000/043 VUs  0m47.9s/5m0s  85.00 iters/s
+load_MAD           [  16% ] 000/043 VUs  0m47.9s/5m0s  85.00 iters/s
+load_MEC           [  16% ] 000/043 VUs  0m47.9s/5m0s  85.00 iters/s
+load_OtherCities   [  16% ] 000/043 VUs  0m47.9s/5m0s  85.00 iters/s
+load_RUH           [  16% ] 000/043 VUs  0m47.9s/5m0s  85.00 iters/s
+
+running (0m49.0s), 0008/0301 VUs, 29112 complete and 0 interrupted iterations
+load_AMM           [  16% ] 001/043 VUs  0m48.9s/5m0s  85.00 iters/s
+load_DMM           [  16% ] 001/043 VUs  0m48.9s/5m0s  85.00 iters/s
+load_JED           [  16% ] 002/043 VUs  0m48.9s/5m0s  85.00 iters/s
+load_MAD           [  16% ] 001/043 VUs  0m48.9s/5m0s  85.00 iters/s
+load_MEC           [  16% ] 001/043 VUs  0m48.9s/5m0s  85.00 iters/s
+load_OtherCities   [  16% ] 001/043 VUs  0m48.9s/5m0s  85.00 iters/s
+load_RUH           [  16% ] 001/043 VUs  0m48.9s/5m0s  85.00 iters/s
+
+running (0m50.0s), 0000/0301 VUs, 29715 complete and 0 interrupted iterations
+load_AMM           [  17% ] 000/043 VUs  0m49.9s/5m0s  85.00 iters/s
+load_DMM           [  17% ] 000/043 VUs  0m49.9s/5m0s  85.00 iters/s
+load_JED           [  17% ] 000/043 VUs  0m49.9s/5m0s  85.00 iters/s
+load_MAD           [  17% ] 000/043 VUs  0m49.9s/5m0s  85.00 iters/s
+load_MEC           [  17% ] 000/043 VUs  0m49.9s/5m0s  85.00 iters/s
+load_OtherCities   [  17% ] 000/043 VUs  0m49.9s/5m0s  85.00 iters/s
+load_RUH           [  17% ] 000/043 VUs  0m49.9s/5m0s  85.00 iters/s
+
+running (0m51.0s), 0000/0301 VUs, 30310 complete and 0 interrupted iterations
+load_AMM           [  17% ] 000/043 VUs  0m50.9s/5m0s  85.00 iters/s
+load_DMM           [  17% ] 000/043 VUs  0m50.9s/5m0s  85.00 iters/s
+load_JED           [  17% ] 000/043 VUs  0m50.9s/5m0s  85.00 iters/s
+load_MAD           [  17% ] 000/043 VUs  0m50.9s/5m0s  85.00 iters/s
+load_MEC           [  17% ] 000/043 VUs  0m50.9s/5m0s  85.00 iters/s
+load_OtherCities   [  17% ] 000/043 VUs  0m50.9s/5m0s  85.00 iters/s
+load_RUH           [  17% ] 000/043 VUs  0m50.9s/5m0s  85.00 iters/s
+
+running (0m52.0s), 0000/0301 VUs, 30905 complete and 0 interrupted iterations
+load_AMM           [  17% ] 000/043 VUs  0m51.9s/5m0s  85.00 iters/s
+load_DMM           [  17% ] 000/043 VUs  0m51.9s/5m0s  85.00 iters/s
+load_JED           [  17% ] 000/043 VUs  0m51.9s/5m0s  85.00 iters/s
+load_MAD           [  17% ] 000/043 VUs  0m51.9s/5m0s  85.00 iters/s
+load_MEC           [  17% ] 000/043 VUs  0m51.9s/5m0s  85.00 iters/s
+load_OtherCities   [  17% ] 000/043 VUs  0m51.9s/5m0s  85.00 iters/s
+load_RUH           [  17% ] 000/043 VUs  0m51.9s/5m0s  85.00 iters/s
+
+running (0m53.0s), 0000/0301 VUs, 31500 complete and 0 interrupted iterations
+load_AMM           [  18% ] 000/043 VUs  0m52.9s/5m0s  85.00 iters/s
+load_DMM           [  18% ] 000/043 VUs  0m52.9s/5m0s  85.00 iters/s
+load_JED           [  18% ] 000/043 VUs  0m52.9s/5m0s  85.00 iters/s
+load_MAD           [  18% ] 000/043 VUs  0m52.9s/5m0s  85.00 iters/s
+load_MEC           [  18% ] 000/043 VUs  0m52.9s/5m0s  85.00 iters/s
+load_OtherCities   [  18% ] 000/043 VUs  0m52.9s/5m0s  85.00 iters/s
+load_RUH           [  18% ] 000/043 VUs  0m52.9s/5m0s  85.00 iters/s
+
+running (0m54.0s), 0000/0301 VUs, 32095 complete and 0 interrupted iterations
+load_AMM           [  18% ] 000/043 VUs  0m53.9s/5m0s  85.00 iters/s
+load_DMM           [  18% ] 000/043 VUs  0m53.9s/5m0s  85.00 iters/s
+load_JED           [  18% ] 000/043 VUs  0m53.9s/5m0s  85.00 iters/s
+load_MAD           [  18% ] 000/043 VUs  0m53.9s/5m0s  85.00 iters/s
+load_MEC           [  18% ] 000/043 VUs  0m53.9s/5m0s  85.00 iters/s
+load_OtherCities   [  18% ] 000/043 VUs  0m53.9s/5m0s  85.00 iters/s
+load_RUH           [  18% ] 000/043 VUs  0m53.9s/5m0s  85.00 iters/s
+
+running (0m55.0s), 0000/0301 VUs, 32690 complete and 0 interrupted iterations
+load_AMM           [  18% ] 000/043 VUs  0m54.9s/5m0s  85.00 iters/s
+load_DMM           [  18% ] 000/043 VUs  0m54.9s/5m0s  85.00 iters/s
+load_JED           [  18% ] 000/043 VUs  0m54.9s/5m0s  85.00 iters/s
+load_MAD           [  18% ] 000/043 VUs  0m54.9s/5m0s  85.00 iters/s
+load_MEC           [  18% ] 000/043 VUs  0m54.9s/5m0s  85.00 iters/s
+load_OtherCities   [  18% ] 000/043 VUs  0m54.9s/5m0s  85.00 iters/s
+load_RUH           [  18% ] 000/043 VUs  0m54.9s/5m0s  85.00 iters/s
+
+running (0m56.0s), 0000/0301 VUs, 33285 complete and 0 interrupted iterations
+load_AMM           [  19% ] 000/043 VUs  0m55.9s/5m0s  85.00 iters/s
+load_DMM           [  19% ] 000/043 VUs  0m55.9s/5m0s  85.00 iters/s
+load_JED           [  19% ] 000/043 VUs  0m55.9s/5m0s  85.00 iters/s
+load_MAD           [  19% ] 000/043 VUs  0m55.9s/5m0s  85.00 iters/s
+load_MEC           [  19% ] 000/043 VUs  0m55.9s/5m0s  85.00 iters/s
+load_OtherCities   [  19% ] 000/043 VUs  0m55.9s/5m0s  85.00 iters/s
+load_RUH           [  19% ] 000/043 VUs  0m55.9s/5m0s  85.00 iters/s
+
+running (0m57.0s), 0000/0301 VUs, 33880 complete and 0 interrupted iterations
+load_AMM           [  19% ] 000/043 VUs  0m56.9s/5m0s  85.00 iters/s
+load_DMM           [  19% ] 000/043 VUs  0m56.9s/5m0s  85.00 iters/s
+load_JED           [  19% ] 000/043 VUs  0m56.9s/5m0s  85.00 iters/s
+load_MAD           [  19% ] 000/043 VUs  0m56.9s/5m0s  85.00 iters/s
+load_MEC           [  19% ] 000/043 VUs  0m56.9s/5m0s  85.00 iters/s
+load_OtherCities   [  19% ] 000/043 VUs  0m56.9s/5m0s  85.00 iters/s
+load_RUH           [  19% ] 000/043 VUs  0m56.9s/5m0s  85.00 iters/s
+
+running (0m58.0s), 0000/0301 VUs, 34475 complete and 0 interrupted iterations
+load_AMM           [  19% ] 000/043 VUs  0m57.9s/5m0s  85.00 iters/s
+load_DMM           [  19% ] 000/043 VUs  0m57.9s/5m0s  85.00 iters/s
+load_JED           [  19% ] 000/043 VUs  0m57.9s/5m0s  85.00 iters/s
+load_MAD           [  19% ] 000/043 VUs  0m57.9s/5m0s  85.00 iters/s
+load_MEC           [  19% ] 000/043 VUs  0m57.9s/5m0s  85.00 iters/s
+load_OtherCities   [  19% ] 000/043 VUs  0m57.9s/5m0s  85.00 iters/s
+load_RUH           [  19% ] 000/043 VUs  0m57.9s/5m0s  85.00 iters/s
+
+running (0m59.0s), 0000/0301 VUs, 35070 complete and 0 interrupted iterations
+load_AMM           [  20% ] 000/043 VUs  0m58.9s/5m0s  85.00 iters/s
+load_DMM           [  20% ] 000/043 VUs  0m58.9s/5m0s  85.00 iters/s
+load_JED           [  20% ] 000/043 VUs  0m58.9s/5m0s  85.00 iters/s
+load_MAD           [  20% ] 000/043 VUs  0m58.9s/5m0s  85.00 iters/s
+load_MEC           [  20% ] 000/043 VUs  0m58.9s/5m0s  85.00 iters/s
+load_OtherCities   [  20% ] 000/043 VUs  0m58.9s/5m0s  85.00 iters/s
+load_RUH           [  20% ] 000/043 VUs  0m58.9s/5m0s  85.00 iters/s
+
+running (1m00.0s), 0000/0301 VUs, 35665 complete and 0 interrupted iterations
+load_AMM           [  20% ] 000/043 VUs  0m59.9s/5m0s  85.00 iters/s
+load_DMM           [  20% ] 000/043 VUs  0m59.9s/5m0s  85.00 iters/s
+load_JED           [  20% ] 000/043 VUs  0m59.9s/5m0s  85.00 iters/s
+load_MAD           [  20% ] 000/043 VUs  0m59.9s/5m0s  85.00 iters/s
+load_MEC           [  20% ] 000/043 VUs  0m59.9s/5m0s  85.00 iters/s
+load_OtherCities   [  20% ] 000/043 VUs  0m59.9s/5m0s  85.00 iters/s
+load_RUH           [  20% ] 000/043 VUs  0m59.9s/5m0s  85.00 iters/s
+
+running (1m01.0s), 0000/0301 VUs, 36260 complete and 0 interrupted iterations
+load_AMM           [  20% ] 000/043 VUs  1m00.9s/5m0s  85.00 iters/s
+load_DMM           [  20% ] 000/043 VUs  1m00.9s/5m0s  85.00 iters/s
+load_JED           [  20% ] 000/043 VUs  1m00.9s/5m0s  85.00 iters/s
+load_MAD           [  20% ] 000/043 VUs  1m00.9s/5m0s  85.00 iters/s
+load_MEC           [  20% ] 000/043 VUs  1m00.9s/5m0s  85.00 iters/s
+load_OtherCities   [  20% ] 000/043 VUs  1m00.9s/5m0s  85.00 iters/s
+load_RUH           [  20% ] 000/043 VUs  1m00.9s/5m0s  85.00 iters/s
+
+running (1m02.0s), 0000/0301 VUs, 36855 complete and 0 interrupted iterations
+load_AMM           [  21% ] 000/043 VUs  1m01.9s/5m0s  85.00 iters/s
+load_DMM           [  21% ] 000/043 VUs  1m01.9s/5m0s  85.00 iters/s
+load_JED           [  21% ] 000/043 VUs  1m01.9s/5m0s  85.00 iters/s
+load_MAD           [  21% ] 000/043 VUs  1m01.9s/5m0s  85.00 iters/s
+load_MEC           [  21% ] 000/043 VUs  1m01.9s/5m0s  85.00 iters/s
+load_OtherCities   [  21% ] 000/043 VUs  1m01.9s/5m0s  85.00 iters/s
+load_RUH           [  21% ] 000/043 VUs  1m01.9s/5m0s  85.00 iters/s
+
+running (1m03.0s), 0000/0301 VUs, 37450 complete and 0 interrupted iterations
+load_AMM           [  21% ] 000/043 VUs  1m02.9s/5m0s  85.00 iters/s
+load_DMM           [  21% ] 000/043 VUs  1m02.9s/5m0s  85.00 iters/s
+load_JED           [  21% ] 000/043 VUs  1m02.9s/5m0s  85.00 iters/s
+load_MAD           [  21% ] 000/043 VUs  1m02.9s/5m0s  85.00 iters/s
+load_MEC           [  21% ] 000/043 VUs  1m02.9s/5m0s  85.00 iters/s
+load_OtherCities   [  21% ] 000/043 VUs  1m02.9s/5m0s  85.00 iters/s
+load_RUH           [  21% ] 000/043 VUs  1m02.9s/5m0s  85.00 iters/s
+
+running (1m04.0s), 0010/0301 VUs, 38035 complete and 0 interrupted iterations
+load_AMM           [  21% ] 001/043 VUs  1m03.9s/5m0s  85.00 iters/s
+load_DMM           [  21% ] 002/043 VUs  1m03.9s/5m0s  85.00 iters/s
+load_JED           [  21% ] 001/043 VUs  1m03.9s/5m0s  85.00 iters/s
+load_MAD           [  21% ] 001/043 VUs  1m03.9s/5m0s  85.00 iters/s
+load_MEC           [  21% ] 001/043 VUs  1m03.9s/5m0s  85.00 iters/s
+load_OtherCities   [  21% ] 002/043 VUs  1m03.9s/5m0s  85.00 iters/s
+load_RUH           [  21% ] 002/043 VUs  1m03.9s/5m0s  85.00 iters/s
+
+running (1m05.0s), 0000/0301 VUs, 38640 complete and 0 interrupted iterations
+load_AMM           [  22% ] 000/043 VUs  1m04.9s/5m0s  85.00 iters/s
+load_DMM           [  22% ] 000/043 VUs  1m04.9s/5m0s  85.00 iters/s
+load_JED           [  22% ] 000/043 VUs  1m04.9s/5m0s  85.00 iters/s
+load_MAD           [  22% ] 000/043 VUs  1m04.9s/5m0s  85.00 iters/s
+load_MEC           [  22% ] 000/043 VUs  1m04.9s/5m0s  85.00 iters/s
+load_OtherCities   [  22% ] 000/043 VUs  1m04.9s/5m0s  85.00 iters/s
+load_RUH           [  22% ] 000/043 VUs  1m04.9s/5m0s  85.00 iters/s
+
+running (1m06.0s), 0000/0301 VUs, 39235 complete and 0 interrupted iterations
+load_AMM           [  22% ] 000/043 VUs  1m05.9s/5m0s  85.00 iters/s
+load_DMM           [  22% ] 000/043 VUs  1m05.9s/5m0s  85.00 iters/s
+load_JED           [  22% ] 000/043 VUs  1m05.9s/5m0s  85.00 iters/s
+load_MAD           [  22% ] 000/043 VUs  1m05.9s/5m0s  85.00 iters/s
+load_MEC           [  22% ] 000/043 VUs  1m05.9s/5m0s  85.00 iters/s
+load_OtherCities   [  22% ] 000/043 VUs  1m05.9s/5m0s  85.00 iters/s
+load_RUH           [  22% ] 000/043 VUs  1m05.9s/5m0s  85.00 iters/s
+
+running (1m07.0s), 0000/0301 VUs, 39830 complete and 0 interrupted iterations
+load_AMM           [  22% ] 000/043 VUs  1m06.9s/5m0s  85.00 iters/s
+load_DMM           [  22% ] 000/043 VUs  1m06.9s/5m0s  85.00 iters/s
+load_JED           [  22% ] 000/043 VUs  1m06.9s/5m0s  85.00 iters/s
+load_MAD           [  22% ] 000/043 VUs  1m06.9s/5m0s  85.00 iters/s
+load_MEC           [  22% ] 000/043 VUs  1m06.9s/5m0s  85.00 iters/s
+load_OtherCities   [  22% ] 000/043 VUs  1m06.9s/5m0s  85.00 iters/s
+load_RUH           [  22% ] 000/043 VUs  1m06.9s/5m0s  85.00 iters/s
+
+running (1m08.0s), 0000/0301 VUs, 40425 complete and 0 interrupted iterations
+load_AMM           [  23% ] 000/043 VUs  1m07.9s/5m0s  85.00 iters/s
+load_DMM           [  23% ] 000/043 VUs  1m07.9s/5m0s  85.00 iters/s
+load_JED           [  23% ] 000/043 VUs  1m07.9s/5m0s  85.00 iters/s
+load_MAD           [  23% ] 000/043 VUs  1m07.9s/5m0s  85.00 iters/s
+load_MEC           [  23% ] 000/043 VUs  1m07.9s/5m0s  85.00 iters/s
+load_OtherCities   [  23% ] 000/043 VUs  1m07.9s/5m0s  85.00 iters/s
+load_RUH           [  23% ] 000/043 VUs  1m07.9s/5m0s  85.00 iters/s
+
+running (1m09.0s), 0000/0301 VUs, 41020 complete and 0 interrupted iterations
+load_AMM           [  23% ] 000/043 VUs  1m08.9s/5m0s  85.00 iters/s
+load_DMM           [  23% ] 000/043 VUs  1m08.9s/5m0s  85.00 iters/s
+load_JED           [  23% ] 000/043 VUs  1m08.9s/5m0s  85.00 iters/s
+load_MAD           [  23% ] 000/043 VUs  1m08.9s/5m0s  85.00 iters/s
+load_MEC           [  23% ] 000/043 VUs  1m08.9s/5m0s  85.00 iters/s
+load_OtherCities   [  23% ] 000/043 VUs  1m08.9s/5m0s  85.00 iters/s
+load_RUH           [  23% ] 000/043 VUs  1m08.9s/5m0s  85.00 iters/s
+
+running (1m10.0s), 0000/0301 VUs, 41615 complete and 0 interrupted iterations
+load_AMM           [  23% ] 000/043 VUs  1m09.9s/5m0s  85.00 iters/s
+load_DMM           [  23% ] 000/043 VUs  1m09.9s/5m0s  85.00 iters/s
+load_JED           [  23% ] 000/043 VUs  1m09.9s/5m0s  85.00 iters/s
+load_MAD           [  23% ] 000/043 VUs  1m09.9s/5m0s  85.00 iters/s
+load_MEC           [  23% ] 000/043 VUs  1m09.9s/5m0s  85.00 iters/s
+load_OtherCities   [  23% ] 000/043 VUs  1m09.9s/5m0s  85.00 iters/s
+load_RUH           [  23% ] 000/043 VUs  1m09.9s/5m0s  85.00 iters/s
+
+running (1m11.0s), 0000/0301 VUs, 42210 complete and 0 interrupted iterations
+load_AMM           [  24% ] 000/043 VUs  1m10.9s/5m0s  85.00 iters/s
+load_DMM           [  24% ] 000/043 VUs  1m10.9s/5m0s  85.00 iters/s
+load_JED           [  24% ] 000/043 VUs  1m10.9s/5m0s  85.00 iters/s
+load_MAD           [  24% ] 000/043 VUs  1m10.9s/5m0s  85.00 iters/s
+load_MEC           [  24% ] 000/043 VUs  1m10.9s/5m0s  85.00 iters/s
+load_OtherCities   [  24% ] 000/043 VUs  1m10.9s/5m0s  85.00 iters/s
+load_RUH           [  24% ] 000/043 VUs  1m10.9s/5m0s  85.00 iters/s
+
+running (1m12.0s), 0000/0301 VUs, 42805 complete and 0 interrupted iterations
+load_AMM           [  24% ] 000/043 VUs  1m11.9s/5m0s  85.00 iters/s
+load_DMM           [  24% ] 000/043 VUs  1m11.9s/5m0s  85.00 iters/s
+load_JED           [  24% ] 000/043 VUs  1m11.9s/5m0s  85.00 iters/s
+load_MAD           [  24% ] 000/043 VUs  1m11.9s/5m0s  85.00 iters/s
+load_MEC           [  24% ] 000/043 VUs  1m11.9s/5m0s  85.00 iters/s
+load_OtherCities   [  24% ] 000/043 VUs  1m11.9s/5m0s  85.00 iters/s
+load_RUH           [  24% ] 000/043 VUs  1m11.9s/5m0s  85.00 iters/s
+
+running (1m13.0s), 0000/0301 VUs, 43400 complete and 0 interrupted iterations
+load_AMM           [  24% ] 000/043 VUs  1m12.9s/5m0s  85.00 iters/s
+load_DMM           [  24% ] 000/043 VUs  1m12.9s/5m0s  85.00 iters/s
+load_JED           [  24% ] 000/043 VUs  1m12.9s/5m0s  85.00 iters/s
+load_MAD           [  24% ] 000/043 VUs  1m12.9s/5m0s  85.00 iters/s
+load_MEC           [  24% ] 000/043 VUs  1m12.9s/5m0s  85.00 iters/s
+load_OtherCities   [  24% ] 000/043 VUs  1m12.9s/5m0s  85.00 iters/s
+load_RUH           [  24% ] 000/043 VUs  1m12.9s/5m0s  85.00 iters/s
+
+running (1m14.0s), 0000/0301 VUs, 43995 complete and 0 interrupted iterations
+load_AMM           [  25% ] 000/043 VUs  1m13.9s/5m0s  85.00 iters/s
+load_DMM           [  25% ] 000/043 VUs  1m13.9s/5m0s  85.00 iters/s
+load_JED           [  25% ] 000/043 VUs  1m13.9s/5m0s  85.00 iters/s
+load_MAD           [  25% ] 000/043 VUs  1m13.9s/5m0s  85.00 iters/s
+load_MEC           [  25% ] 000/043 VUs  1m13.9s/5m0s  85.00 iters/s
+load_OtherCities   [  25% ] 000/043 VUs  1m13.9s/5m0s  85.00 iters/s
+load_RUH           [  25% ] 000/043 VUs  1m13.9s/5m0s  85.00 iters/s
+
+running (1m15.0s), 0000/0301 VUs, 44590 complete and 0 interrupted iterations
+load_AMM           [  25% ] 000/043 VUs  1m14.9s/5m0s  85.00 iters/s
+load_DMM           [  25% ] 000/043 VUs  1m14.9s/5m0s  85.00 iters/s
+load_JED           [  25% ] 000/043 VUs  1m14.9s/5m0s  85.00 iters/s
+load_MAD           [  25% ] 000/043 VUs  1m14.9s/5m0s  85.00 iters/s
+load_MEC           [  25% ] 000/043 VUs  1m14.9s/5m0s  85.00 iters/s
+load_OtherCities   [  25% ] 000/043 VUs  1m14.9s/5m0s  85.00 iters/s
+load_RUH           [  25% ] 000/043 VUs  1m14.9s/5m0s  85.00 iters/s
+
+running (1m16.0s), 0000/0301 VUs, 45185 complete and 0 interrupted iterations
+load_AMM           [  25% ] 000/043 VUs  1m15.9s/5m0s  85.00 iters/s
+load_DMM           [  25% ] 000/043 VUs  1m15.9s/5m0s  85.00 iters/s
+load_JED           [  25% ] 000/043 VUs  1m15.9s/5m0s  85.00 iters/s
+load_MAD           [  25% ] 000/043 VUs  1m15.9s/5m0s  85.00 iters/s
+load_MEC           [  25% ] 000/043 VUs  1m15.9s/5m0s  85.00 iters/s
+load_OtherCities   [  25% ] 000/043 VUs  1m15.9s/5m0s  85.00 iters/s
+load_RUH           [  25% ] 000/043 VUs  1m15.9s/5m0s  85.00 iters/s
+
+running (1m17.0s), 0000/0301 VUs, 45780 complete and 0 interrupted iterations
+load_AMM           [  26% ] 000/043 VUs  1m16.9s/5m0s  85.00 iters/s
+load_DMM           [  26% ] 000/043 VUs  1m16.9s/5m0s  85.00 iters/s
+load_JED           [  26% ] 000/043 VUs  1m16.9s/5m0s  85.00 iters/s
+load_MAD           [  26% ] 000/043 VUs  1m16.9s/5m0s  85.00 iters/s
+load_MEC           [  26% ] 000/043 VUs  1m16.9s/5m0s  85.00 iters/s
+load_OtherCities   [  26% ] 000/043 VUs  1m16.9s/5m0s  85.00 iters/s
+load_RUH           [  26% ] 000/043 VUs  1m16.9s/5m0s  85.00 iters/s
+
+running (1m18.0s), 0000/0301 VUs, 46375 complete and 0 interrupted iterations
+load_AMM           [  26% ] 000/043 VUs  1m17.9s/5m0s  85.00 iters/s
+load_DMM           [  26% ] 000/043 VUs  1m17.9s/5m0s  85.00 iters/s
+load_JED           [  26% ] 000/043 VUs  1m17.9s/5m0s  85.00 iters/s
+load_MAD           [  26% ] 000/043 VUs  1m17.9s/5m0s  85.00 iters/s
+load_MEC           [  26% ] 000/043 VUs  1m17.9s/5m0s  85.00 iters/s
+load_OtherCities   [  26% ] 000/043 VUs  1m17.9s/5m0s  85.00 iters/s
+load_RUH           [  26% ] 000/043 VUs  1m17.9s/5m0s  85.00 iters/s
+
+running (1m19.0s), 0000/0301 VUs, 46970 complete and 0 interrupted iterations
+load_AMM           [  26% ] 000/043 VUs  1m18.9s/5m0s  85.00 iters/s
+load_DMM           [  26% ] 000/043 VUs  1m18.9s/5m0s  85.00 iters/s
+load_JED           [  26% ] 000/043 VUs  1m18.9s/5m0s  85.00 iters/s
+load_MAD           [  26% ] 000/043 VUs  1m18.9s/5m0s  85.00 iters/s
+load_MEC           [  26% ] 000/043 VUs  1m18.9s/5m0s  85.00 iters/s
+load_OtherCities   [  26% ] 000/043 VUs  1m18.9s/5m0s  85.00 iters/s
+load_RUH           [  26% ] 000/043 VUs  1m18.9s/5m0s  85.00 iters/s
+
+running (1m20.0s), 0000/0301 VUs, 47565 complete and 0 interrupted iterations
+load_AMM           [  27% ] 000/043 VUs  1m19.9s/5m0s  85.00 iters/s
+load_DMM           [  27% ] 000/043 VUs  1m19.9s/5m0s  85.00 iters/s
+load_JED           [  27% ] 000/043 VUs  1m19.9s/5m0s  85.00 iters/s
+load_MAD           [  27% ] 000/043 VUs  1m19.9s/5m0s  85.00 iters/s
+load_MEC           [  27% ] 000/043 VUs  1m19.9s/5m0s  85.00 iters/s
+load_OtherCities   [  27% ] 000/043 VUs  1m19.9s/5m0s  85.00 iters/s
+load_RUH           [  27% ] 000/043 VUs  1m19.9s/5m0s  85.00 iters/s
+
+running (1m21.0s), 0000/0301 VUs, 48160 complete and 0 interrupted iterations
+load_AMM           [  27% ] 000/043 VUs  1m20.9s/5m0s  85.00 iters/s
+load_DMM           [  27% ] 000/043 VUs  1m20.9s/5m0s  85.00 iters/s
+load_JED           [  27% ] 000/043 VUs  1m20.9s/5m0s  85.00 iters/s
+load_MAD           [  27% ] 000/043 VUs  1m20.9s/5m0s  85.00 iters/s
+load_MEC           [  27% ] 000/043 VUs  1m20.9s/5m0s  85.00 iters/s
+load_OtherCities   [  27% ] 000/043 VUs  1m20.9s/5m0s  85.00 iters/s
+load_RUH           [  27% ] 000/043 VUs  1m20.9s/5m0s  85.00 iters/s
+
+running (1m22.0s), 0000/0301 VUs, 48755 complete and 0 interrupted iterations
+load_AMM           [  27% ] 000/043 VUs  1m21.9s/5m0s  85.00 iters/s
+load_DMM           [  27% ] 000/043 VUs  1m21.9s/5m0s  85.00 iters/s
+load_JED           [  27% ] 000/043 VUs  1m21.9s/5m0s  85.00 iters/s
+load_MAD           [  27% ] 000/043 VUs  1m21.9s/5m0s  85.00 iters/s
+load_MEC           [  27% ] 000/043 VUs  1m21.9s/5m0s  85.00 iters/s
+load_OtherCities   [  27% ] 000/043 VUs  1m21.9s/5m0s  85.00 iters/s
+load_RUH           [  27% ] 000/043 VUs  1m21.9s/5m0s  85.00 iters/s
+
+running (1m23.0s), 0000/0301 VUs, 49350 complete and 0 interrupted iterations
+load_AMM           [  28% ] 000/043 VUs  1m22.9s/5m0s  85.00 iters/s
+load_DMM           [  28% ] 000/043 VUs  1m22.9s/5m0s  85.00 iters/s
+load_JED           [  28% ] 000/043 VUs  1m22.9s/5m0s  85.00 iters/s
+load_MAD           [  28% ] 000/043 VUs  1m22.9s/5m0s  85.00 iters/s
+load_MEC           [  28% ] 000/043 VUs  1m22.9s/5m0s  85.00 iters/s
+load_OtherCities   [  28% ] 000/043 VUs  1m22.9s/5m0s  85.00 iters/s
+load_RUH           [  28% ] 000/043 VUs  1m22.9s/5m0s  85.00 iters/s
+
+running (1m24.0s), 0000/0301 VUs, 49945 complete and 0 interrupted iterations
+load_AMM           [  28% ] 000/043 VUs  1m23.9s/5m0s  85.00 iters/s
+load_DMM           [  28% ] 000/043 VUs  1m23.9s/5m0s  85.00 iters/s
+load_JED           [  28% ] 000/043 VUs  1m23.9s/5m0s  85.00 iters/s
+load_MAD           [  28% ] 000/043 VUs  1m23.9s/5m0s  85.00 iters/s
+load_MEC           [  28% ] 000/043 VUs  1m23.9s/5m0s  85.00 iters/s
+load_OtherCities   [  28% ] 000/043 VUs  1m23.9s/5m0s  85.00 iters/s
+load_RUH           [  28% ] 000/043 VUs  1m23.9s/5m0s  85.00 iters/s
+
+running (1m25.0s), 0000/0301 VUs, 50540 complete and 0 interrupted iterations
+load_AMM           [  28% ] 000/043 VUs  1m24.9s/5m0s  85.00 iters/s
+load_DMM           [  28% ] 000/043 VUs  1m24.9s/5m0s  85.00 iters/s
+load_JED           [  28% ] 000/043 VUs  1m24.9s/5m0s  85.00 iters/s
+load_MAD           [  28% ] 000/043 VUs  1m24.9s/5m0s  85.00 iters/s
+load_MEC           [  28% ] 000/043 VUs  1m24.9s/5m0s  85.00 iters/s
+load_OtherCities   [  28% ] 000/043 VUs  1m24.9s/5m0s  85.00 iters/s
+load_RUH           [  28% ] 000/043 VUs  1m24.9s/5m0s  85.00 iters/s
+
+running (1m26.0s), 0000/0301 VUs, 51135 complete and 0 interrupted iterations
+load_AMM           [  29% ] 000/043 VUs  1m25.9s/5m0s  85.00 iters/s
+load_DMM           [  29% ] 000/043 VUs  1m25.9s/5m0s  85.00 iters/s
+load_JED           [  29% ] 000/043 VUs  1m25.9s/5m0s  85.00 iters/s
+load_MAD           [  29% ] 000/043 VUs  1m25.9s/5m0s  85.00 iters/s
+load_MEC           [  29% ] 000/043 VUs  1m25.9s/5m0s  85.00 iters/s
+load_OtherCities   [  29% ] 000/043 VUs  1m25.9s/5m0s  85.00 iters/s
+load_RUH           [  29% ] 000/043 VUs  1m25.9s/5m0s  85.00 iters/s
+
+running (1m27.0s), 0000/0301 VUs, 51730 complete and 0 interrupted iterations
+load_AMM           [  29% ] 000/043 VUs  1m26.9s/5m0s  85.00 iters/s
+load_DMM           [  29% ] 000/043 VUs  1m26.9s/5m0s  85.00 iters/s
+load_JED           [  29% ] 000/043 VUs  1m26.9s/5m0s  85.00 iters/s
+load_MAD           [  29% ] 000/043 VUs  1m26.9s/5m0s  85.00 iters/s
+load_MEC           [  29% ] 000/043 VUs  1m26.9s/5m0s  85.00 iters/s
+load_OtherCities   [  29% ] 000/043 VUs  1m26.9s/5m0s  85.00 iters/s
+load_RUH           [  29% ] 000/043 VUs  1m26.9s/5m0s  85.00 iters/s
+
+running (1m28.0s), 0000/0301 VUs, 52325 complete and 0 interrupted iterations
+load_AMM           [  29% ] 000/043 VUs  1m27.9s/5m0s  85.00 iters/s
+load_DMM           [  29% ] 000/043 VUs  1m27.9s/5m0s  85.00 iters/s
+load_JED           [  29% ] 000/043 VUs  1m27.9s/5m0s  85.00 iters/s
+load_MAD           [  29% ] 000/043 VUs  1m27.9s/5m0s  85.00 iters/s
+load_MEC           [  29% ] 000/043 VUs  1m27.9s/5m0s  85.00 iters/s
+load_OtherCities   [  29% ] 000/043 VUs  1m27.9s/5m0s  85.00 iters/s
+load_RUH           [  29% ] 000/043 VUs  1m27.9s/5m0s  85.00 iters/s
+
+running (1m29.0s), 0000/0301 VUs, 52920 complete and 0 interrupted iterations
+load_AMM           [  30% ] 000/043 VUs  1m28.9s/5m0s  85.00 iters/s
+load_DMM           [  30% ] 000/043 VUs  1m28.9s/5m0s  85.00 iters/s
+load_JED           [  30% ] 000/043 VUs  1m28.9s/5m0s  85.00 iters/s
+load_MAD           [  30% ] 000/043 VUs  1m28.9s/5m0s  85.00 iters/s
+load_MEC           [  30% ] 000/043 VUs  1m28.9s/5m0s  85.00 iters/s
+load_OtherCities   [  30% ] 000/043 VUs  1m28.9s/5m0s  85.00 iters/s
+load_RUH           [  30% ] 000/043 VUs  1m28.9s/5m0s  85.00 iters/s
+
+running (1m30.0s), 0000/0301 VUs, 53515 complete and 0 interrupted iterations
+load_AMM           [  30% ] 000/043 VUs  1m29.9s/5m0s  85.00 iters/s
+load_DMM           [  30% ] 000/043 VUs  1m29.9s/5m0s  85.00 iters/s
+load_JED           [  30% ] 000/043 VUs  1m29.9s/5m0s  85.00 iters/s
+load_MAD           [  30% ] 000/043 VUs  1m29.9s/5m0s  85.00 iters/s
+load_MEC           [  30% ] 000/043 VUs  1m29.9s/5m0s  85.00 iters/s
+load_OtherCities   [  30% ] 000/043 VUs  1m29.9s/5m0s  85.00 iters/s
+load_RUH           [  30% ] 000/043 VUs  1m29.9s/5m0s  85.00 iters/s
+
+running (1m31.0s), 0000/0301 VUs, 54110 complete and 0 interrupted iterations
+load_AMM           [  30% ] 000/043 VUs  1m30.9s/5m0s  85.00 iters/s
+load_DMM           [  30% ] 000/043 VUs  1m30.9s/5m0s  85.00 iters/s
+load_JED           [  30% ] 000/043 VUs  1m30.9s/5m0s  85.00 iters/s
+load_MAD           [  30% ] 000/043 VUs  1m30.9s/5m0s  85.00 iters/s
+load_MEC           [  30% ] 000/043 VUs  1m30.9s/5m0s  85.00 iters/s
+load_OtherCities   [  30% ] 000/043 VUs  1m30.9s/5m0s  85.00 iters/s
+load_RUH           [  30% ] 000/043 VUs  1m30.9s/5m0s  85.00 iters/s
+
+running (1m32.0s), 0000/0301 VUs, 54705 complete and 0 interrupted iterations
+load_AMM           [  31% ] 000/043 VUs  1m31.9s/5m0s  85.00 iters/s
+load_DMM           [  31% ] 000/043 VUs  1m31.9s/5m0s  85.00 iters/s
+load_JED           [  31% ] 000/043 VUs  1m31.9s/5m0s  85.00 iters/s
+load_MAD           [  31% ] 000/043 VUs  1m31.9s/5m0s  85.00 iters/s
+load_MEC           [  31% ] 000/043 VUs  1m31.9s/5m0s  85.00 iters/s
+load_OtherCities   [  31% ] 000/043 VUs  1m31.9s/5m0s  85.00 iters/s
+load_RUH           [  31% ] 000/043 VUs  1m31.9s/5m0s  85.00 iters/s
+
+running (1m33.0s), 0000/0301 VUs, 55300 complete and 0 interrupted iterations
+load_AMM           [  31% ] 000/043 VUs  1m32.9s/5m0s  85.00 iters/s
+load_DMM           [  31% ] 000/043 VUs  1m32.9s/5m0s  85.00 iters/s
+load_JED           [  31% ] 000/043 VUs  1m32.9s/5m0s  85.00 iters/s
+load_MAD           [  31% ] 000/043 VUs  1m32.9s/5m0s  85.00 iters/s
+load_MEC           [  31% ] 000/043 VUs  1m32.9s/5m0s  85.00 iters/s
+load_OtherCities   [  31% ] 000/043 VUs  1m32.9s/5m0s  85.00 iters/s
+load_RUH           [  31% ] 000/043 VUs  1m32.9s/5m0s  85.00 iters/s
+
+running (1m34.0s), 0000/0301 VUs, 55895 complete and 0 interrupted iterations
+load_AMM           [  31% ] 000/043 VUs  1m33.9s/5m0s  85.00 iters/s
+load_DMM           [  31% ] 000/043 VUs  1m33.9s/5m0s  85.00 iters/s
+load_JED           [  31% ] 000/043 VUs  1m33.9s/5m0s  85.00 iters/s
+load_MAD           [  31% ] 000/043 VUs  1m33.9s/5m0s  85.00 iters/s
+load_MEC           [  31% ] 000/043 VUs  1m33.9s/5m0s  85.00 iters/s
+load_OtherCities   [  31% ] 000/043 VUs  1m33.9s/5m0s  85.00 iters/s
+load_RUH           [  31% ] 000/043 VUs  1m33.9s/5m0s  85.00 iters/s
+
+running (1m35.0s), 0000/0301 VUs, 56490 complete and 0 interrupted iterations
+load_AMM           [  32% ] 000/043 VUs  1m34.9s/5m0s  85.00 iters/s
+load_DMM           [  32% ] 000/043 VUs  1m34.9s/5m0s  85.00 iters/s
+load_JED           [  32% ] 000/043 VUs  1m34.9s/5m0s  85.00 iters/s
+load_MAD           [  32% ] 000/043 VUs  1m34.9s/5m0s  85.00 iters/s
+load_MEC           [  32% ] 000/043 VUs  1m34.9s/5m0s  85.00 iters/s
+load_OtherCities   [  32% ] 000/043 VUs  1m34.9s/5m0s  85.00 iters/s
+load_RUH           [  32% ] 000/043 VUs  1m34.9s/5m0s  85.00 iters/s
+
+running (1m36.0s), 0000/0301 VUs, 57085 complete and 0 interrupted iterations
+load_AMM           [  32% ] 000/043 VUs  1m35.9s/5m0s  85.00 iters/s
+load_DMM           [  32% ] 000/043 VUs  1m35.9s/5m0s  85.00 iters/s
+load_JED           [  32% ] 000/043 VUs  1m35.9s/5m0s  85.00 iters/s
+load_MAD           [  32% ] 000/043 VUs  1m35.9s/5m0s  85.00 iters/s
+load_MEC           [  32% ] 000/043 VUs  1m35.9s/5m0s  85.00 iters/s
+load_OtherCities   [  32% ] 000/043 VUs  1m35.9s/5m0s  85.00 iters/s
+load_RUH           [  32% ] 000/043 VUs  1m35.9s/5m0s  85.00 iters/s
+
+running (1m37.0s), 0000/0301 VUs, 57680 complete and 0 interrupted iterations
+load_AMM           [  32% ] 000/043 VUs  1m36.9s/5m0s  85.00 iters/s
+load_DMM           [  32% ] 000/043 VUs  1m36.9s/5m0s  85.00 iters/s
+load_JED           [  32% ] 000/043 VUs  1m36.9s/5m0s  85.00 iters/s
+load_MAD           [  32% ] 000/043 VUs  1m36.9s/5m0s  85.00 iters/s
+load_MEC           [  32% ] 000/043 VUs  1m36.9s/5m0s  85.00 iters/s
+load_OtherCities   [  32% ] 000/043 VUs  1m36.9s/5m0s  85.00 iters/s
+load_RUH           [  32% ] 000/043 VUs  1m36.9s/5m0s  85.00 iters/s
+
+running (1m38.0s), 0000/0301 VUs, 58275 complete and 0 interrupted iterations
+load_AMM           [  33% ] 000/043 VUs  1m37.9s/5m0s  85.00 iters/s
+load_DMM           [  33% ] 000/043 VUs  1m37.9s/5m0s  85.00 iters/s
+load_JED           [  33% ] 000/043 VUs  1m37.9s/5m0s  85.00 iters/s
+load_MAD           [  33% ] 000/043 VUs  1m37.9s/5m0s  85.00 iters/s
+load_MEC           [  33% ] 000/043 VUs  1m37.9s/5m0s  85.00 iters/s
+load_OtherCities   [  33% ] 000/043 VUs  1m37.9s/5m0s  85.00 iters/s
+load_RUH           [  33% ] 000/043 VUs  1m37.9s/5m0s  85.00 iters/s
+
+running (1m39.0s), 0000/0301 VUs, 58870 complete and 0 interrupted iterations
+load_AMM           [  33% ] 000/043 VUs  1m38.9s/5m0s  85.00 iters/s
+load_DMM           [  33% ] 000/043 VUs  1m38.9s/5m0s  85.00 iters/s
+load_JED           [  33% ] 000/043 VUs  1m38.9s/5m0s  85.00 iters/s
+load_MAD           [  33% ] 000/043 VUs  1m38.9s/5m0s  85.00 iters/s
+load_MEC           [  33% ] 000/043 VUs  1m38.9s/5m0s  85.00 iters/s
+load_OtherCities   [  33% ] 000/043 VUs  1m38.9s/5m0s  85.00 iters/s
+load_RUH           [  33% ] 000/043 VUs  1m38.9s/5m0s  85.00 iters/s
+
+running (1m40.0s), 0000/0301 VUs, 59465 complete and 0 interrupted iterations
+load_AMM           [  33% ] 000/043 VUs  1m39.9s/5m0s  85.00 iters/s
+load_DMM           [  33% ] 000/043 VUs  1m39.9s/5m0s  85.00 iters/s
+load_JED           [  33% ] 000/043 VUs  1m39.9s/5m0s  85.00 iters/s
+load_MAD           [  33% ] 000/043 VUs  1m39.9s/5m0s  85.00 iters/s
+load_MEC           [  33% ] 000/043 VUs  1m39.9s/5m0s  85.00 iters/s
+load_OtherCities   [  33% ] 000/043 VUs  1m39.9s/5m0s  85.00 iters/s
+load_RUH           [  33% ] 000/043 VUs  1m39.9s/5m0s  85.00 iters/s
+
+running (1m41.0s), 0000/0301 VUs, 60060 complete and 0 interrupted iterations
+load_AMM           [  34% ] 000/043 VUs  1m40.9s/5m0s  85.00 iters/s
+load_DMM           [  34% ] 000/043 VUs  1m40.9s/5m0s  85.00 iters/s
+load_JED           [  34% ] 000/043 VUs  1m40.9s/5m0s  85.00 iters/s
+load_MAD           [  34% ] 000/043 VUs  1m40.9s/5m0s  85.00 iters/s
+load_MEC           [  34% ] 000/043 VUs  1m40.9s/5m0s  85.00 iters/s
+load_OtherCities   [  34% ] 000/043 VUs  1m40.9s/5m0s  85.00 iters/s
+load_RUH           [  34% ] 000/043 VUs  1m40.9s/5m0s  85.00 iters/s
+
+running (1m42.0s), 0000/0301 VUs, 60655 complete and 0 interrupted iterations
+load_AMM           [  34% ] 000/043 VUs  1m41.9s/5m0s  85.00 iters/s
+load_DMM           [  34% ] 000/043 VUs  1m41.9s/5m0s  85.00 iters/s
+load_JED           [  34% ] 000/043 VUs  1m41.9s/5m0s  85.00 iters/s
+load_MAD           [  34% ] 000/043 VUs  1m41.9s/5m0s  85.00 iters/s
+load_MEC           [  34% ] 000/043 VUs  1m41.9s/5m0s  85.00 iters/s
+load_OtherCities   [  34% ] 000/043 VUs  1m41.9s/5m0s  85.00 iters/s
+load_RUH           [  34% ] 000/043 VUs  1m41.9s/5m0s  85.00 iters/s
+
+running (1m43.0s), 0000/0301 VUs, 61250 complete and 0 interrupted iterations
+load_AMM           [  34% ] 000/043 VUs  1m42.9s/5m0s  85.00 iters/s
+load_DMM           [  34% ] 000/043 VUs  1m42.9s/5m0s  85.00 iters/s
+load_JED           [  34% ] 000/043 VUs  1m42.9s/5m0s  85.00 iters/s
+load_MAD           [  34% ] 000/043 VUs  1m42.9s/5m0s  85.00 iters/s
+load_MEC           [  34% ] 000/043 VUs  1m42.9s/5m0s  85.00 iters/s
+load_OtherCities   [  34% ] 000/043 VUs  1m42.9s/5m0s  85.00 iters/s
+load_RUH           [  34% ] 000/043 VUs  1m42.9s/5m0s  85.00 iters/s
+
+running (1m44.0s), 0000/0301 VUs, 61845 complete and 0 interrupted iterations
+load_AMM           [  35% ] 000/043 VUs  1m43.9s/5m0s  85.00 iters/s
+load_DMM           [  35% ] 000/043 VUs  1m43.9s/5m0s  85.00 iters/s
+load_JED           [  35% ] 000/043 VUs  1m43.9s/5m0s  85.00 iters/s
+load_MAD           [  35% ] 000/043 VUs  1m43.9s/5m0s  85.00 iters/s
+load_MEC           [  35% ] 000/043 VUs  1m43.9s/5m0s  85.00 iters/s
+load_OtherCities   [  35% ] 000/043 VUs  1m43.9s/5m0s  85.00 iters/s
+load_RUH           [  35% ] 000/043 VUs  1m43.9s/5m0s  85.00 iters/s
+
+running (1m45.0s), 0000/0301 VUs, 62440 complete and 0 interrupted iterations
+load_AMM           [  35% ] 000/043 VUs  1m44.9s/5m0s  85.00 iters/s
+load_DMM           [  35% ] 000/043 VUs  1m44.9s/5m0s  85.00 iters/s
+load_JED           [  35% ] 000/043 VUs  1m44.9s/5m0s  85.00 iters/s
+load_MAD           [  35% ] 000/043 VUs  1m44.9s/5m0s  85.00 iters/s
+load_MEC           [  35% ] 000/043 VUs  1m44.9s/5m0s  85.00 iters/s
+load_OtherCities   [  35% ] 000/043 VUs  1m44.9s/5m0s  85.00 iters/s
+load_RUH           [  35% ] 000/043 VUs  1m44.9s/5m0s  85.00 iters/s
+
+running (1m46.0s), 0000/0301 VUs, 63035 complete and 0 interrupted iterations
+load_AMM           [  35% ] 000/043 VUs  1m45.9s/5m0s  85.00 iters/s
+load_DMM           [  35% ] 000/043 VUs  1m45.9s/5m0s  85.00 iters/s
+load_JED           [  35% ] 000/043 VUs  1m45.9s/5m0s  85.00 iters/s
+load_MAD           [  35% ] 000/043 VUs  1m45.9s/5m0s  85.00 iters/s
+load_MEC           [  35% ] 000/043 VUs  1m45.9s/5m0s  85.00 iters/s
+load_OtherCities   [  35% ] 000/043 VUs  1m45.9s/5m0s  85.00 iters/s
+load_RUH           [  35% ] 000/043 VUs  1m45.9s/5m0s  85.00 iters/s
+
+running (1m47.0s), 0000/0301 VUs, 63630 complete and 0 interrupted iterations
+load_AMM           [  36% ] 000/043 VUs  1m46.9s/5m0s  85.00 iters/s
+load_DMM           [  36% ] 000/043 VUs  1m46.9s/5m0s  85.00 iters/s
+load_JED           [  36% ] 000/043 VUs  1m46.9s/5m0s  85.00 iters/s
+load_MAD           [  36% ] 000/043 VUs  1m46.9s/5m0s  85.00 iters/s
+load_MEC           [  36% ] 000/043 VUs  1m46.9s/5m0s  85.00 iters/s
+load_OtherCities   [  36% ] 000/043 VUs  1m46.9s/5m0s  85.00 iters/s
+load_RUH           [  36% ] 000/043 VUs  1m46.9s/5m0s  85.00 iters/s
+
+running (1m48.0s), 0000/0301 VUs, 64225 complete and 0 interrupted iterations
+load_AMM           [  36% ] 000/043 VUs  1m47.9s/5m0s  85.00 iters/s
+load_DMM           [  36% ] 000/043 VUs  1m47.9s/5m0s  85.00 iters/s
+load_JED           [  36% ] 000/043 VUs  1m47.9s/5m0s  85.00 iters/s
+load_MAD           [  36% ] 000/043 VUs  1m47.9s/5m0s  85.00 iters/s
+load_MEC           [  36% ] 000/043 VUs  1m47.9s/5m0s  85.00 iters/s
+load_OtherCities   [  36% ] 000/043 VUs  1m47.9s/5m0s  85.00 iters/s
+load_RUH           [  36% ] 000/043 VUs  1m47.9s/5m0s  85.00 iters/s
+
+running (1m49.0s), 0004/0301 VUs, 64816 complete and 0 interrupted iterations
+load_AMM           [  36% ] 000/043 VUs  1m48.9s/5m0s  85.00 iters/s
+load_DMM           [  36% ] 001/043 VUs  1m48.9s/5m0s  85.00 iters/s
+load_JED           [  36% ] 001/043 VUs  1m48.9s/5m0s  85.00 iters/s
+load_MAD           [  36% ] 000/043 VUs  1m48.9s/5m0s  85.00 iters/s
+load_MEC           [  36% ] 000/043 VUs  1m48.9s/5m0s  85.00 iters/s
+load_OtherCities   [  36% ] 001/043 VUs  1m48.9s/5m0s  85.00 iters/s
+load_RUH           [  36% ] 001/043 VUs  1m48.9s/5m0s  85.00 iters/s
+
+running (1m50.0s), 0000/0301 VUs, 65415 complete and 0 interrupted iterations
+load_AMM           [  37% ] 000/043 VUs  1m49.9s/5m0s  85.00 iters/s
+load_DMM           [  37% ] 000/043 VUs  1m49.9s/5m0s  85.00 iters/s
+load_JED           [  37% ] 000/043 VUs  1m49.9s/5m0s  85.00 iters/s
+load_MAD           [  37% ] 000/043 VUs  1m49.9s/5m0s  85.00 iters/s
+load_MEC           [  37% ] 000/043 VUs  1m49.9s/5m0s  85.00 iters/s
+load_OtherCities   [  37% ] 000/043 VUs  1m49.9s/5m0s  85.00 iters/s
+load_RUH           [  37% ] 000/043 VUs  1m49.9s/5m0s  85.00 iters/s
+
+running (1m51.0s), 0000/0301 VUs, 66010 complete and 0 interrupted iterations
+load_AMM           [  37% ] 000/043 VUs  1m50.9s/5m0s  85.00 iters/s
+load_DMM           [  37% ] 000/043 VUs  1m50.9s/5m0s  85.00 iters/s
+load_JED           [  37% ] 000/043 VUs  1m50.9s/5m0s  85.00 iters/s
+load_MAD           [  37% ] 000/043 VUs  1m50.9s/5m0s  85.00 iters/s
+load_MEC           [  37% ] 000/043 VUs  1m50.9s/5m0s  85.00 iters/s
+load_OtherCities   [  37% ] 000/043 VUs  1m50.9s/5m0s  85.00 iters/s
+load_RUH           [  37% ] 000/043 VUs  1m50.9s/5m0s  85.00 iters/s
+
+running (1m52.0s), 0000/0301 VUs, 66605 complete and 0 interrupted iterations
+load_AMM           [  37% ] 000/043 VUs  1m51.9s/5m0s  85.00 iters/s
+load_DMM           [  37% ] 000/043 VUs  1m51.9s/5m0s  85.00 iters/s
+load_JED           [  37% ] 000/043 VUs  1m51.9s/5m0s  85.00 iters/s
+load_MAD           [  37% ] 000/043 VUs  1m51.9s/5m0s  85.00 iters/s
+load_MEC           [  37% ] 000/043 VUs  1m51.9s/5m0s  85.00 iters/s
+load_OtherCities   [  37% ] 000/043 VUs  1m51.9s/5m0s  85.00 iters/s
+load_RUH           [  37% ] 000/043 VUs  1m51.9s/5m0s  85.00 iters/s
+
+running (1m53.0s), 0000/0301 VUs, 67200 complete and 0 interrupted iterations
+load_AMM           [  38% ] 000/043 VUs  1m52.9s/5m0s  85.00 iters/s
+load_DMM           [  38% ] 000/043 VUs  1m52.9s/5m0s  85.00 iters/s
+load_JED           [  38% ] 000/043 VUs  1m52.9s/5m0s  85.00 iters/s
+load_MAD           [  38% ] 000/043 VUs  1m52.9s/5m0s  85.00 iters/s
+load_MEC           [  38% ] 000/043 VUs  1m52.9s/5m0s  85.00 iters/s
+load_OtherCities   [  38% ] 000/043 VUs  1m52.9s/5m0s  85.00 iters/s
+load_RUH           [  38% ] 000/043 VUs  1m52.9s/5m0s  85.00 iters/s
+
+running (1m54.0s), 0000/0301 VUs, 67795 complete and 0 interrupted iterations
+load_AMM           [  38% ] 000/043 VUs  1m53.9s/5m0s  85.00 iters/s
+load_DMM           [  38% ] 000/043 VUs  1m53.9s/5m0s  85.00 iters/s
+load_JED           [  38% ] 000/043 VUs  1m53.9s/5m0s  85.00 iters/s
+load_MAD           [  38% ] 000/043 VUs  1m53.9s/5m0s  85.00 iters/s
+load_MEC           [  38% ] 000/043 VUs  1m53.9s/5m0s  85.00 iters/s
+load_OtherCities   [  38% ] 000/043 VUs  1m53.9s/5m0s  85.00 iters/s
+load_RUH           [  38% ] 000/043 VUs  1m53.9s/5m0s  85.00 iters/s
+
+running (1m55.0s), 0000/0301 VUs, 68390 complete and 0 interrupted iterations
+load_AMM           [  38% ] 000/043 VUs  1m54.9s/5m0s  85.00 iters/s
+load_DMM           [  38% ] 000/043 VUs  1m54.9s/5m0s  85.00 iters/s
+load_JED           [  38% ] 000/043 VUs  1m54.9s/5m0s  85.00 iters/s
+load_MAD           [  38% ] 000/043 VUs  1m54.9s/5m0s  85.00 iters/s
+load_MEC           [  38% ] 000/043 VUs  1m54.9s/5m0s  85.00 iters/s
+load_OtherCities   [  38% ] 000/043 VUs  1m54.9s/5m0s  85.00 iters/s
+load_RUH           [  38% ] 000/043 VUs  1m54.9s/5m0s  85.00 iters/s
+
+running (1m56.0s), 0000/0301 VUs, 68985 complete and 0 interrupted iterations
+load_AMM           [  39% ] 000/043 VUs  1m55.9s/5m0s  85.00 iters/s
+load_DMM           [  39% ] 000/043 VUs  1m55.9s/5m0s  85.00 iters/s
+load_JED           [  39% ] 000/043 VUs  1m55.9s/5m0s  85.00 iters/s
+load_MAD           [  39% ] 000/043 VUs  1m55.9s/5m0s  85.00 iters/s
+load_MEC           [  39% ] 000/043 VUs  1m55.9s/5m0s  85.00 iters/s
+load_OtherCities   [  39% ] 000/043 VUs  1m55.9s/5m0s  85.00 iters/s
+load_RUH           [  39% ] 000/043 VUs  1m55.9s/5m0s  85.00 iters/s
+
+running (1m57.0s), 0000/0301 VUs, 69580 complete and 0 interrupted iterations
+load_AMM           [  39% ] 000/043 VUs  1m56.9s/5m0s  85.00 iters/s
+load_DMM           [  39% ] 000/043 VUs  1m56.9s/5m0s  85.00 iters/s
+load_JED           [  39% ] 000/043 VUs  1m56.9s/5m0s  85.00 iters/s
+load_MAD           [  39% ] 000/043 VUs  1m56.9s/5m0s  85.00 iters/s
+load_MEC           [  39% ] 000/043 VUs  1m56.9s/5m0s  85.00 iters/s
+load_OtherCities   [  39% ] 000/043 VUs  1m56.9s/5m0s  85.00 iters/s
+load_RUH           [  39% ] 000/043 VUs  1m56.9s/5m0s  85.00 iters/s
+
+running (1m58.0s), 0000/0301 VUs, 70175 complete and 0 interrupted iterations
+load_AMM           [  39% ] 000/043 VUs  1m57.9s/5m0s  85.00 iters/s
+load_DMM           [  39% ] 000/043 VUs  1m57.9s/5m0s  85.00 iters/s
+load_JED           [  39% ] 000/043 VUs  1m57.9s/5m0s  85.00 iters/s
+load_MAD           [  39% ] 000/043 VUs  1m57.9s/5m0s  85.00 iters/s
+load_MEC           [  39% ] 000/043 VUs  1m57.9s/5m0s  85.00 iters/s
+load_OtherCities   [  39% ] 000/043 VUs  1m57.9s/5m0s  85.00 iters/s
+load_RUH           [  39% ] 000/043 VUs  1m57.9s/5m0s  85.00 iters/s
+
+running (1m59.0s), 0000/0301 VUs, 70770 complete and 0 interrupted iterations
+load_AMM           [  40% ] 000/043 VUs  1m58.9s/5m0s  85.00 iters/s
+load_DMM           [  40% ] 000/043 VUs  1m58.9s/5m0s  85.00 iters/s
+load_JED           [  40% ] 000/043 VUs  1m58.9s/5m0s  85.00 iters/s
+load_MAD           [  40% ] 000/043 VUs  1m58.9s/5m0s  85.00 iters/s
+load_MEC           [  40% ] 000/043 VUs  1m58.9s/5m0s  85.00 iters/s
+load_OtherCities   [  40% ] 000/043 VUs  1m58.9s/5m0s  85.00 iters/s
+load_RUH           [  40% ] 000/043 VUs  1m58.9s/5m0s  85.00 iters/s
+
+running (2m00.0s), 0000/0301 VUs, 71365 complete and 0 interrupted iterations
+load_AMM           [  40% ] 000/043 VUs  1m59.9s/5m0s  85.00 iters/s
+load_DMM           [  40% ] 000/043 VUs  1m59.9s/5m0s  85.00 iters/s
+load_JED           [  40% ] 000/043 VUs  1m59.9s/5m0s  85.00 iters/s
+load_MAD           [  40% ] 000/043 VUs  1m59.9s/5m0s  85.00 iters/s
+load_MEC           [  40% ] 000/043 VUs  1m59.9s/5m0s  85.00 iters/s
+load_OtherCities   [  40% ] 000/043 VUs  1m59.9s/5m0s  85.00 iters/s
+load_RUH           [  40% ] 000/043 VUs  1m59.9s/5m0s  85.00 iters/s
+
+running (2m01.0s), 0000/0301 VUs, 71960 complete and 0 interrupted iterations
+load_AMM           [  40% ] 000/043 VUs  2m00.9s/5m0s  85.00 iters/s
+load_DMM           [  40% ] 000/043 VUs  2m00.9s/5m0s  85.00 iters/s
+load_JED           [  40% ] 000/043 VUs  2m00.9s/5m0s  85.00 iters/s
+load_MAD           [  40% ] 000/043 VUs  2m00.9s/5m0s  85.00 iters/s
+load_MEC           [  40% ] 000/043 VUs  2m00.9s/5m0s  85.00 iters/s
+load_OtherCities   [  40% ] 000/043 VUs  2m00.9s/5m0s  85.00 iters/s
+load_RUH           [  40% ] 000/043 VUs  2m00.9s/5m0s  85.00 iters/s
+
+running (2m02.0s), 0000/0301 VUs, 72555 complete and 0 interrupted iterations
+load_AMM           [  41% ] 000/043 VUs  2m01.9s/5m0s  85.00 iters/s
+load_DMM           [  41% ] 000/043 VUs  2m01.9s/5m0s  85.00 iters/s
+load_JED           [  41% ] 000/043 VUs  2m01.9s/5m0s  85.00 iters/s
+load_MAD           [  41% ] 000/043 VUs  2m01.9s/5m0s  85.00 iters/s
+load_MEC           [  41% ] 000/043 VUs  2m01.9s/5m0s  85.00 iters/s
+load_OtherCities   [  41% ] 000/043 VUs  2m01.9s/5m0s  85.00 iters/s
+load_RUH           [  41% ] 000/043 VUs  2m01.9s/5m0s  85.00 iters/s
+
+running (2m03.0s), 0000/0301 VUs, 73150 complete and 0 interrupted iterations
+load_AMM           [  41% ] 000/043 VUs  2m02.9s/5m0s  85.00 iters/s
+load_DMM           [  41% ] 000/043 VUs  2m02.9s/5m0s  85.00 iters/s
+load_JED           [  41% ] 000/043 VUs  2m02.9s/5m0s  85.00 iters/s
+load_MAD           [  41% ] 000/043 VUs  2m02.9s/5m0s  85.00 iters/s
+load_MEC           [  41% ] 000/043 VUs  2m02.9s/5m0s  85.00 iters/s
+load_OtherCities   [  41% ] 000/043 VUs  2m02.9s/5m0s  85.00 iters/s
+load_RUH           [  41% ] 000/043 VUs  2m02.9s/5m0s  85.00 iters/s
+
+running (2m04.0s), 0000/0301 VUs, 73745 complete and 0 interrupted iterations
+load_AMM           [  41% ] 000/043 VUs  2m03.9s/5m0s  85.00 iters/s
+load_DMM           [  41% ] 000/043 VUs  2m03.9s/5m0s  85.00 iters/s
+load_JED           [  41% ] 000/043 VUs  2m03.9s/5m0s  85.00 iters/s
+load_MAD           [  41% ] 000/043 VUs  2m03.9s/5m0s  85.00 iters/s
+load_MEC           [  41% ] 000/043 VUs  2m03.9s/5m0s  85.00 iters/s
+load_OtherCities   [  41% ] 000/043 VUs  2m03.9s/5m0s  85.00 iters/s
+load_RUH           [  41% ] 000/043 VUs  2m03.9s/5m0s  85.00 iters/s
+
+running (2m05.0s), 0000/0301 VUs, 74340 complete and 0 interrupted iterations
+load_AMM           [  42% ] 000/043 VUs  2m04.9s/5m0s  85.00 iters/s
+load_DMM           [  42% ] 000/043 VUs  2m04.9s/5m0s  85.00 iters/s
+load_JED           [  42% ] 000/043 VUs  2m04.9s/5m0s  85.00 iters/s
+load_MAD           [  42% ] 000/043 VUs  2m04.9s/5m0s  85.00 iters/s
+load_MEC           [  42% ] 000/043 VUs  2m04.9s/5m0s  85.00 iters/s
+load_OtherCities   [  42% ] 000/043 VUs  2m04.9s/5m0s  85.00 iters/s
+load_RUH           [  42% ] 000/043 VUs  2m04.9s/5m0s  85.00 iters/s
+
+running (2m06.0s), 0000/0301 VUs, 74935 complete and 0 interrupted iterations
+load_AMM           [  42% ] 000/043 VUs  2m05.9s/5m0s  85.00 iters/s
+load_DMM           [  42% ] 000/043 VUs  2m05.9s/5m0s  85.00 iters/s
+load_JED           [  42% ] 000/043 VUs  2m05.9s/5m0s  85.00 iters/s
+load_MAD           [  42% ] 000/043 VUs  2m05.9s/5m0s  85.00 iters/s
+load_MEC           [  42% ] 000/043 VUs  2m05.9s/5m0s  85.00 iters/s
+load_OtherCities   [  42% ] 000/043 VUs  2m05.9s/5m0s  85.00 iters/s
+load_RUH           [  42% ] 000/043 VUs  2m05.9s/5m0s  85.00 iters/s
+
+running (2m07.0s), 0000/0301 VUs, 75530 complete and 0 interrupted iterations
+load_AMM           [  42% ] 000/043 VUs  2m06.9s/5m0s  85.00 iters/s
+load_DMM           [  42% ] 000/043 VUs  2m06.9s/5m0s  85.00 iters/s
+load_JED           [  42% ] 000/043 VUs  2m06.9s/5m0s  85.00 iters/s
+load_MAD           [  42% ] 000/043 VUs  2m06.9s/5m0s  85.00 iters/s
+load_MEC           [  42% ] 000/043 VUs  2m06.9s/5m0s  85.00 iters/s
+load_OtherCities   [  42% ] 000/043 VUs  2m06.9s/5m0s  85.00 iters/s
+load_RUH           [  42% ] 000/043 VUs  2m06.9s/5m0s  85.00 iters/s
+
+running (2m08.0s), 0000/0301 VUs, 76125 complete and 0 interrupted iterations
+load_AMM           [  43% ] 000/043 VUs  2m07.9s/5m0s  85.00 iters/s
+load_DMM           [  43% ] 000/043 VUs  2m07.9s/5m0s  85.00 iters/s
+load_JED           [  43% ] 000/043 VUs  2m07.9s/5m0s  85.00 iters/s
+load_MAD           [  43% ] 000/043 VUs  2m07.9s/5m0s  85.00 iters/s
+load_MEC           [  43% ] 000/043 VUs  2m07.9s/5m0s  85.00 iters/s
+load_OtherCities   [  43% ] 000/043 VUs  2m07.9s/5m0s  85.00 iters/s
+load_RUH           [  43% ] 000/043 VUs  2m07.9s/5m0s  85.00 iters/s
+
+running (2m09.0s), 0000/0301 VUs, 76720 complete and 0 interrupted iterations
+load_AMM           [  43% ] 000/043 VUs  2m08.9s/5m0s  85.00 iters/s
+load_DMM           [  43% ] 000/043 VUs  2m08.9s/5m0s  85.00 iters/s
+load_JED           [  43% ] 000/043 VUs  2m08.9s/5m0s  85.00 iters/s
+load_MAD           [  43% ] 000/043 VUs  2m08.9s/5m0s  85.00 iters/s
+load_MEC           [  43% ] 000/043 VUs  2m08.9s/5m0s  85.00 iters/s
+load_OtherCities   [  43% ] 000/043 VUs  2m08.9s/5m0s  85.00 iters/s
+load_RUH           [  43% ] 000/043 VUs  2m08.9s/5m0s  85.00 iters/s
+
+running (2m10.0s), 0000/0301 VUs, 77315 complete and 0 interrupted iterations
+load_AMM           [  43% ] 000/043 VUs  2m09.9s/5m0s  85.00 iters/s
+load_DMM           [  43% ] 000/043 VUs  2m09.9s/5m0s  85.00 iters/s
+load_JED           [  43% ] 000/043 VUs  2m09.9s/5m0s  85.00 iters/s
+load_MAD           [  43% ] 000/043 VUs  2m09.9s/5m0s  85.00 iters/s
+load_MEC           [  43% ] 000/043 VUs  2m09.9s/5m0s  85.00 iters/s
+load_OtherCities   [  43% ] 000/043 VUs  2m09.9s/5m0s  85.00 iters/s
+load_RUH           [  43% ] 000/043 VUs  2m09.9s/5m0s  85.00 iters/s
+
+running (2m11.0s), 0000/0301 VUs, 77910 complete and 0 interrupted iterations
+load_AMM           [  44% ] 000/043 VUs  2m10.9s/5m0s  85.00 iters/s
+load_DMM           [  44% ] 000/043 VUs  2m10.9s/5m0s  85.00 iters/s
+load_JED           [  44% ] 000/043 VUs  2m10.9s/5m0s  85.00 iters/s
+load_MAD           [  44% ] 000/043 VUs  2m10.9s/5m0s  85.00 iters/s
+load_MEC           [  44% ] 000/043 VUs  2m10.9s/5m0s  85.00 iters/s
+load_OtherCities   [  44% ] 000/043 VUs  2m10.9s/5m0s  85.00 iters/s
+load_RUH           [  44% ] 000/043 VUs  2m10.9s/5m0s  85.00 iters/s
+
+running (2m12.0s), 0000/0301 VUs, 78505 complete and 0 interrupted iterations
+load_AMM           [  44% ] 000/043 VUs  2m11.9s/5m0s  85.00 iters/s
+load_DMM           [  44% ] 000/043 VUs  2m11.9s/5m0s  85.00 iters/s
+load_JED           [  44% ] 000/043 VUs  2m11.9s/5m0s  85.00 iters/s
+load_MAD           [  44% ] 000/043 VUs  2m11.9s/5m0s  85.00 iters/s
+load_MEC           [  44% ] 000/043 VUs  2m11.9s/5m0s  85.00 iters/s
+load_OtherCities   [  44% ] 000/043 VUs  2m11.9s/5m0s  85.00 iters/s
+load_RUH           [  44% ] 000/043 VUs  2m11.9s/5m0s  85.00 iters/s
+
+running (2m13.0s), 0000/0301 VUs, 79100 complete and 0 interrupted iterations
+load_AMM           [  44% ] 000/043 VUs  2m12.9s/5m0s  85.00 iters/s
+load_DMM           [  44% ] 000/043 VUs  2m12.9s/5m0s  85.00 iters/s
+load_JED           [  44% ] 000/043 VUs  2m12.9s/5m0s  85.00 iters/s
+load_MAD           [  44% ] 000/043 VUs  2m12.9s/5m0s  85.00 iters/s
+load_MEC           [  44% ] 000/043 VUs  2m12.9s/5m0s  85.00 iters/s
+load_OtherCities   [  44% ] 000/043 VUs  2m12.9s/5m0s  85.00 iters/s
+load_RUH           [  44% ] 000/043 VUs  2m12.9s/5m0s  85.00 iters/s
+
+running (2m14.0s), 0000/0301 VUs, 79695 complete and 0 interrupted iterations
+load_AMM           [  45% ] 000/043 VUs  2m13.9s/5m0s  85.00 iters/s
+load_DMM           [  45% ] 000/043 VUs  2m13.9s/5m0s  85.00 iters/s
+load_JED           [  45% ] 000/043 VUs  2m13.9s/5m0s  85.00 iters/s
+load_MAD           [  45% ] 000/043 VUs  2m13.9s/5m0s  85.00 iters/s
+load_MEC           [  45% ] 000/043 VUs  2m13.9s/5m0s  85.00 iters/s
+load_OtherCities   [  45% ] 000/043 VUs  2m13.9s/5m0s  85.00 iters/s
+load_RUH           [  45% ] 000/043 VUs  2m13.9s/5m0s  85.00 iters/s
+
+running (2m15.0s), 0000/0301 VUs, 80290 complete and 0 interrupted iterations
+load_AMM           [  45% ] 000/043 VUs  2m14.9s/5m0s  85.00 iters/s
+load_DMM           [  45% ] 000/043 VUs  2m14.9s/5m0s  85.00 iters/s
+load_JED           [  45% ] 000/043 VUs  2m14.9s/5m0s  85.00 iters/s
+load_MAD           [  45% ] 000/043 VUs  2m14.9s/5m0s  85.00 iters/s
+load_MEC           [  45% ] 000/043 VUs  2m14.9s/5m0s  85.00 iters/s
+load_OtherCities   [  45% ] 000/043 VUs  2m14.9s/5m0s  85.00 iters/s
+load_RUH           [  45% ] 000/043 VUs  2m14.9s/5m0s  85.00 iters/s
+
+running (2m16.0s), 0000/0301 VUs, 80885 complete and 0 interrupted iterations
+load_AMM           [  45% ] 000/043 VUs  2m15.9s/5m0s  85.00 iters/s
+load_DMM           [  45% ] 000/043 VUs  2m15.9s/5m0s  85.00 iters/s
+load_JED           [  45% ] 000/043 VUs  2m15.9s/5m0s  85.00 iters/s
+load_MAD           [  45% ] 000/043 VUs  2m15.9s/5m0s  85.00 iters/s
+load_MEC           [  45% ] 000/043 VUs  2m15.9s/5m0s  85.00 iters/s
+load_OtherCities   [  45% ] 000/043 VUs  2m15.9s/5m0s  85.00 iters/s
+load_RUH           [  45% ] 000/043 VUs  2m15.9s/5m0s  85.00 iters/s
+
+running (2m17.0s), 0000/0301 VUs, 81480 complete and 0 interrupted iterations
+load_AMM           [  46% ] 000/043 VUs  2m16.9s/5m0s  85.00 iters/s
+load_DMM           [  46% ] 000/043 VUs  2m16.9s/5m0s  85.00 iters/s
+load_JED           [  46% ] 000/043 VUs  2m16.9s/5m0s  85.00 iters/s
+load_MAD           [  46% ] 000/043 VUs  2m16.9s/5m0s  85.00 iters/s
+load_MEC           [  46% ] 000/043 VUs  2m16.9s/5m0s  85.00 iters/s
+load_OtherCities   [  46% ] 000/043 VUs  2m16.9s/5m0s  85.00 iters/s
+load_RUH           [  46% ] 000/043 VUs  2m16.9s/5m0s  85.00 iters/s
+
+running (2m18.0s), 0000/0301 VUs, 82075 complete and 0 interrupted iterations
+load_AMM           [  46% ] 000/043 VUs  2m17.9s/5m0s  85.00 iters/s
+load_DMM           [  46% ] 000/043 VUs  2m17.9s/5m0s  85.00 iters/s
+load_JED           [  46% ] 000/043 VUs  2m17.9s/5m0s  85.00 iters/s
+load_MAD           [  46% ] 000/043 VUs  2m17.9s/5m0s  85.00 iters/s
+load_MEC           [  46% ] 000/043 VUs  2m17.9s/5m0s  85.00 iters/s
+load_OtherCities   [  46% ] 000/043 VUs  2m17.9s/5m0s  85.00 iters/s
+load_RUH           [  46% ] 000/043 VUs  2m17.9s/5m0s  85.00 iters/s
+
+running (2m19.0s), 0000/0301 VUs, 82670 complete and 0 interrupted iterations
+load_AMM           [  46% ] 000/043 VUs  2m18.9s/5m0s  85.00 iters/s
+load_DMM           [  46% ] 000/043 VUs  2m18.9s/5m0s  85.00 iters/s
+load_JED           [  46% ] 000/043 VUs  2m18.9s/5m0s  85.00 iters/s
+load_MAD           [  46% ] 000/043 VUs  2m18.9s/5m0s  85.00 iters/s
+load_MEC           [  46% ] 000/043 VUs  2m18.9s/5m0s  85.00 iters/s
+load_OtherCities   [  46% ] 000/043 VUs  2m18.9s/5m0s  85.00 iters/s
+load_RUH           [  46% ] 000/043 VUs  2m18.9s/5m0s  85.00 iters/s
+
+running (2m20.0s), 0007/0301 VUs, 83258 complete and 0 interrupted iterations
+load_AMM           [  47% ] 001/043 VUs  2m19.9s/5m0s  85.00 iters/s
+load_DMM           [  47% ] 001/043 VUs  2m19.9s/5m0s  85.00 iters/s
+load_JED           [  47% ] 001/043 VUs  2m19.9s/5m0s  85.00 iters/s
+load_MAD           [  47% ] 001/043 VUs  2m19.9s/5m0s  85.00 iters/s
+load_MEC           [  47% ] 001/043 VUs  2m19.9s/5m0s  85.00 iters/s
+load_OtherCities   [  47% ] 001/043 VUs  2m19.9s/5m0s  85.00 iters/s
+load_RUH           [  47% ] 001/043 VUs  2m19.9s/5m0s  85.00 iters/s
+
+running (2m21.0s), 0000/0301 VUs, 83860 complete and 0 interrupted iterations
+load_AMM           [  47% ] 000/043 VUs  2m20.9s/5m0s  85.00 iters/s
+load_DMM           [  47% ] 000/043 VUs  2m20.9s/5m0s  85.00 iters/s
+load_JED           [  47% ] 000/043 VUs  2m20.9s/5m0s  85.00 iters/s
+load_MAD           [  47% ] 000/043 VUs  2m20.9s/5m0s  85.00 iters/s
+load_MEC           [  47% ] 000/043 VUs  2m20.9s/5m0s  85.00 iters/s
+load_OtherCities   [  47% ] 000/043 VUs  2m20.9s/5m0s  85.00 iters/s
+load_RUH           [  47% ] 000/043 VUs  2m20.9s/5m0s  85.00 iters/s
+
+running (2m22.0s), 0000/0301 VUs, 84455 complete and 0 interrupted iterations
+load_AMM           [  47% ] 000/043 VUs  2m21.9s/5m0s  85.00 iters/s
+load_DMM           [  47% ] 000/043 VUs  2m21.9s/5m0s  85.00 iters/s
+load_JED           [  47% ] 000/043 VUs  2m21.9s/5m0s  85.00 iters/s
+load_MAD           [  47% ] 000/043 VUs  2m21.9s/5m0s  85.00 iters/s
+load_MEC           [  47% ] 000/043 VUs  2m21.9s/5m0s  85.00 iters/s
+load_OtherCities   [  47% ] 000/043 VUs  2m21.9s/5m0s  85.00 iters/s
+load_RUH           [  47% ] 000/043 VUs  2m21.9s/5m0s  85.00 iters/s
+
+running (2m23.0s), 0000/0301 VUs, 85050 complete and 0 interrupted iterations
+load_AMM           [  48% ] 000/043 VUs  2m22.9s/5m0s  85.00 iters/s
+load_DMM           [  48% ] 000/043 VUs  2m22.9s/5m0s  85.00 iters/s
+load_JED           [  48% ] 000/043 VUs  2m22.9s/5m0s  85.00 iters/s
+load_MAD           [  48% ] 000/043 VUs  2m22.9s/5m0s  85.00 iters/s
+load_MEC           [  48% ] 000/043 VUs  2m22.9s/5m0s  85.00 iters/s
+load_OtherCities   [  48% ] 000/043 VUs  2m22.9s/5m0s  85.00 iters/s
+load_RUH           [  48% ] 000/043 VUs  2m22.9s/5m0s  85.00 iters/s
+
+running (2m24.0s), 0000/0301 VUs, 85645 complete and 0 interrupted iterations
+load_AMM           [  48% ] 000/043 VUs  2m23.9s/5m0s  85.00 iters/s
+load_DMM           [  48% ] 000/043 VUs  2m23.9s/5m0s  85.00 iters/s
+load_JED           [  48% ] 000/043 VUs  2m23.9s/5m0s  85.00 iters/s
+load_MAD           [  48% ] 000/043 VUs  2m23.9s/5m0s  85.00 iters/s
+load_MEC           [  48% ] 000/043 VUs  2m23.9s/5m0s  85.00 iters/s
+load_OtherCities   [  48% ] 000/043 VUs  2m23.9s/5m0s  85.00 iters/s
+load_RUH           [  48% ] 000/043 VUs  2m23.9s/5m0s  85.00 iters/s
+
+running (2m25.0s), 0000/0301 VUs, 86240 complete and 0 interrupted iterations
+load_AMM           [  48% ] 000/043 VUs  2m24.9s/5m0s  85.00 iters/s
+load_DMM           [  48% ] 000/043 VUs  2m24.9s/5m0s  85.00 iters/s
+load_JED           [  48% ] 000/043 VUs  2m24.9s/5m0s  85.00 iters/s
+load_MAD           [  48% ] 000/043 VUs  2m24.9s/5m0s  85.00 iters/s
+load_MEC           [  48% ] 000/043 VUs  2m24.9s/5m0s  85.00 iters/s
+load_OtherCities   [  48% ] 000/043 VUs  2m24.9s/5m0s  85.00 iters/s
+load_RUH           [  48% ] 000/043 VUs  2m24.9s/5m0s  85.00 iters/s
+
+running (2m26.0s), 0000/0301 VUs, 86835 complete and 0 interrupted iterations
+load_AMM           [  49% ] 000/043 VUs  2m25.9s/5m0s  85.00 iters/s
+load_DMM           [  49% ] 000/043 VUs  2m25.9s/5m0s  85.00 iters/s
+load_JED           [  49% ] 000/043 VUs  2m25.9s/5m0s  85.00 iters/s
+load_MAD           [  49% ] 000/043 VUs  2m25.9s/5m0s  85.00 iters/s
+load_MEC           [  49% ] 000/043 VUs  2m25.9s/5m0s  85.00 iters/s
+load_OtherCities   [  49% ] 000/043 VUs  2m25.9s/5m0s  85.00 iters/s
+load_RUH           [  49% ] 000/043 VUs  2m25.9s/5m0s  85.00 iters/s
+
+running (2m27.0s), 0000/0301 VUs, 87430 complete and 0 interrupted iterations
+load_AMM           [  49% ] 000/043 VUs  2m26.9s/5m0s  85.00 iters/s
+load_DMM           [  49% ] 000/043 VUs  2m26.9s/5m0s  85.00 iters/s
+load_JED           [  49% ] 000/043 VUs  2m26.9s/5m0s  85.00 iters/s
+load_MAD           [  49% ] 000/043 VUs  2m26.9s/5m0s  85.00 iters/s
+load_MEC           [  49% ] 000/043 VUs  2m26.9s/5m0s  85.00 iters/s
+load_OtherCities   [  49% ] 000/043 VUs  2m26.9s/5m0s  85.00 iters/s
+load_RUH           [  49% ] 000/043 VUs  2m26.9s/5m0s  85.00 iters/s
+
+running (2m28.0s), 0000/0301 VUs, 88025 complete and 0 interrupted iterations
+load_AMM           [  49% ] 000/043 VUs  2m27.9s/5m0s  85.00 iters/s
+load_DMM           [  49% ] 000/043 VUs  2m27.9s/5m0s  85.00 iters/s
+load_JED           [  49% ] 000/043 VUs  2m27.9s/5m0s  85.00 iters/s
+load_MAD           [  49% ] 000/043 VUs  2m27.9s/5m0s  85.00 iters/s
+load_MEC           [  49% ] 000/043 VUs  2m27.9s/5m0s  85.00 iters/s
+load_OtherCities   [  49% ] 000/043 VUs  2m27.9s/5m0s  85.00 iters/s
+load_RUH           [  49% ] 000/043 VUs  2m27.9s/5m0s  85.00 iters/s
+
+running (2m29.0s), 0000/0301 VUs, 88620 complete and 0 interrupted iterations
+load_AMM           [  50% ] 000/043 VUs  2m28.9s/5m0s  85.00 iters/s
+load_DMM           [  50% ] 000/043 VUs  2m28.9s/5m0s  85.00 iters/s
+load_JED           [  50% ] 000/043 VUs  2m28.9s/5m0s  85.00 iters/s
+load_MAD           [  50% ] 000/043 VUs  2m28.9s/5m0s  85.00 iters/s
+load_MEC           [  50% ] 000/043 VUs  2m28.9s/5m0s  85.00 iters/s
+load_OtherCities   [  50% ] 000/043 VUs  2m28.9s/5m0s  85.00 iters/s
+load_RUH           [  50% ] 000/043 VUs  2m28.9s/5m0s  85.00 iters/s
+
+running (2m30.0s), 0000/0301 VUs, 89215 complete and 0 interrupted iterations
+load_AMM           [  50% ] 000/043 VUs  2m29.9s/5m0s  85.00 iters/s
+load_DMM           [  50% ] 000/043 VUs  2m29.9s/5m0s  85.00 iters/s
+load_JED           [  50% ] 000/043 VUs  2m29.9s/5m0s  85.00 iters/s
+load_MAD           [  50% ] 000/043 VUs  2m29.9s/5m0s  85.00 iters/s
+load_MEC           [  50% ] 000/043 VUs  2m29.9s/5m0s  85.00 iters/s
+load_OtherCities   [  50% ] 000/043 VUs  2m29.9s/5m0s  85.00 iters/s
+load_RUH           [  50% ] 000/043 VUs  2m29.9s/5m0s  85.00 iters/s
+
+running (2m31.0s), 0000/0301 VUs, 89810 complete and 0 interrupted iterations
+load_AMM           [  50% ] 000/043 VUs  2m30.9s/5m0s  85.00 iters/s
+load_DMM           [  50% ] 000/043 VUs  2m30.9s/5m0s  85.00 iters/s
+load_JED           [  50% ] 000/043 VUs  2m30.9s/5m0s  85.00 iters/s
+load_MAD           [  50% ] 000/043 VUs  2m30.9s/5m0s  85.00 iters/s
+load_MEC           [  50% ] 000/043 VUs  2m30.9s/5m0s  85.00 iters/s
+load_OtherCities   [  50% ] 000/043 VUs  2m30.9s/5m0s  85.00 iters/s
+load_RUH           [  50% ] 000/043 VUs  2m30.9s/5m0s  85.00 iters/s
+
+running (2m32.0s), 0000/0301 VUs, 90405 complete and 0 interrupted iterations
+load_AMM           [  51% ] 000/043 VUs  2m31.9s/5m0s  85.00 iters/s
+load_DMM           [  51% ] 000/043 VUs  2m31.9s/5m0s  85.00 iters/s
+load_JED           [  51% ] 000/043 VUs  2m31.9s/5m0s  85.00 iters/s
+load_MAD           [  51% ] 000/043 VUs  2m31.9s/5m0s  85.00 iters/s
+load_MEC           [  51% ] 000/043 VUs  2m31.9s/5m0s  85.00 iters/s
+load_OtherCities   [  51% ] 000/043 VUs  2m31.9s/5m0s  85.00 iters/s
+load_RUH           [  51% ] 000/043 VUs  2m31.9s/5m0s  85.00 iters/s
+
+running (2m33.0s), 0000/0301 VUs, 91000 complete and 0 interrupted iterations
+load_AMM           [  51% ] 000/043 VUs  2m32.9s/5m0s  85.00 iters/s
+load_DMM           [  51% ] 000/043 VUs  2m32.9s/5m0s  85.00 iters/s
+load_JED           [  51% ] 000/043 VUs  2m32.9s/5m0s  85.00 iters/s
+load_MAD           [  51% ] 000/043 VUs  2m32.9s/5m0s  85.00 iters/s
+load_MEC           [  51% ] 000/043 VUs  2m32.9s/5m0s  85.00 iters/s
+load_OtherCities   [  51% ] 000/043 VUs  2m32.9s/5m0s  85.00 iters/s
+load_RUH           [  51% ] 000/043 VUs  2m32.9s/5m0s  85.00 iters/s
+
+running (2m34.0s), 0000/0301 VUs, 91595 complete and 0 interrupted iterations
+load_AMM           [  51% ] 000/043 VUs  2m33.9s/5m0s  85.00 iters/s
+load_DMM           [  51% ] 000/043 VUs  2m33.9s/5m0s  85.00 iters/s
+load_JED           [  51% ] 000/043 VUs  2m33.9s/5m0s  85.00 iters/s
+load_MAD           [  51% ] 000/043 VUs  2m33.9s/5m0s  85.00 iters/s
+load_MEC           [  51% ] 000/043 VUs  2m33.9s/5m0s  85.00 iters/s
+load_OtherCities   [  51% ] 000/043 VUs  2m33.9s/5m0s  85.00 iters/s
+load_RUH           [  51% ] 000/043 VUs  2m33.9s/5m0s  85.00 iters/s
+
+running (2m35.0s), 0000/0301 VUs, 92190 complete and 0 interrupted iterations
+load_AMM           [  52% ] 000/043 VUs  2m34.9s/5m0s  85.00 iters/s
+load_DMM           [  52% ] 000/043 VUs  2m34.9s/5m0s  85.00 iters/s
+load_JED           [  52% ] 000/043 VUs  2m34.9s/5m0s  85.00 iters/s
+load_MAD           [  52% ] 000/043 VUs  2m34.9s/5m0s  85.00 iters/s
+load_MEC           [  52% ] 000/043 VUs  2m34.9s/5m0s  85.00 iters/s
+load_OtherCities   [  52% ] 000/043 VUs  2m34.9s/5m0s  85.00 iters/s
+load_RUH           [  52% ] 000/043 VUs  2m34.9s/5m0s  85.00 iters/s
+
+running (2m36.0s), 0000/0301 VUs, 92785 complete and 0 interrupted iterations
+load_AMM           [  52% ] 000/043 VUs  2m35.9s/5m0s  85.00 iters/s
+load_DMM           [  52% ] 000/043 VUs  2m35.9s/5m0s  85.00 iters/s
+load_JED           [  52% ] 000/043 VUs  2m35.9s/5m0s  85.00 iters/s
+load_MAD           [  52% ] 000/043 VUs  2m35.9s/5m0s  85.00 iters/s
+load_MEC           [  52% ] 000/043 VUs  2m35.9s/5m0s  85.00 iters/s
+load_OtherCities   [  52% ] 000/043 VUs  2m35.9s/5m0s  85.00 iters/s
+load_RUH           [  52% ] 000/043 VUs  2m35.9s/5m0s  85.00 iters/s
+
+running (2m37.0s), 0000/0301 VUs, 93380 complete and 0 interrupted iterations
+load_AMM           [  52% ] 000/043 VUs  2m36.9s/5m0s  85.00 iters/s
+load_DMM           [  52% ] 000/043 VUs  2m36.9s/5m0s  85.00 iters/s
+load_JED           [  52% ] 000/043 VUs  2m36.9s/5m0s  85.00 iters/s
+load_MAD           [  52% ] 000/043 VUs  2m36.9s/5m0s  85.00 iters/s
+load_MEC           [  52% ] 000/043 VUs  2m36.9s/5m0s  85.00 iters/s
+load_OtherCities   [  52% ] 000/043 VUs  2m36.9s/5m0s  85.00 iters/s
+load_RUH           [  52% ] 000/043 VUs  2m36.9s/5m0s  85.00 iters/s
+
+running (2m38.0s), 0000/0301 VUs, 93975 complete and 0 interrupted iterations
+load_AMM           [  53% ] 000/043 VUs  2m37.9s/5m0s  85.00 iters/s
+load_DMM           [  53% ] 000/043 VUs  2m37.9s/5m0s  85.00 iters/s
+load_JED           [  53% ] 000/043 VUs  2m37.9s/5m0s  85.00 iters/s
+load_MAD           [  53% ] 000/043 VUs  2m37.9s/5m0s  85.00 iters/s
+load_MEC           [  53% ] 000/043 VUs  2m37.9s/5m0s  85.00 iters/s
+load_OtherCities   [  53% ] 000/043 VUs  2m37.9s/5m0s  85.00 iters/s
+load_RUH           [  53% ] 000/043 VUs  2m37.9s/5m0s  85.00 iters/s
+
+running (2m39.0s), 0000/0301 VUs, 94570 complete and 0 interrupted iterations
+load_AMM           [  53% ] 000/043 VUs  2m38.9s/5m0s  85.00 iters/s
+load_DMM           [  53% ] 000/043 VUs  2m38.9s/5m0s  85.00 iters/s
+load_JED           [  53% ] 000/043 VUs  2m38.9s/5m0s  85.00 iters/s
+load_MAD           [  53% ] 000/043 VUs  2m38.9s/5m0s  85.00 iters/s
+load_MEC           [  53% ] 000/043 VUs  2m38.9s/5m0s  85.00 iters/s
+load_OtherCities   [  53% ] 000/043 VUs  2m38.9s/5m0s  85.00 iters/s
+load_RUH           [  53% ] 000/043 VUs  2m38.9s/5m0s  85.00 iters/s
+
+running (2m40.0s), 0000/0301 VUs, 95165 complete and 0 interrupted iterations
+load_AMM           [  53% ] 000/043 VUs  2m39.9s/5m0s  85.00 iters/s
+load_DMM           [  53% ] 000/043 VUs  2m39.9s/5m0s  85.00 iters/s
+load_JED           [  53% ] 000/043 VUs  2m39.9s/5m0s  85.00 iters/s
+load_MAD           [  53% ] 000/043 VUs  2m39.9s/5m0s  85.00 iters/s
+load_MEC           [  53% ] 000/043 VUs  2m39.9s/5m0s  85.00 iters/s
+load_OtherCities   [  53% ] 000/043 VUs  2m39.9s/5m0s  85.00 iters/s
+load_RUH           [  53% ] 000/043 VUs  2m39.9s/5m0s  85.00 iters/s
+
+running (2m41.0s), 0008/0301 VUs, 95752 complete and 0 interrupted iterations
+load_AMM           [  54% ] 001/043 VUs  2m40.9s/5m0s  85.00 iters/s
+load_DMM           [  54% ] 001/043 VUs  2m40.9s/5m0s  85.00 iters/s
+load_JED           [  54% ] 002/043 VUs  2m40.9s/5m0s  85.00 iters/s
+load_MAD           [  54% ] 002/043 VUs  2m40.9s/5m0s  85.00 iters/s
+load_MEC           [  54% ] 001/043 VUs  2m40.9s/5m0s  85.00 iters/s
+load_OtherCities   [  54% ] 001/043 VUs  2m40.9s/5m0s  85.00 iters/s
+load_RUH           [  54% ] 000/043 VUs  2m40.9s/5m0s  85.00 iters/s
+
+running (2m42.0s), 0000/0301 VUs, 96355 complete and 0 interrupted iterations
+load_AMM           [  54% ] 000/043 VUs  2m41.9s/5m0s  85.00 iters/s
+load_DMM           [  54% ] 000/043 VUs  2m41.9s/5m0s  85.00 iters/s
+load_JED           [  54% ] 000/043 VUs  2m41.9s/5m0s  85.00 iters/s
+load_MAD           [  54% ] 000/043 VUs  2m41.9s/5m0s  85.00 iters/s
+load_MEC           [  54% ] 000/043 VUs  2m41.9s/5m0s  85.00 iters/s
+load_OtherCities   [  54% ] 000/043 VUs  2m41.9s/5m0s  85.00 iters/s
+load_RUH           [  54% ] 000/043 VUs  2m41.9s/5m0s  85.00 iters/s
+
+running (2m43.0s), 0000/0301 VUs, 96950 complete and 0 interrupted iterations
+load_AMM           [  54% ] 000/043 VUs  2m42.9s/5m0s  85.00 iters/s
+load_DMM           [  54% ] 000/043 VUs  2m42.9s/5m0s  85.00 iters/s
+load_JED           [  54% ] 000/043 VUs  2m42.9s/5m0s  85.00 iters/s
+load_MAD           [  54% ] 000/043 VUs  2m42.9s/5m0s  85.00 iters/s
+load_MEC           [  54% ] 000/043 VUs  2m42.9s/5m0s  85.00 iters/s
+load_OtherCities   [  54% ] 000/043 VUs  2m42.9s/5m0s  85.00 iters/s
+load_RUH           [  54% ] 000/043 VUs  2m42.9s/5m0s  85.00 iters/s
+
+running (2m44.0s), 0000/0301 VUs, 97545 complete and 0 interrupted iterations
+load_AMM           [  55% ] 000/043 VUs  2m43.9s/5m0s  85.00 iters/s
+load_DMM           [  55% ] 000/043 VUs  2m43.9s/5m0s  85.00 iters/s
+load_JED           [  55% ] 000/043 VUs  2m43.9s/5m0s  85.00 iters/s
+load_MAD           [  55% ] 000/043 VUs  2m43.9s/5m0s  85.00 iters/s
+load_MEC           [  55% ] 000/043 VUs  2m43.9s/5m0s  85.00 iters/s
+load_OtherCities   [  55% ] 000/043 VUs  2m43.9s/5m0s  85.00 iters/s
+load_RUH           [  55% ] 000/043 VUs  2m43.9s/5m0s  85.00 iters/s
+
+running (2m45.0s), 0000/0301 VUs, 98140 complete and 0 interrupted iterations
+load_AMM           [  55% ] 000/043 VUs  2m44.9s/5m0s  85.00 iters/s
+load_DMM           [  55% ] 000/043 VUs  2m44.9s/5m0s  85.00 iters/s
+load_JED           [  55% ] 000/043 VUs  2m44.9s/5m0s  85.00 iters/s
+load_MAD           [  55% ] 000/043 VUs  2m44.9s/5m0s  85.00 iters/s
+load_MEC           [  55% ] 000/043 VUs  2m44.9s/5m0s  85.00 iters/s
+load_OtherCities   [  55% ] 000/043 VUs  2m44.9s/5m0s  85.00 iters/s
+load_RUH           [  55% ] 000/043 VUs  2m44.9s/5m0s  85.00 iters/s
+
+running (2m46.0s), 0003/0301 VUs, 98732 complete and 0 interrupted iterations
+load_AMM           [  55% ] 000/043 VUs  2m45.9s/5m0s  85.00 iters/s
+load_DMM           [  55% ] 001/043 VUs  2m45.9s/5m0s  85.00 iters/s
+load_JED           [  55% ] 000/043 VUs  2m45.9s/5m0s  85.00 iters/s
+load_MAD           [  55% ] 001/043 VUs  2m45.9s/5m0s  85.00 iters/s
+load_MEC           [  55% ] 000/043 VUs  2m45.9s/5m0s  85.00 iters/s
+load_OtherCities   [  55% ] 000/043 VUs  2m45.9s/5m0s  85.00 iters/s
+load_RUH           [  55% ] 001/043 VUs  2m45.9s/5m0s  85.00 iters/s
+
+running (2m47.0s), 0000/0301 VUs, 99330 complete and 0 interrupted iterations
+load_AMM           [  56% ] 000/043 VUs  2m46.9s/5m0s  85.00 iters/s
+load_DMM           [  56% ] 000/043 VUs  2m46.9s/5m0s  85.00 iters/s
+load_JED           [  56% ] 000/043 VUs  2m46.9s/5m0s  85.00 iters/s
+load_MAD           [  56% ] 000/043 VUs  2m46.9s/5m0s  85.00 iters/s
+load_MEC           [  56% ] 000/043 VUs  2m46.9s/5m0s  85.00 iters/s
+load_OtherCities   [  56% ] 000/043 VUs  2m46.9s/5m0s  85.00 iters/s
+load_RUH           [  56% ] 000/043 VUs  2m46.9s/5m0s  85.00 iters/s
+
+running (2m48.0s), 0000/0301 VUs, 99925 complete and 0 interrupted iterations
+load_AMM           [  56% ] 000/043 VUs  2m47.9s/5m0s  85.00 iters/s
+load_DMM           [  56% ] 000/043 VUs  2m47.9s/5m0s  85.00 iters/s
+load_JED           [  56% ] 000/043 VUs  2m47.9s/5m0s  85.00 iters/s
+load_MAD           [  56% ] 000/043 VUs  2m47.9s/5m0s  85.00 iters/s
+load_MEC           [  56% ] 000/043 VUs  2m47.9s/5m0s  85.00 iters/s
+load_OtherCities   [  56% ] 000/043 VUs  2m47.9s/5m0s  85.00 iters/s
+load_RUH           [  56% ] 000/043 VUs  2m47.9s/5m0s  85.00 iters/s
+
+running (2m49.0s), 0003/0301 VUs, 100517 complete and 0 interrupted iterations
+load_AMM           [  56% ] 000/043 VUs  2m48.9s/5m0s  85.00 iters/s
+load_DMM           [  56% ] 001/043 VUs  2m48.9s/5m0s  85.00 iters/s
+load_JED           [  56% ] 001/043 VUs  2m48.9s/5m0s  85.00 iters/s
+load_MAD           [  56% ] 000/043 VUs  2m48.9s/5m0s  85.00 iters/s
+load_MEC           [  56% ] 000/043 VUs  2m48.9s/5m0s  85.00 iters/s
+load_OtherCities   [  56% ] 000/043 VUs  2m48.9s/5m0s  85.00 iters/s
+load_RUH           [  56% ] 001/043 VUs  2m48.9s/5m0s  85.00 iters/s
+
+running (2m50.0s), 0000/0301 VUs, 101115 complete and 0 interrupted iterations
+load_AMM           [  57% ] 000/043 VUs  2m49.9s/5m0s  85.00 iters/s
+load_DMM           [  57% ] 000/043 VUs  2m49.9s/5m0s  85.00 iters/s
+load_JED           [  57% ] 000/043 VUs  2m49.9s/5m0s  85.00 iters/s
+load_MAD           [  57% ] 000/043 VUs  2m49.9s/5m0s  85.00 iters/s
+load_MEC           [  57% ] 000/043 VUs  2m49.9s/5m0s  85.00 iters/s
+load_OtherCities   [  57% ] 000/043 VUs  2m49.9s/5m0s  85.00 iters/s
+load_RUH           [  57% ] 000/043 VUs  2m49.9s/5m0s  85.00 iters/s
+
+running (2m51.0s), 0018/0301 VUs, 101692 complete and 0 interrupted iterations
+load_AMM           [  57% ] 003/043 VUs  2m50.9s/5m0s  85.00 iters/s
+load_DMM           [  57% ] 002/043 VUs  2m50.9s/5m0s  85.00 iters/s
+load_JED           [  57% ] 003/043 VUs  2m50.9s/5m0s  85.00 iters/s
+load_MAD           [  57% ] 003/043 VUs  2m50.9s/5m0s  85.00 iters/s
+load_MEC           [  57% ] 002/043 VUs  2m50.9s/5m0s  85.00 iters/s
+load_OtherCities   [  57% ] 002/043 VUs  2m50.9s/5m0s  85.00 iters/s
+load_RUH           [  57% ] 003/043 VUs  2m50.9s/5m0s  85.00 iters/s
+
+running (2m52.0s), 0018/0301 VUs, 102287 complete and 0 interrupted iterations
+load_AMM           [  57% ] 002/043 VUs  2m51.9s/5m0s  85.00 iters/s
+load_DMM           [  57% ] 002/043 VUs  2m51.9s/5m0s  85.00 iters/s
+load_JED           [  57% ] 002/043 VUs  2m51.9s/5m0s  85.00 iters/s
+load_MAD           [  57% ] 003/043 VUs  2m51.9s/5m0s  85.00 iters/s
+load_MEC           [  57% ] 003/043 VUs  2m51.9s/5m0s  85.00 iters/s
+load_OtherCities   [  57% ] 002/043 VUs  2m51.9s/5m0s  85.00 iters/s
+load_RUH           [  57% ] 004/043 VUs  2m51.9s/5m0s  85.00 iters/s
+
+running (2m53.0s), 0001/0301 VUs, 102899 complete and 0 interrupted iterations
+load_AMM           [  58% ] 000/043 VUs  2m52.9s/5m0s  85.00 iters/s
+load_DMM           [  58% ] 000/043 VUs  2m52.9s/5m0s  85.00 iters/s
+load_JED           [  58% ] 000/043 VUs  2m52.9s/5m0s  85.00 iters/s
+load_MAD           [  58% ] 000/043 VUs  2m52.9s/5m0s  85.00 iters/s
+load_MEC           [  58% ] 000/043 VUs  2m52.9s/5m0s  85.00 iters/s
+load_OtherCities   [  58% ] 000/043 VUs  2m52.9s/5m0s  85.00 iters/s
+load_RUH           [  58% ] 000/043 VUs  2m52.9s/5m0s  85.00 iters/s
+
+running (2m54.0s), 0000/0301 VUs, 103495 complete and 0 interrupted iterations
+load_AMM           [  58% ] 000/043 VUs  2m53.9s/5m0s  85.00 iters/s
+load_DMM           [  58% ] 000/043 VUs  2m53.9s/5m0s  85.00 iters/s
+load_JED           [  58% ] 000/043 VUs  2m53.9s/5m0s  85.00 iters/s
+load_MAD           [  58% ] 000/043 VUs  2m53.9s/5m0s  85.00 iters/s
+load_MEC           [  58% ] 000/043 VUs  2m53.9s/5m0s  85.00 iters/s
+load_OtherCities   [  58% ] 000/043 VUs  2m53.9s/5m0s  85.00 iters/s
+load_RUH           [  58% ] 000/043 VUs  2m53.9s/5m0s  85.00 iters/s
+
+running (2m55.0s), 0000/0301 VUs, 104090 complete and 0 interrupted iterations
+load_AMM           [  58% ] 000/043 VUs  2m54.9s/5m0s  85.00 iters/s
+load_DMM           [  58% ] 000/043 VUs  2m54.9s/5m0s  85.00 iters/s
+load_JED           [  58% ] 000/043 VUs  2m54.9s/5m0s  85.00 iters/s
+load_MAD           [  58% ] 000/043 VUs  2m54.9s/5m0s  85.00 iters/s
+load_MEC           [  58% ] 000/043 VUs  2m54.9s/5m0s  85.00 iters/s
+load_OtherCities   [  58% ] 000/043 VUs  2m54.9s/5m0s  85.00 iters/s
+load_RUH           [  58% ] 000/043 VUs  2m54.9s/5m0s  85.00 iters/s
+
+running (2m56.0s), 0000/0301 VUs, 104685 complete and 0 interrupted iterations
+load_AMM           [  59% ] 000/043 VUs  2m55.9s/5m0s  85.00 iters/s
+load_DMM           [  59% ] 000/043 VUs  2m55.9s/5m0s  85.00 iters/s
+load_JED           [  59% ] 000/043 VUs  2m55.9s/5m0s  85.00 iters/s
+load_MAD           [  59% ] 000/043 VUs  2m55.9s/5m0s  85.00 iters/s
+load_MEC           [  59% ] 000/043 VUs  2m55.9s/5m0s  85.00 iters/s
+load_OtherCities   [  59% ] 000/043 VUs  2m55.9s/5m0s  85.00 iters/s
+load_RUH           [  59% ] 000/043 VUs  2m55.9s/5m0s  85.00 iters/s
+
+running (2m57.0s), 0003/0301 VUs, 105277 complete and 0 interrupted iterations
+load_AMM           [  59% ] 001/043 VUs  2m56.9s/5m0s  85.00 iters/s
+load_DMM           [  59% ] 000/043 VUs  2m56.9s/5m0s  85.00 iters/s
+load_JED           [  59% ] 000/043 VUs  2m56.9s/5m0s  85.00 iters/s
+load_MAD           [  59% ] 000/043 VUs  2m56.9s/5m0s  85.00 iters/s
+load_MEC           [  59% ] 001/043 VUs  2m56.9s/5m0s  85.00 iters/s
+load_OtherCities   [  59% ] 000/043 VUs  2m56.9s/5m0s  85.00 iters/s
+load_RUH           [  59% ] 001/043 VUs  2m56.9s/5m0s  85.00 iters/s
+
+running (2m58.0s), 0000/0301 VUs, 105875 complete and 0 interrupted iterations
+load_AMM           [  59% ] 000/043 VUs  2m57.9s/5m0s  85.00 iters/s
+load_DMM           [  59% ] 000/043 VUs  2m57.9s/5m0s  85.00 iters/s
+load_JED           [  59% ] 000/043 VUs  2m57.9s/5m0s  85.00 iters/s
+load_MAD           [  59% ] 000/043 VUs  2m57.9s/5m0s  85.00 iters/s
+load_MEC           [  59% ] 000/043 VUs  2m57.9s/5m0s  85.00 iters/s
+load_OtherCities   [  59% ] 000/043 VUs  2m57.9s/5m0s  85.00 iters/s
+load_RUH           [  59% ] 000/043 VUs  2m57.9s/5m0s  85.00 iters/s
+
+running (2m59.0s), 0000/0301 VUs, 106470 complete and 0 interrupted iterations
+load_AMM           [  60% ] 000/043 VUs  2m58.9s/5m0s  85.00 iters/s
+load_DMM           [  60% ] 000/043 VUs  2m58.9s/5m0s  85.00 iters/s
+load_JED           [  60% ] 000/043 VUs  2m58.9s/5m0s  85.00 iters/s
+load_MAD           [  60% ] 000/043 VUs  2m58.9s/5m0s  85.00 iters/s
+load_MEC           [  60% ] 000/043 VUs  2m58.9s/5m0s  85.00 iters/s
+load_OtherCities   [  60% ] 000/043 VUs  2m58.9s/5m0s  85.00 iters/s
+load_RUH           [  60% ] 000/043 VUs  2m58.9s/5m0s  85.00 iters/s
+
+running (3m00.0s), 0000/0301 VUs, 107065 complete and 0 interrupted iterations
+load_AMM           [  60% ] 000/043 VUs  2m59.9s/5m0s  85.00 iters/s
+load_DMM           [  60% ] 000/043 VUs  2m59.9s/5m0s  85.00 iters/s
+load_JED           [  60% ] 000/043 VUs  2m59.9s/5m0s  85.00 iters/s
+load_MAD           [  60% ] 000/043 VUs  2m59.9s/5m0s  85.00 iters/s
+load_MEC           [  60% ] 000/043 VUs  2m59.9s/5m0s  85.00 iters/s
+load_OtherCities   [  60% ] 000/043 VUs  2m59.9s/5m0s  85.00 iters/s
+load_RUH           [  60% ] 000/043 VUs  2m59.9s/5m0s  85.00 iters/s
+
+running (3m01.0s), 0000/0301 VUs, 107660 complete and 0 interrupted iterations
+load_AMM           [  60% ] 000/043 VUs  3m00.9s/5m0s  85.00 iters/s
+load_DMM           [  60% ] 000/043 VUs  3m00.9s/5m0s  85.00 iters/s
+load_JED           [  60% ] 000/043 VUs  3m00.9s/5m0s  85.00 iters/s
+load_MAD           [  60% ] 000/043 VUs  3m00.9s/5m0s  85.00 iters/s
+load_MEC           [  60% ] 000/043 VUs  3m00.9s/5m0s  85.00 iters/s
+load_OtherCities   [  60% ] 000/043 VUs  3m00.9s/5m0s  85.00 iters/s
+load_RUH           [  60% ] 000/043 VUs  3m00.9s/5m0s  85.00 iters/s
+
+running (3m02.0s), 0000/0301 VUs, 108255 complete and 0 interrupted iterations
+load_AMM           [  61% ] 000/043 VUs  3m01.9s/5m0s  85.00 iters/s
+load_DMM           [  61% ] 000/043 VUs  3m01.9s/5m0s  85.00 iters/s
+load_JED           [  61% ] 000/043 VUs  3m01.9s/5m0s  85.00 iters/s
+load_MAD           [  61% ] 000/043 VUs  3m01.9s/5m0s  85.00 iters/s
+load_MEC           [  61% ] 000/043 VUs  3m01.9s/5m0s  85.00 iters/s
+load_OtherCities   [  61% ] 000/043 VUs  3m01.9s/5m0s  85.00 iters/s
+load_RUH           [  61% ] 000/043 VUs  3m01.9s/5m0s  85.00 iters/s
+
+running (3m03.0s), 0000/0301 VUs, 108850 complete and 0 interrupted iterations
+load_AMM           [  61% ] 000/043 VUs  3m02.9s/5m0s  85.00 iters/s
+load_DMM           [  61% ] 000/043 VUs  3m02.9s/5m0s  85.00 iters/s
+load_JED           [  61% ] 000/043 VUs  3m02.9s/5m0s  85.00 iters/s
+load_MAD           [  61% ] 000/043 VUs  3m02.9s/5m0s  85.00 iters/s
+load_MEC           [  61% ] 000/043 VUs  3m02.9s/5m0s  85.00 iters/s
+load_OtherCities   [  61% ] 000/043 VUs  3m02.9s/5m0s  85.00 iters/s
+load_RUH           [  61% ] 000/043 VUs  3m02.9s/5m0s  85.00 iters/s
+
+running (3m04.0s), 0000/0301 VUs, 109445 complete and 0 interrupted iterations
+load_AMM           [  61% ] 000/043 VUs  3m03.9s/5m0s  85.00 iters/s
+load_DMM           [  61% ] 000/043 VUs  3m03.9s/5m0s  85.00 iters/s
+load_JED           [  61% ] 000/043 VUs  3m03.9s/5m0s  85.00 iters/s
+load_MAD           [  61% ] 000/043 VUs  3m03.9s/5m0s  85.00 iters/s
+load_MEC           [  61% ] 000/043 VUs  3m03.9s/5m0s  85.00 iters/s
+load_OtherCities   [  61% ] 000/043 VUs  3m03.9s/5m0s  85.00 iters/s
+load_RUH           [  61% ] 000/043 VUs  3m03.9s/5m0s  85.00 iters/s
+
+running (3m05.0s), 0010/0301 VUs, 110030 complete and 0 interrupted iterations
+load_AMM           [  62% ] 001/043 VUs  3m04.9s/5m0s  85.00 iters/s
+load_DMM           [  62% ] 002/043 VUs  3m04.9s/5m0s  85.00 iters/s
+load_JED           [  62% ] 001/043 VUs  3m04.9s/5m0s  85.00 iters/s
+load_MAD           [  62% ] 002/043 VUs  3m04.9s/5m0s  85.00 iters/s
+load_MEC           [  62% ] 001/043 VUs  3m04.9s/5m0s  85.00 iters/s
+load_OtherCities   [  62% ] 001/043 VUs  3m04.9s/5m0s  85.00 iters/s
+load_RUH           [  62% ] 002/043 VUs  3m04.9s/5m0s  85.00 iters/s
+
+running (3m06.0s), 0000/0301 VUs, 110635 complete and 0 interrupted iterations
+load_AMM           [  62% ] 000/043 VUs  3m05.9s/5m0s  85.00 iters/s
+load_DMM           [  62% ] 000/043 VUs  3m05.9s/5m0s  85.00 iters/s
+load_JED           [  62% ] 000/043 VUs  3m05.9s/5m0s  85.00 iters/s
+load_MAD           [  62% ] 000/043 VUs  3m05.9s/5m0s  85.00 iters/s
+load_MEC           [  62% ] 000/043 VUs  3m05.9s/5m0s  85.00 iters/s
+load_OtherCities   [  62% ] 000/043 VUs  3m05.9s/5m0s  85.00 iters/s
+load_RUH           [  62% ] 000/043 VUs  3m05.9s/5m0s  85.00 iters/s
+
+running (3m07.0s), 0000/0301 VUs, 111230 complete and 0 interrupted iterations
+load_AMM           [  62% ] 000/043 VUs  3m06.9s/5m0s  85.00 iters/s
+load_DMM           [  62% ] 000/043 VUs  3m06.9s/5m0s  85.00 iters/s
+load_JED           [  62% ] 000/043 VUs  3m06.9s/5m0s  85.00 iters/s
+load_MAD           [  62% ] 000/043 VUs  3m06.9s/5m0s  85.00 iters/s
+load_MEC           [  62% ] 000/043 VUs  3m06.9s/5m0s  85.00 iters/s
+load_OtherCities   [  62% ] 000/043 VUs  3m06.9s/5m0s  85.00 iters/s
+load_RUH           [  62% ] 000/043 VUs  3m06.9s/5m0s  85.00 iters/s
+
+running (3m08.0s), 0000/0301 VUs, 111825 complete and 0 interrupted iterations
+load_AMM           [  63% ] 000/043 VUs  3m07.9s/5m0s  85.00 iters/s
+load_DMM           [  63% ] 000/043 VUs  3m07.9s/5m0s  85.00 iters/s
+load_JED           [  63% ] 000/043 VUs  3m07.9s/5m0s  85.00 iters/s
+load_MAD           [  63% ] 000/043 VUs  3m07.9s/5m0s  85.00 iters/s
+load_MEC           [  63% ] 000/043 VUs  3m07.9s/5m0s  85.00 iters/s
+load_OtherCities   [  63% ] 000/043 VUs  3m07.9s/5m0s  85.00 iters/s
+load_RUH           [  63% ] 000/043 VUs  3m07.9s/5m0s  85.00 iters/s
+
+running (3m09.0s), 0000/0301 VUs, 112420 complete and 0 interrupted iterations
+load_AMM           [  63% ] 000/043 VUs  3m08.9s/5m0s  85.00 iters/s
+load_DMM           [  63% ] 000/043 VUs  3m08.9s/5m0s  85.00 iters/s
+load_JED           [  63% ] 000/043 VUs  3m08.9s/5m0s  85.00 iters/s
+load_MAD           [  63% ] 000/043 VUs  3m08.9s/5m0s  85.00 iters/s
+load_MEC           [  63% ] 000/043 VUs  3m08.9s/5m0s  85.00 iters/s
+load_OtherCities   [  63% ] 000/043 VUs  3m08.9s/5m0s  85.00 iters/s
+load_RUH           [  63% ] 000/043 VUs  3m08.9s/5m0s  85.00 iters/s
+
+running (3m10.0s), 0000/0301 VUs, 113015 complete and 0 interrupted iterations
+load_AMM           [  63% ] 000/043 VUs  3m09.9s/5m0s  85.00 iters/s
+load_DMM           [  63% ] 000/043 VUs  3m09.9s/5m0s  85.00 iters/s
+load_JED           [  63% ] 000/043 VUs  3m09.9s/5m0s  85.00 iters/s
+load_MAD           [  63% ] 000/043 VUs  3m09.9s/5m0s  85.00 iters/s
+load_MEC           [  63% ] 000/043 VUs  3m09.9s/5m0s  85.00 iters/s
+load_OtherCities   [  63% ] 000/043 VUs  3m09.9s/5m0s  85.00 iters/s
+load_RUH           [  63% ] 000/043 VUs  3m09.9s/5m0s  85.00 iters/s
+
+running (3m11.0s), 0000/0301 VUs, 113610 complete and 0 interrupted iterations
+load_AMM           [  64% ] 000/043 VUs  3m10.9s/5m0s  85.00 iters/s
+load_DMM           [  64% ] 000/043 VUs  3m10.9s/5m0s  85.00 iters/s
+load_JED           [  64% ] 000/043 VUs  3m10.9s/5m0s  85.00 iters/s
+load_MAD           [  64% ] 000/043 VUs  3m10.9s/5m0s  85.00 iters/s
+load_MEC           [  64% ] 000/043 VUs  3m10.9s/5m0s  85.00 iters/s
+load_OtherCities   [  64% ] 000/043 VUs  3m10.9s/5m0s  85.00 iters/s
+load_RUH           [  64% ] 000/043 VUs  3m10.9s/5m0s  85.00 iters/s
+
+running (3m12.0s), 0000/0301 VUs, 114205 complete and 0 interrupted iterations
+load_AMM           [  64% ] 000/043 VUs  3m11.9s/5m0s  85.00 iters/s
+load_DMM           [  64% ] 000/043 VUs  3m11.9s/5m0s  85.00 iters/s
+load_JED           [  64% ] 000/043 VUs  3m11.9s/5m0s  85.00 iters/s
+load_MAD           [  64% ] 000/043 VUs  3m11.9s/5m0s  85.00 iters/s
+load_MEC           [  64% ] 000/043 VUs  3m11.9s/5m0s  85.00 iters/s
+load_OtherCities   [  64% ] 000/043 VUs  3m11.9s/5m0s  85.00 iters/s
+load_RUH           [  64% ] 000/043 VUs  3m11.9s/5m0s  85.00 iters/s
+
+running (3m13.0s), 0000/0301 VUs, 114800 complete and 0 interrupted iterations
+load_AMM           [  64% ] 000/043 VUs  3m12.9s/5m0s  85.00 iters/s
+load_DMM           [  64% ] 000/043 VUs  3m12.9s/5m0s  85.00 iters/s
+load_JED           [  64% ] 000/043 VUs  3m12.9s/5m0s  85.00 iters/s
+load_MAD           [  64% ] 000/043 VUs  3m12.9s/5m0s  85.00 iters/s
+load_MEC           [  64% ] 000/043 VUs  3m12.9s/5m0s  85.00 iters/s
+load_OtherCities   [  64% ] 000/043 VUs  3m12.9s/5m0s  85.00 iters/s
+load_RUH           [  64% ] 000/043 VUs  3m12.9s/5m0s  85.00 iters/s
+
+running (3m14.0s), 0000/0301 VUs, 115395 complete and 0 interrupted iterations
+load_AMM           [  65% ] 000/043 VUs  3m13.9s/5m0s  85.00 iters/s
+load_DMM           [  65% ] 000/043 VUs  3m13.9s/5m0s  85.00 iters/s
+load_JED           [  65% ] 000/043 VUs  3m13.9s/5m0s  85.00 iters/s
+load_MAD           [  65% ] 000/043 VUs  3m13.9s/5m0s  85.00 iters/s
+load_MEC           [  65% ] 000/043 VUs  3m13.9s/5m0s  85.00 iters/s
+load_OtherCities   [  65% ] 000/043 VUs  3m13.9s/5m0s  85.00 iters/s
+load_RUH           [  65% ] 000/043 VUs  3m13.9s/5m0s  85.00 iters/s
+
+running (3m15.0s), 0000/0301 VUs, 115990 complete and 0 interrupted iterations
+load_AMM           [  65% ] 000/043 VUs  3m14.9s/5m0s  85.00 iters/s
+load_DMM           [  65% ] 000/043 VUs  3m14.9s/5m0s  85.00 iters/s
+load_JED           [  65% ] 000/043 VUs  3m14.9s/5m0s  85.00 iters/s
+load_MAD           [  65% ] 000/043 VUs  3m14.9s/5m0s  85.00 iters/s
+load_MEC           [  65% ] 000/043 VUs  3m14.9s/5m0s  85.00 iters/s
+load_OtherCities   [  65% ] 000/043 VUs  3m14.9s/5m0s  85.00 iters/s
+load_RUH           [  65% ] 000/043 VUs  3m14.9s/5m0s  85.00 iters/s
+
+running (3m16.0s), 0000/0301 VUs, 116585 complete and 0 interrupted iterations
+load_AMM           [  65% ] 000/043 VUs  3m15.9s/5m0s  85.00 iters/s
+load_DMM           [  65% ] 000/043 VUs  3m15.9s/5m0s  85.00 iters/s
+load_JED           [  65% ] 000/043 VUs  3m15.9s/5m0s  85.00 iters/s
+load_MAD           [  65% ] 000/043 VUs  3m15.9s/5m0s  85.00 iters/s
+load_MEC           [  65% ] 000/043 VUs  3m15.9s/5m0s  85.00 iters/s
+load_OtherCities   [  65% ] 000/043 VUs  3m15.9s/5m0s  85.00 iters/s
+load_RUH           [  65% ] 000/043 VUs  3m15.9s/5m0s  85.00 iters/s
+
+running (3m17.0s), 0000/0301 VUs, 117180 complete and 0 interrupted iterations
+load_AMM           [  66% ] 000/043 VUs  3m16.9s/5m0s  85.00 iters/s
+load_DMM           [  66% ] 000/043 VUs  3m16.9s/5m0s  85.00 iters/s
+load_JED           [  66% ] 000/043 VUs  3m16.9s/5m0s  85.00 iters/s
+load_MAD           [  66% ] 000/043 VUs  3m16.9s/5m0s  85.00 iters/s
+load_MEC           [  66% ] 000/043 VUs  3m16.9s/5m0s  85.00 iters/s
+load_OtherCities   [  66% ] 000/043 VUs  3m16.9s/5m0s  85.00 iters/s
+load_RUH           [  66% ] 000/043 VUs  3m16.9s/5m0s  85.00 iters/s
+
+running (3m18.0s), 0000/0301 VUs, 117775 complete and 0 interrupted iterations
+load_AMM           [  66% ] 000/043 VUs  3m17.9s/5m0s  85.00 iters/s
+load_DMM           [  66% ] 000/043 VUs  3m17.9s/5m0s  85.00 iters/s
+load_JED           [  66% ] 000/043 VUs  3m17.9s/5m0s  85.00 iters/s
+load_MAD           [  66% ] 000/043 VUs  3m17.9s/5m0s  85.00 iters/s
+load_MEC           [  66% ] 000/043 VUs  3m17.9s/5m0s  85.00 iters/s
+load_OtherCities   [  66% ] 000/043 VUs  3m17.9s/5m0s  85.00 iters/s
+load_RUH           [  66% ] 000/043 VUs  3m17.9s/5m0s  85.00 iters/s
+
+running (3m19.0s), 0000/0301 VUs, 118370 complete and 0 interrupted iterations
+load_AMM           [  66% ] 000/043 VUs  3m18.9s/5m0s  85.00 iters/s
+load_DMM           [  66% ] 000/043 VUs  3m18.9s/5m0s  85.00 iters/s
+load_JED           [  66% ] 000/043 VUs  3m18.9s/5m0s  85.00 iters/s
+load_MAD           [  66% ] 000/043 VUs  3m18.9s/5m0s  85.00 iters/s
+load_MEC           [  66% ] 000/043 VUs  3m18.9s/5m0s  85.00 iters/s
+load_OtherCities   [  66% ] 000/043 VUs  3m18.9s/5m0s  85.00 iters/s
+load_RUH           [  66% ] 000/043 VUs  3m18.9s/5m0s  85.00 iters/s
+
+running (3m20.0s), 0013/0301 VUs, 118952 complete and 0 interrupted iterations
+load_AMM           [  67% ] 002/043 VUs  3m19.9s/5m0s  85.00 iters/s
+load_DMM           [  67% ] 002/043 VUs  3m19.9s/5m0s  85.00 iters/s
+load_JED           [  67% ] 002/043 VUs  3m19.9s/5m0s  85.00 iters/s
+load_MAD           [  67% ] 002/043 VUs  3m19.9s/5m0s  85.00 iters/s
+load_MEC           [  67% ] 002/043 VUs  3m19.9s/5m0s  85.00 iters/s
+load_OtherCities   [  67% ] 002/043 VUs  3m19.9s/5m0s  85.00 iters/s
+load_RUH           [  67% ] 001/043 VUs  3m19.9s/5m0s  85.00 iters/s
+
+running (3m21.0s), 0000/0301 VUs, 119560 complete and 0 interrupted iterations
+load_AMM           [  67% ] 000/043 VUs  3m20.9s/5m0s  85.00 iters/s
+load_DMM           [  67% ] 000/043 VUs  3m20.9s/5m0s  85.00 iters/s
+load_JED           [  67% ] 000/043 VUs  3m20.9s/5m0s  85.00 iters/s
+load_MAD           [  67% ] 000/043 VUs  3m20.9s/5m0s  85.00 iters/s
+load_MEC           [  67% ] 000/043 VUs  3m20.9s/5m0s  85.00 iters/s
+load_OtherCities   [  67% ] 000/043 VUs  3m20.9s/5m0s  85.00 iters/s
+load_RUH           [  67% ] 000/043 VUs  3m20.9s/5m0s  85.00 iters/s
+
+running (3m22.0s), 0000/0301 VUs, 120155 complete and 0 interrupted iterations
+load_AMM           [  67% ] 000/043 VUs  3m21.9s/5m0s  85.00 iters/s
+load_DMM           [  67% ] 000/043 VUs  3m21.9s/5m0s  85.00 iters/s
+load_JED           [  67% ] 000/043 VUs  3m21.9s/5m0s  85.00 iters/s
+load_MAD           [  67% ] 000/043 VUs  3m21.9s/5m0s  85.00 iters/s
+load_MEC           [  67% ] 000/043 VUs  3m21.9s/5m0s  85.00 iters/s
+load_OtherCities   [  67% ] 000/043 VUs  3m21.9s/5m0s  85.00 iters/s
+load_RUH           [  67% ] 000/043 VUs  3m21.9s/5m0s  85.00 iters/s
+
+running (3m23.0s), 0000/0301 VUs, 120750 complete and 0 interrupted iterations
+load_AMM           [  68% ] 000/043 VUs  3m22.9s/5m0s  85.00 iters/s
+load_DMM           [  68% ] 000/043 VUs  3m22.9s/5m0s  85.00 iters/s
+load_JED           [  68% ] 000/043 VUs  3m22.9s/5m0s  85.00 iters/s
+load_MAD           [  68% ] 000/043 VUs  3m22.9s/5m0s  85.00 iters/s
+load_MEC           [  68% ] 000/043 VUs  3m22.9s/5m0s  85.00 iters/s
+load_OtherCities   [  68% ] 000/043 VUs  3m22.9s/5m0s  85.00 iters/s
+load_RUH           [  68% ] 000/043 VUs  3m22.9s/5m0s  85.00 iters/s
+
+running (3m24.0s), 0000/0301 VUs, 121345 complete and 0 interrupted iterations
+load_AMM           [  68% ] 000/043 VUs  3m23.9s/5m0s  85.00 iters/s
+load_DMM           [  68% ] 000/043 VUs  3m23.9s/5m0s  85.00 iters/s
+load_JED           [  68% ] 000/043 VUs  3m23.9s/5m0s  85.00 iters/s
+load_MAD           [  68% ] 000/043 VUs  3m23.9s/5m0s  85.00 iters/s
+load_MEC           [  68% ] 000/043 VUs  3m23.9s/5m0s  85.00 iters/s
+load_OtherCities   [  68% ] 000/043 VUs  3m23.9s/5m0s  85.00 iters/s
+load_RUH           [  68% ] 000/043 VUs  3m23.9s/5m0s  85.00 iters/s
+
+running (3m25.0s), 0000/0301 VUs, 121940 complete and 0 interrupted iterations
+load_AMM           [  68% ] 000/043 VUs  3m24.9s/5m0s  85.00 iters/s
+load_DMM           [  68% ] 000/043 VUs  3m24.9s/5m0s  85.00 iters/s
+load_JED           [  68% ] 000/043 VUs  3m24.9s/5m0s  85.00 iters/s
+load_MAD           [  68% ] 000/043 VUs  3m24.9s/5m0s  85.00 iters/s
+load_MEC           [  68% ] 000/043 VUs  3m24.9s/5m0s  85.00 iters/s
+load_OtherCities   [  68% ] 000/043 VUs  3m24.9s/5m0s  85.00 iters/s
+load_RUH           [  68% ] 000/043 VUs  3m24.9s/5m0s  85.00 iters/s
+
+running (3m26.0s), 0000/0301 VUs, 122535 complete and 0 interrupted iterations
+load_AMM           [  69% ] 000/043 VUs  3m25.9s/5m0s  85.00 iters/s
+load_DMM           [  69% ] 000/043 VUs  3m25.9s/5m0s  85.00 iters/s
+load_JED           [  69% ] 000/043 VUs  3m25.9s/5m0s  85.00 iters/s
+load_MAD           [  69% ] 000/043 VUs  3m25.9s/5m0s  85.00 iters/s
+load_MEC           [  69% ] 000/043 VUs  3m25.9s/5m0s  85.00 iters/s
+load_OtherCities   [  69% ] 000/043 VUs  3m25.9s/5m0s  85.00 iters/s
+load_RUH           [  69% ] 000/043 VUs  3m25.9s/5m0s  85.00 iters/s
+
+running (3m27.0s), 0000/0301 VUs, 123130 complete and 0 interrupted iterations
+load_AMM           [  69% ] 000/043 VUs  3m26.9s/5m0s  85.00 iters/s
+load_DMM           [  69% ] 000/043 VUs  3m26.9s/5m0s  85.00 iters/s
+load_JED           [  69% ] 000/043 VUs  3m26.9s/5m0s  85.00 iters/s
+load_MAD           [  69% ] 000/043 VUs  3m26.9s/5m0s  85.00 iters/s
+load_MEC           [  69% ] 000/043 VUs  3m26.9s/5m0s  85.00 iters/s
+load_OtherCities   [  69% ] 000/043 VUs  3m26.9s/5m0s  85.00 iters/s
+load_RUH           [  69% ] 000/043 VUs  3m26.9s/5m0s  85.00 iters/s
+
+running (3m28.0s), 0000/0301 VUs, 123725 complete and 0 interrupted iterations
+load_AMM           [  69% ] 000/043 VUs  3m27.9s/5m0s  85.00 iters/s
+load_DMM           [  69% ] 000/043 VUs  3m27.9s/5m0s  85.00 iters/s
+load_JED           [  69% ] 000/043 VUs  3m27.9s/5m0s  85.00 iters/s
+load_MAD           [  69% ] 000/043 VUs  3m27.9s/5m0s  85.00 iters/s
+load_MEC           [  69% ] 000/043 VUs  3m27.9s/5m0s  85.00 iters/s
+load_OtherCities   [  69% ] 000/043 VUs  3m27.9s/5m0s  85.00 iters/s
+load_RUH           [  69% ] 000/043 VUs  3m27.9s/5m0s  85.00 iters/s
+
+running (3m29.0s), 0000/0301 VUs, 124320 complete and 0 interrupted iterations
+load_AMM           [  70% ] 000/043 VUs  3m28.9s/5m0s  85.00 iters/s
+load_DMM           [  70% ] 000/043 VUs  3m28.9s/5m0s  85.00 iters/s
+load_JED           [  70% ] 000/043 VUs  3m28.9s/5m0s  85.00 iters/s
+load_MAD           [  70% ] 000/043 VUs  3m28.9s/5m0s  85.00 iters/s
+load_MEC           [  70% ] 000/043 VUs  3m28.9s/5m0s  85.00 iters/s
+load_OtherCities   [  70% ] 000/043 VUs  3m28.9s/5m0s  85.00 iters/s
+load_RUH           [  70% ] 000/043 VUs  3m28.9s/5m0s  85.00 iters/s
+
+running (3m30.0s), 0000/0301 VUs, 124915 complete and 0 interrupted iterations
+load_AMM           [  70% ] 000/043 VUs  3m29.9s/5m0s  85.00 iters/s
+load_DMM           [  70% ] 000/043 VUs  3m29.9s/5m0s  85.00 iters/s
+load_JED           [  70% ] 000/043 VUs  3m29.9s/5m0s  85.00 iters/s
+load_MAD           [  70% ] 000/043 VUs  3m29.9s/5m0s  85.00 iters/s
+load_MEC           [  70% ] 000/043 VUs  3m29.9s/5m0s  85.00 iters/s
+load_OtherCities   [  70% ] 000/043 VUs  3m29.9s/5m0s  85.00 iters/s
+load_RUH           [  70% ] 000/043 VUs  3m29.9s/5m0s  85.00 iters/s
+
+running (3m31.0s), 0019/0301 VUs, 125491 complete and 0 interrupted iterations
+load_AMM           [  70% ] 003/043 VUs  3m30.9s/5m0s  85.00 iters/s
+load_DMM           [  70% ] 003/043 VUs  3m30.9s/5m0s  85.00 iters/s
+load_JED           [  70% ] 003/043 VUs  3m30.9s/5m0s  85.00 iters/s
+load_MAD           [  70% ] 003/043 VUs  3m30.9s/5m0s  85.00 iters/s
+load_MEC           [  70% ] 003/043 VUs  3m30.9s/5m0s  85.00 iters/s
+load_OtherCities   [  70% ] 002/043 VUs  3m30.9s/5m0s  85.00 iters/s
+load_RUH           [  70% ] 002/043 VUs  3m30.9s/5m0s  85.00 iters/s
+
+running (3m32.0s), 0000/0301 VUs, 126105 complete and 0 interrupted iterations
+load_AMM           [  71% ] 000/043 VUs  3m31.9s/5m0s  85.00 iters/s
+load_DMM           [  71% ] 000/043 VUs  3m31.9s/5m0s  85.00 iters/s
+load_JED           [  71% ] 000/043 VUs  3m31.9s/5m0s  85.00 iters/s
+load_MAD           [  71% ] 000/043 VUs  3m31.9s/5m0s  85.00 iters/s
+load_MEC           [  71% ] 000/043 VUs  3m31.9s/5m0s  85.00 iters/s
+load_OtherCities   [  71% ] 000/043 VUs  3m31.9s/5m0s  85.00 iters/s
+load_RUH           [  71% ] 000/043 VUs  3m31.9s/5m0s  85.00 iters/s
+
+running (3m33.0s), 0000/0301 VUs, 126700 complete and 0 interrupted iterations
+load_AMM           [  71% ] 000/043 VUs  3m32.9s/5m0s  85.00 iters/s
+load_DMM           [  71% ] 000/043 VUs  3m32.9s/5m0s  85.00 iters/s
+load_JED           [  71% ] 000/043 VUs  3m32.9s/5m0s  85.00 iters/s
+load_MAD           [  71% ] 000/043 VUs  3m32.9s/5m0s  85.00 iters/s
+load_MEC           [  71% ] 000/043 VUs  3m32.9s/5m0s  85.00 iters/s
+load_OtherCities   [  71% ] 000/043 VUs  3m32.9s/5m0s  85.00 iters/s
+load_RUH           [  71% ] 000/043 VUs  3m32.9s/5m0s  85.00 iters/s
+
+running (3m34.0s), 0000/0301 VUs, 127295 complete and 0 interrupted iterations
+load_AMM           [  71% ] 000/043 VUs  3m33.9s/5m0s  85.00 iters/s
+load_DMM           [  71% ] 000/043 VUs  3m33.9s/5m0s  85.00 iters/s
+load_JED           [  71% ] 000/043 VUs  3m33.9s/5m0s  85.00 iters/s
+load_MAD           [  71% ] 000/043 VUs  3m33.9s/5m0s  85.00 iters/s
+load_MEC           [  71% ] 000/043 VUs  3m33.9s/5m0s  85.00 iters/s
+load_OtherCities   [  71% ] 000/043 VUs  3m33.9s/5m0s  85.00 iters/s
+load_RUH           [  71% ] 000/043 VUs  3m33.9s/5m0s  85.00 iters/s
+
+running (3m35.0s), 0000/0301 VUs, 127890 complete and 0 interrupted iterations
+load_AMM           [  72% ] 000/043 VUs  3m34.9s/5m0s  85.00 iters/s
+load_DMM           [  72% ] 000/043 VUs  3m34.9s/5m0s  85.00 iters/s
+load_JED           [  72% ] 000/043 VUs  3m34.9s/5m0s  85.00 iters/s
+load_MAD           [  72% ] 000/043 VUs  3m34.9s/5m0s  85.00 iters/s
+load_MEC           [  72% ] 000/043 VUs  3m34.9s/5m0s  85.00 iters/s
+load_OtherCities   [  72% ] 000/043 VUs  3m34.9s/5m0s  85.00 iters/s
+load_RUH           [  72% ] 000/043 VUs  3m34.9s/5m0s  85.00 iters/s
+
+running (3m36.0s), 0000/0301 VUs, 128485 complete and 0 interrupted iterations
+load_AMM           [  72% ] 000/043 VUs  3m35.9s/5m0s  85.00 iters/s
+load_DMM           [  72% ] 000/043 VUs  3m35.9s/5m0s  85.00 iters/s
+load_JED           [  72% ] 000/043 VUs  3m35.9s/5m0s  85.00 iters/s
+load_MAD           [  72% ] 000/043 VUs  3m35.9s/5m0s  85.00 iters/s
+load_MEC           [  72% ] 000/043 VUs  3m35.9s/5m0s  85.00 iters/s
+load_OtherCities   [  72% ] 000/043 VUs  3m35.9s/5m0s  85.00 iters/s
+load_RUH           [  72% ] 000/043 VUs  3m35.9s/5m0s  85.00 iters/s
+
+running (3m37.0s), 0000/0301 VUs, 129080 complete and 0 interrupted iterations
+load_AMM           [  72% ] 000/043 VUs  3m36.9s/5m0s  85.00 iters/s
+load_DMM           [  72% ] 000/043 VUs  3m36.9s/5m0s  85.00 iters/s
+load_JED           [  72% ] 000/043 VUs  3m36.9s/5m0s  85.00 iters/s
+load_MAD           [  72% ] 000/043 VUs  3m36.9s/5m0s  85.00 iters/s
+load_MEC           [  72% ] 000/043 VUs  3m36.9s/5m0s  85.00 iters/s
+load_OtherCities   [  72% ] 000/043 VUs  3m36.9s/5m0s  85.00 iters/s
+load_RUH           [  72% ] 000/043 VUs  3m36.9s/5m0s  85.00 iters/s
+
+running (3m38.0s), 0000/0301 VUs, 129675 complete and 0 interrupted iterations
+load_AMM           [  73% ] 000/043 VUs  3m37.9s/5m0s  85.00 iters/s
+load_DMM           [  73% ] 000/043 VUs  3m37.9s/5m0s  85.00 iters/s
+load_JED           [  73% ] 000/043 VUs  3m37.9s/5m0s  85.00 iters/s
+load_MAD           [  73% ] 000/043 VUs  3m37.9s/5m0s  85.00 iters/s
+load_MEC           [  73% ] 000/043 VUs  3m37.9s/5m0s  85.00 iters/s
+load_OtherCities   [  73% ] 000/043 VUs  3m37.9s/5m0s  85.00 iters/s
+load_RUH           [  73% ] 000/043 VUs  3m37.9s/5m0s  85.00 iters/s
+
+running (3m39.0s), 0000/0301 VUs, 130270 complete and 0 interrupted iterations
+load_AMM           [  73% ] 000/043 VUs  3m38.9s/5m0s  85.00 iters/s
+load_DMM           [  73% ] 000/043 VUs  3m38.9s/5m0s  85.00 iters/s
+load_JED           [  73% ] 000/043 VUs  3m38.9s/5m0s  85.00 iters/s
+load_MAD           [  73% ] 000/043 VUs  3m38.9s/5m0s  85.00 iters/s
+load_MEC           [  73% ] 000/043 VUs  3m38.9s/5m0s  85.00 iters/s
+load_OtherCities   [  73% ] 000/043 VUs  3m38.9s/5m0s  85.00 iters/s
+load_RUH           [  73% ] 000/043 VUs  3m38.9s/5m0s  85.00 iters/s
+
+running (3m40.0s), 0000/0301 VUs, 130865 complete and 0 interrupted iterations
+load_AMM           [  73% ] 000/043 VUs  3m39.9s/5m0s  85.00 iters/s
+load_DMM           [  73% ] 000/043 VUs  3m39.9s/5m0s  85.00 iters/s
+load_JED           [  73% ] 000/043 VUs  3m39.9s/5m0s  85.00 iters/s
+load_MAD           [  73% ] 000/043 VUs  3m39.9s/5m0s  85.00 iters/s
+load_MEC           [  73% ] 000/043 VUs  3m39.9s/5m0s  85.00 iters/s
+load_OtherCities   [  73% ] 000/043 VUs  3m39.9s/5m0s  85.00 iters/s
+load_RUH           [  73% ] 000/043 VUs  3m39.9s/5m0s  85.00 iters/s
+
+running (3m41.0s), 0000/0301 VUs, 131460 complete and 0 interrupted iterations
+load_AMM           [  74% ] 000/043 VUs  3m40.9s/5m0s  85.00 iters/s
+load_DMM           [  74% ] 000/043 VUs  3m40.9s/5m0s  85.00 iters/s
+load_JED           [  74% ] 000/043 VUs  3m40.9s/5m0s  85.00 iters/s
+load_MAD           [  74% ] 000/043 VUs  3m40.9s/5m0s  85.00 iters/s
+load_MEC           [  74% ] 000/043 VUs  3m40.9s/5m0s  85.00 iters/s
+load_OtherCities   [  74% ] 000/043 VUs  3m40.9s/5m0s  85.00 iters/s
+load_RUH           [  74% ] 000/043 VUs  3m40.9s/5m0s  85.00 iters/s
+
+running (3m42.0s), 0000/0301 VUs, 132055 complete and 0 interrupted iterations
+load_AMM           [  74% ] 000/043 VUs  3m41.9s/5m0s  85.00 iters/s
+load_DMM           [  74% ] 000/043 VUs  3m41.9s/5m0s  85.00 iters/s
+load_JED           [  74% ] 000/043 VUs  3m41.9s/5m0s  85.00 iters/s
+load_MAD           [  74% ] 000/043 VUs  3m41.9s/5m0s  85.00 iters/s
+load_MEC           [  74% ] 000/043 VUs  3m41.9s/5m0s  85.00 iters/s
+load_OtherCities   [  74% ] 000/043 VUs  3m41.9s/5m0s  85.00 iters/s
+load_RUH           [  74% ] 000/043 VUs  3m41.9s/5m0s  85.00 iters/s
+
+running (3m43.0s), 0000/0301 VUs, 132650 complete and 0 interrupted iterations
+load_AMM           [  74% ] 000/043 VUs  3m42.9s/5m0s  85.00 iters/s
+load_DMM           [  74% ] 000/043 VUs  3m42.9s/5m0s  85.00 iters/s
+load_JED           [  74% ] 000/043 VUs  3m42.9s/5m0s  85.00 iters/s
+load_MAD           [  74% ] 000/043 VUs  3m42.9s/5m0s  85.00 iters/s
+load_MEC           [  74% ] 000/043 VUs  3m42.9s/5m0s  85.00 iters/s
+load_OtherCities   [  74% ] 000/043 VUs  3m42.9s/5m0s  85.00 iters/s
+load_RUH           [  74% ] 000/043 VUs  3m42.9s/5m0s  85.00 iters/s
+
+running (3m44.0s), 0000/0301 VUs, 133245 complete and 0 interrupted iterations
+load_AMM           [  75% ] 000/043 VUs  3m43.9s/5m0s  85.00 iters/s
+load_DMM           [  75% ] 000/043 VUs  3m43.9s/5m0s  85.00 iters/s
+load_JED           [  75% ] 000/043 VUs  3m43.9s/5m0s  85.00 iters/s
+load_MAD           [  75% ] 000/043 VUs  3m43.9s/5m0s  85.00 iters/s
+load_MEC           [  75% ] 000/043 VUs  3m43.9s/5m0s  85.00 iters/s
+load_OtherCities   [  75% ] 000/043 VUs  3m43.9s/5m0s  85.00 iters/s
+load_RUH           [  75% ] 000/043 VUs  3m43.9s/5m0s  85.00 iters/s
+
+running (3m45.0s), 0000/0301 VUs, 133840 complete and 0 interrupted iterations
+load_AMM           [  75% ] 000/043 VUs  3m44.9s/5m0s  85.00 iters/s
+load_DMM           [  75% ] 000/043 VUs  3m44.9s/5m0s  85.00 iters/s
+load_JED           [  75% ] 000/043 VUs  3m44.9s/5m0s  85.00 iters/s
+load_MAD           [  75% ] 000/043 VUs  3m44.9s/5m0s  85.00 iters/s
+load_MEC           [  75% ] 000/043 VUs  3m44.9s/5m0s  85.00 iters/s
+load_OtherCities   [  75% ] 000/043 VUs  3m44.9s/5m0s  85.00 iters/s
+load_RUH           [  75% ] 000/043 VUs  3m44.9s/5m0s  85.00 iters/s
+
+running (3m46.0s), 0000/0301 VUs, 134435 complete and 0 interrupted iterations
+load_AMM           [  75% ] 000/043 VUs  3m45.9s/5m0s  85.00 iters/s
+load_DMM           [  75% ] 000/043 VUs  3m45.9s/5m0s  85.00 iters/s
+load_JED           [  75% ] 000/043 VUs  3m45.9s/5m0s  85.00 iters/s
+load_MAD           [  75% ] 000/043 VUs  3m45.9s/5m0s  85.00 iters/s
+load_MEC           [  75% ] 000/043 VUs  3m45.9s/5m0s  85.00 iters/s
+load_OtherCities   [  75% ] 000/043 VUs  3m45.9s/5m0s  85.00 iters/s
+load_RUH           [  75% ] 000/043 VUs  3m45.9s/5m0s  85.00 iters/s
+
+running (3m47.0s), 0000/0301 VUs, 135030 complete and 0 interrupted iterations
+load_AMM           [  76% ] 000/043 VUs  3m46.9s/5m0s  85.00 iters/s
+load_DMM           [  76% ] 000/043 VUs  3m46.9s/5m0s  85.00 iters/s
+load_JED           [  76% ] 000/043 VUs  3m46.9s/5m0s  85.00 iters/s
+load_MAD           [  76% ] 000/043 VUs  3m46.9s/5m0s  85.00 iters/s
+load_MEC           [  76% ] 000/043 VUs  3m46.9s/5m0s  85.00 iters/s
+load_OtherCities   [  76% ] 000/043 VUs  3m46.9s/5m0s  85.00 iters/s
+load_RUH           [  76% ] 000/043 VUs  3m46.9s/5m0s  85.00 iters/s
+
+running (3m48.0s), 0000/0301 VUs, 135625 complete and 0 interrupted iterations
+load_AMM           [  76% ] 000/043 VUs  3m47.9s/5m0s  85.00 iters/s
+load_DMM           [  76% ] 000/043 VUs  3m47.9s/5m0s  85.00 iters/s
+load_JED           [  76% ] 000/043 VUs  3m47.9s/5m0s  85.00 iters/s
+load_MAD           [  76% ] 000/043 VUs  3m47.9s/5m0s  85.00 iters/s
+load_MEC           [  76% ] 000/043 VUs  3m47.9s/5m0s  85.00 iters/s
+load_OtherCities   [  76% ] 000/043 VUs  3m47.9s/5m0s  85.00 iters/s
+load_RUH           [  76% ] 000/043 VUs  3m47.9s/5m0s  85.00 iters/s
+
+running (3m49.0s), 0000/0301 VUs, 136220 complete and 0 interrupted iterations
+load_AMM           [  76% ] 000/043 VUs  3m48.9s/5m0s  85.00 iters/s
+load_DMM           [  76% ] 000/043 VUs  3m48.9s/5m0s  85.00 iters/s
+load_JED           [  76% ] 000/043 VUs  3m48.9s/5m0s  85.00 iters/s
+load_MAD           [  76% ] 000/043 VUs  3m48.9s/5m0s  85.00 iters/s
+load_MEC           [  76% ] 000/043 VUs  3m48.9s/5m0s  85.00 iters/s
+load_OtherCities   [  76% ] 000/043 VUs  3m48.9s/5m0s  85.00 iters/s
+load_RUH           [  76% ] 000/043 VUs  3m48.9s/5m0s  85.00 iters/s
+
+running (3m50.0s), 0000/0301 VUs, 136815 complete and 0 interrupted iterations
+load_AMM           [  77% ] 000/043 VUs  3m49.9s/5m0s  85.00 iters/s
+load_DMM           [  77% ] 000/043 VUs  3m49.9s/5m0s  85.00 iters/s
+load_JED           [  77% ] 000/043 VUs  3m49.9s/5m0s  85.00 iters/s
+load_MAD           [  77% ] 000/043 VUs  3m49.9s/5m0s  85.00 iters/s
+load_MEC           [  77% ] 000/043 VUs  3m49.9s/5m0s  85.00 iters/s
+load_OtherCities   [  77% ] 000/043 VUs  3m49.9s/5m0s  85.00 iters/s
+load_RUH           [  77% ] 000/043 VUs  3m49.9s/5m0s  85.00 iters/s
+
+running (3m51.0s), 0000/0301 VUs, 137410 complete and 0 interrupted iterations
+load_AMM           [  77% ] 000/043 VUs  3m50.9s/5m0s  85.00 iters/s
+load_DMM           [  77% ] 000/043 VUs  3m50.9s/5m0s  85.00 iters/s
+load_JED           [  77% ] 000/043 VUs  3m50.9s/5m0s  85.00 iters/s
+load_MAD           [  77% ] 000/043 VUs  3m50.9s/5m0s  85.00 iters/s
+load_MEC           [  77% ] 000/043 VUs  3m50.9s/5m0s  85.00 iters/s
+load_OtherCities   [  77% ] 000/043 VUs  3m50.9s/5m0s  85.00 iters/s
+load_RUH           [  77% ] 000/043 VUs  3m50.9s/5m0s  85.00 iters/s
+
+running (3m52.0s), 0000/0301 VUs, 138005 complete and 0 interrupted iterations
+load_AMM           [  77% ] 000/043 VUs  3m51.9s/5m0s  85.00 iters/s
+load_DMM           [  77% ] 000/043 VUs  3m51.9s/5m0s  85.00 iters/s
+load_JED           [  77% ] 000/043 VUs  3m51.9s/5m0s  85.00 iters/s
+load_MAD           [  77% ] 000/043 VUs  3m51.9s/5m0s  85.00 iters/s
+load_MEC           [  77% ] 000/043 VUs  3m51.9s/5m0s  85.00 iters/s
+load_OtherCities   [  77% ] 000/043 VUs  3m51.9s/5m0s  85.00 iters/s
+load_RUH           [  77% ] 000/043 VUs  3m51.9s/5m0s  85.00 iters/s
+
+running (3m53.0s), 0000/0301 VUs, 138600 complete and 0 interrupted iterations
+load_AMM           [  78% ] 000/043 VUs  3m52.9s/5m0s  85.00 iters/s
+load_DMM           [  78% ] 000/043 VUs  3m52.9s/5m0s  85.00 iters/s
+load_JED           [  78% ] 000/043 VUs  3m52.9s/5m0s  85.00 iters/s
+load_MAD           [  78% ] 000/043 VUs  3m52.9s/5m0s  85.00 iters/s
+load_MEC           [  78% ] 000/043 VUs  3m52.9s/5m0s  85.00 iters/s
+load_OtherCities   [  78% ] 000/043 VUs  3m52.9s/5m0s  85.00 iters/s
+load_RUH           [  78% ] 000/043 VUs  3m52.9s/5m0s  85.00 iters/s
+
+running (3m54.0s), 0000/0301 VUs, 139195 complete and 0 interrupted iterations
+load_AMM           [  78% ] 000/043 VUs  3m53.9s/5m0s  85.00 iters/s
+load_DMM           [  78% ] 000/043 VUs  3m53.9s/5m0s  85.00 iters/s
+load_JED           [  78% ] 000/043 VUs  3m53.9s/5m0s  85.00 iters/s
+load_MAD           [  78% ] 000/043 VUs  3m53.9s/5m0s  85.00 iters/s
+load_MEC           [  78% ] 000/043 VUs  3m53.9s/5m0s  85.00 iters/s
+load_OtherCities   [  78% ] 000/043 VUs  3m53.9s/5m0s  85.00 iters/s
+load_RUH           [  78% ] 000/043 VUs  3m53.9s/5m0s  85.00 iters/s
+
+running (3m55.0s), 0000/0301 VUs, 139790 complete and 0 interrupted iterations
+load_AMM           [  78% ] 000/043 VUs  3m54.9s/5m0s  85.00 iters/s
+load_DMM           [  78% ] 000/043 VUs  3m54.9s/5m0s  85.00 iters/s
+load_JED           [  78% ] 000/043 VUs  3m54.9s/5m0s  85.00 iters/s
+load_MAD           [  78% ] 000/043 VUs  3m54.9s/5m0s  85.00 iters/s
+load_MEC           [  78% ] 000/043 VUs  3m54.9s/5m0s  85.00 iters/s
+load_OtherCities   [  78% ] 000/043 VUs  3m54.9s/5m0s  85.00 iters/s
+load_RUH           [  78% ] 000/043 VUs  3m54.9s/5m0s  85.00 iters/s
+
+running (3m56.0s), 0000/0301 VUs, 140385 complete and 0 interrupted iterations
+load_AMM           [  79% ] 000/043 VUs  3m55.9s/5m0s  85.00 iters/s
+load_DMM           [  79% ] 000/043 VUs  3m55.9s/5m0s  85.00 iters/s
+load_JED           [  79% ] 000/043 VUs  3m55.9s/5m0s  85.00 iters/s
+load_MAD           [  79% ] 000/043 VUs  3m55.9s/5m0s  85.00 iters/s
+load_MEC           [  79% ] 000/043 VUs  3m55.9s/5m0s  85.00 iters/s
+load_OtherCities   [  79% ] 000/043 VUs  3m55.9s/5m0s  85.00 iters/s
+load_RUH           [  79% ] 000/043 VUs  3m55.9s/5m0s  85.00 iters/s
+
+running (3m57.0s), 0000/0301 VUs, 140980 complete and 0 interrupted iterations
+load_AMM           [  79% ] 000/043 VUs  3m56.9s/5m0s  85.00 iters/s
+load_DMM           [  79% ] 000/043 VUs  3m56.9s/5m0s  85.00 iters/s
+load_JED           [  79% ] 000/043 VUs  3m56.9s/5m0s  85.00 iters/s
+load_MAD           [  79% ] 000/043 VUs  3m56.9s/5m0s  85.00 iters/s
+load_MEC           [  79% ] 000/043 VUs  3m56.9s/5m0s  85.00 iters/s
+load_OtherCities   [  79% ] 000/043 VUs  3m56.9s/5m0s  85.00 iters/s
+load_RUH           [  79% ] 000/043 VUs  3m56.9s/5m0s  85.00 iters/s
+
+running (3m58.0s), 0000/0301 VUs, 141575 complete and 0 interrupted iterations
+load_AMM           [  79% ] 000/043 VUs  3m57.9s/5m0s  85.00 iters/s
+load_DMM           [  79% ] 000/043 VUs  3m57.9s/5m0s  85.00 iters/s
+load_JED           [  79% ] 000/043 VUs  3m57.9s/5m0s  85.00 iters/s
+load_MAD           [  79% ] 000/043 VUs  3m57.9s/5m0s  85.00 iters/s
+load_MEC           [  79% ] 000/043 VUs  3m57.9s/5m0s  85.00 iters/s
+load_OtherCities   [  79% ] 000/043 VUs  3m57.9s/5m0s  85.00 iters/s
+load_RUH           [  79% ] 000/043 VUs  3m57.9s/5m0s  85.00 iters/s
+
+running (3m59.0s), 0000/0301 VUs, 142170 complete and 0 interrupted iterations
+load_AMM           [  80% ] 000/043 VUs  3m58.9s/5m0s  85.00 iters/s
+load_DMM           [  80% ] 000/043 VUs  3m58.9s/5m0s  85.00 iters/s
+load_JED           [  80% ] 000/043 VUs  3m58.9s/5m0s  85.00 iters/s
+load_MAD           [  80% ] 000/043 VUs  3m58.9s/5m0s  85.00 iters/s
+load_MEC           [  80% ] 000/043 VUs  3m58.9s/5m0s  85.00 iters/s
+load_OtherCities   [  80% ] 000/043 VUs  3m58.9s/5m0s  85.00 iters/s
+load_RUH           [  80% ] 000/043 VUs  3m58.9s/5m0s  85.00 iters/s
+
+running (4m00.0s), 0000/0301 VUs, 142765 complete and 0 interrupted iterations
+load_AMM           [  80% ] 000/043 VUs  3m59.9s/5m0s  85.00 iters/s
+load_DMM           [  80% ] 000/043 VUs  3m59.9s/5m0s  85.00 iters/s
+load_JED           [  80% ] 000/043 VUs  3m59.9s/5m0s  85.00 iters/s
+load_MAD           [  80% ] 000/043 VUs  3m59.9s/5m0s  85.00 iters/s
+load_MEC           [  80% ] 000/043 VUs  3m59.9s/5m0s  85.00 iters/s
+load_OtherCities   [  80% ] 000/043 VUs  3m59.9s/5m0s  85.00 iters/s
+load_RUH           [  80% ] 000/043 VUs  3m59.9s/5m0s  85.00 iters/s
+
+running (4m01.0s), 0000/0301 VUs, 143360 complete and 0 interrupted iterations
+load_AMM           [  80% ] 000/043 VUs  4m00.9s/5m0s  85.00 iters/s
+load_DMM           [  80% ] 000/043 VUs  4m00.9s/5m0s  85.00 iters/s
+load_JED           [  80% ] 000/043 VUs  4m00.9s/5m0s  85.00 iters/s
+load_MAD           [  80% ] 000/043 VUs  4m00.9s/5m0s  85.00 iters/s
+load_MEC           [  80% ] 000/043 VUs  4m00.9s/5m0s  85.00 iters/s
+load_OtherCities   [  80% ] 000/043 VUs  4m00.9s/5m0s  85.00 iters/s
+load_RUH           [  80% ] 000/043 VUs  4m00.9s/5m0s  85.00 iters/s
+
+running (4m02.0s), 0000/0301 VUs, 143955 complete and 0 interrupted iterations
+load_AMM           [  81% ] 000/043 VUs  4m01.9s/5m0s  85.00 iters/s
+load_DMM           [  81% ] 000/043 VUs  4m01.9s/5m0s  85.00 iters/s
+load_JED           [  81% ] 000/043 VUs  4m01.9s/5m0s  85.00 iters/s
+load_MAD           [  81% ] 000/043 VUs  4m01.9s/5m0s  85.00 iters/s
+load_MEC           [  81% ] 000/043 VUs  4m01.9s/5m0s  85.00 iters/s
+load_OtherCities   [  81% ] 000/043 VUs  4m01.9s/5m0s  85.00 iters/s
+load_RUH           [  81% ] 000/043 VUs  4m01.9s/5m0s  85.00 iters/s
+
+running (4m03.0s), 0000/0301 VUs, 144550 complete and 0 interrupted iterations
+load_AMM           [  81% ] 000/043 VUs  4m02.9s/5m0s  85.00 iters/s
+load_DMM           [  81% ] 000/043 VUs  4m02.9s/5m0s  85.00 iters/s
+load_JED           [  81% ] 000/043 VUs  4m02.9s/5m0s  85.00 iters/s
+load_MAD           [  81% ] 000/043 VUs  4m02.9s/5m0s  85.00 iters/s
+load_MEC           [  81% ] 000/043 VUs  4m02.9s/5m0s  85.00 iters/s
+load_OtherCities   [  81% ] 000/043 VUs  4m02.9s/5m0s  85.00 iters/s
+load_RUH           [  81% ] 000/043 VUs  4m02.9s/5m0s  85.00 iters/s
+
+running (4m04.0s), 0000/0301 VUs, 145145 complete and 0 interrupted iterations
+load_AMM           [  81% ] 000/043 VUs  4m03.9s/5m0s  85.00 iters/s
+load_DMM           [  81% ] 000/043 VUs  4m03.9s/5m0s  85.00 iters/s
+load_JED           [  81% ] 000/043 VUs  4m03.9s/5m0s  85.00 iters/s
+load_MAD           [  81% ] 000/043 VUs  4m03.9s/5m0s  85.00 iters/s
+load_MEC           [  81% ] 000/043 VUs  4m03.9s/5m0s  85.00 iters/s
+load_OtherCities   [  81% ] 000/043 VUs  4m03.9s/5m0s  85.00 iters/s
+load_RUH           [  81% ] 000/043 VUs  4m03.9s/5m0s  85.00 iters/s
+
+running (4m05.0s), 0000/0301 VUs, 145740 complete and 0 interrupted iterations
+load_AMM           [  82% ] 000/043 VUs  4m04.9s/5m0s  85.00 iters/s
+load_DMM           [  82% ] 000/043 VUs  4m04.9s/5m0s  85.00 iters/s
+load_JED           [  82% ] 000/043 VUs  4m04.9s/5m0s  85.00 iters/s
+load_MAD           [  82% ] 000/043 VUs  4m04.9s/5m0s  85.00 iters/s
+load_MEC           [  82% ] 000/043 VUs  4m04.9s/5m0s  85.00 iters/s
+load_OtherCities   [  82% ] 000/043 VUs  4m04.9s/5m0s  85.00 iters/s
+load_RUH           [  82% ] 000/043 VUs  4m04.9s/5m0s  85.00 iters/s
+
+running (4m06.0s), 0000/0301 VUs, 146335 complete and 0 interrupted iterations
+load_AMM           [  82% ] 000/043 VUs  4m05.9s/5m0s  85.00 iters/s
+load_DMM           [  82% ] 000/043 VUs  4m05.9s/5m0s  85.00 iters/s
+load_JED           [  82% ] 000/043 VUs  4m05.9s/5m0s  85.00 iters/s
+load_MAD           [  82% ] 000/043 VUs  4m05.9s/5m0s  85.00 iters/s
+load_MEC           [  82% ] 000/043 VUs  4m05.9s/5m0s  85.00 iters/s
+load_OtherCities   [  82% ] 000/043 VUs  4m05.9s/5m0s  85.00 iters/s
+load_RUH           [  82% ] 000/043 VUs  4m05.9s/5m0s  85.00 iters/s
+
+running (4m07.0s), 0000/0301 VUs, 146930 complete and 0 interrupted iterations
+load_AMM           [  82% ] 000/043 VUs  4m06.9s/5m0s  85.00 iters/s
+load_DMM           [  82% ] 000/043 VUs  4m06.9s/5m0s  85.00 iters/s
+load_JED           [  82% ] 000/043 VUs  4m06.9s/5m0s  85.00 iters/s
+load_MAD           [  82% ] 000/043 VUs  4m06.9s/5m0s  85.00 iters/s
+load_MEC           [  82% ] 000/043 VUs  4m06.9s/5m0s  85.00 iters/s
+load_OtherCities   [  82% ] 000/043 VUs  4m06.9s/5m0s  85.00 iters/s
+load_RUH           [  82% ] 000/043 VUs  4m06.9s/5m0s  85.00 iters/s
+
+running (4m08.0s), 0000/0301 VUs, 147525 complete and 0 interrupted iterations
+load_AMM           [  83% ] 000/043 VUs  4m07.9s/5m0s  85.00 iters/s
+load_DMM           [  83% ] 000/043 VUs  4m07.9s/5m0s  85.00 iters/s
+load_JED           [  83% ] 000/043 VUs  4m07.9s/5m0s  85.00 iters/s
+load_MAD           [  83% ] 000/043 VUs  4m07.9s/5m0s  85.00 iters/s
+load_MEC           [  83% ] 000/043 VUs  4m07.9s/5m0s  85.00 iters/s
+load_OtherCities   [  83% ] 000/043 VUs  4m07.9s/5m0s  85.00 iters/s
+load_RUH           [  83% ] 000/043 VUs  4m07.9s/5m0s  85.00 iters/s
+
+running (4m09.0s), 0000/0301 VUs, 148120 complete and 0 interrupted iterations
+load_AMM           [  83% ] 000/043 VUs  4m08.9s/5m0s  85.00 iters/s
+load_DMM           [  83% ] 000/043 VUs  4m08.9s/5m0s  85.00 iters/s
+load_JED           [  83% ] 000/043 VUs  4m08.9s/5m0s  85.00 iters/s
+load_MAD           [  83% ] 000/043 VUs  4m08.9s/5m0s  85.00 iters/s
+load_MEC           [  83% ] 000/043 VUs  4m08.9s/5m0s  85.00 iters/s
+load_OtherCities   [  83% ] 000/043 VUs  4m08.9s/5m0s  85.00 iters/s
+load_RUH           [  83% ] 000/043 VUs  4m08.9s/5m0s  85.00 iters/s
+
+running (4m10.0s), 0000/0301 VUs, 148715 complete and 0 interrupted iterations
+load_AMM           [  83% ] 000/043 VUs  4m09.9s/5m0s  85.00 iters/s
+load_DMM           [  83% ] 000/043 VUs  4m09.9s/5m0s  85.00 iters/s
+load_JED           [  83% ] 000/043 VUs  4m09.9s/5m0s  85.00 iters/s
+load_MAD           [  83% ] 000/043 VUs  4m09.9s/5m0s  85.00 iters/s
+load_MEC           [  83% ] 000/043 VUs  4m09.9s/5m0s  85.00 iters/s
+load_OtherCities   [  83% ] 000/043 VUs  4m09.9s/5m0s  85.00 iters/s
+load_RUH           [  83% ] 000/043 VUs  4m09.9s/5m0s  85.00 iters/s
+
+running (4m11.0s), 0000/0301 VUs, 149310 complete and 0 interrupted iterations
+load_AMM           [  84% ] 000/043 VUs  4m10.9s/5m0s  85.00 iters/s
+load_DMM           [  84% ] 000/043 VUs  4m10.9s/5m0s  85.00 iters/s
+load_JED           [  84% ] 000/043 VUs  4m10.9s/5m0s  85.00 iters/s
+load_MAD           [  84% ] 000/043 VUs  4m10.9s/5m0s  85.00 iters/s
+load_MEC           [  84% ] 000/043 VUs  4m10.9s/5m0s  85.00 iters/s
+load_OtherCities   [  84% ] 000/043 VUs  4m10.9s/5m0s  85.00 iters/s
+load_RUH           [  84% ] 000/043 VUs  4m10.9s/5m0s  85.00 iters/s
+
+running (4m12.0s), 0000/0301 VUs, 149905 complete and 0 interrupted iterations
+load_AMM           [  84% ] 000/043 VUs  4m11.9s/5m0s  85.00 iters/s
+load_DMM           [  84% ] 000/043 VUs  4m11.9s/5m0s  85.00 iters/s
+load_JED           [  84% ] 000/043 VUs  4m11.9s/5m0s  85.00 iters/s
+load_MAD           [  84% ] 000/043 VUs  4m11.9s/5m0s  85.00 iters/s
+load_MEC           [  84% ] 000/043 VUs  4m11.9s/5m0s  85.00 iters/s
+load_OtherCities   [  84% ] 000/043 VUs  4m11.9s/5m0s  85.00 iters/s
+load_RUH           [  84% ] 000/043 VUs  4m11.9s/5m0s  85.00 iters/s
+
+running (4m13.0s), 0000/0301 VUs, 150500 complete and 0 interrupted iterations
+load_AMM           [  84% ] 000/043 VUs  4m12.9s/5m0s  85.00 iters/s
+load_DMM           [  84% ] 000/043 VUs  4m12.9s/5m0s  85.00 iters/s
+load_JED           [  84% ] 000/043 VUs  4m12.9s/5m0s  85.00 iters/s
+load_MAD           [  84% ] 000/043 VUs  4m12.9s/5m0s  85.00 iters/s
+load_MEC           [  84% ] 000/043 VUs  4m12.9s/5m0s  85.00 iters/s
+load_OtherCities   [  84% ] 000/043 VUs  4m12.9s/5m0s  85.00 iters/s
+load_RUH           [  84% ] 000/043 VUs  4m12.9s/5m0s  85.00 iters/s
+
+running (4m14.0s), 0000/0301 VUs, 151095 complete and 0 interrupted iterations
+load_AMM           [  85% ] 000/043 VUs  4m13.9s/5m0s  85.00 iters/s
+load_DMM           [  85% ] 000/043 VUs  4m13.9s/5m0s  85.00 iters/s
+load_JED           [  85% ] 000/043 VUs  4m13.9s/5m0s  85.00 iters/s
+load_MAD           [  85% ] 000/043 VUs  4m13.9s/5m0s  85.00 iters/s
+load_MEC           [  85% ] 000/043 VUs  4m13.9s/5m0s  85.00 iters/s
+load_OtherCities   [  85% ] 000/043 VUs  4m13.9s/5m0s  85.00 iters/s
+load_RUH           [  85% ] 000/043 VUs  4m13.9s/5m0s  85.00 iters/s
+
+running (4m15.0s), 0000/0301 VUs, 151690 complete and 0 interrupted iterations
+load_AMM           [  85% ] 000/043 VUs  4m14.9s/5m0s  85.00 iters/s
+load_DMM           [  85% ] 000/043 VUs  4m14.9s/5m0s  85.00 iters/s
+load_JED           [  85% ] 000/043 VUs  4m14.9s/5m0s  85.00 iters/s
+load_MAD           [  85% ] 000/043 VUs  4m14.9s/5m0s  85.00 iters/s
+load_MEC           [  85% ] 000/043 VUs  4m14.9s/5m0s  85.00 iters/s
+load_OtherCities   [  85% ] 000/043 VUs  4m14.9s/5m0s  85.00 iters/s
+load_RUH           [  85% ] 000/043 VUs  4m14.9s/5m0s  85.00 iters/s
+
+running (4m16.0s), 0000/0301 VUs, 152285 complete and 0 interrupted iterations
+load_AMM           [  85% ] 000/043 VUs  4m15.9s/5m0s  85.00 iters/s
+load_DMM           [  85% ] 000/043 VUs  4m15.9s/5m0s  85.00 iters/s
+load_JED           [  85% ] 000/043 VUs  4m15.9s/5m0s  85.00 iters/s
+load_MAD           [  85% ] 000/043 VUs  4m15.9s/5m0s  85.00 iters/s
+load_MEC           [  85% ] 000/043 VUs  4m15.9s/5m0s  85.00 iters/s
+load_OtherCities   [  85% ] 000/043 VUs  4m15.9s/5m0s  85.00 iters/s
+load_RUH           [  85% ] 000/043 VUs  4m15.9s/5m0s  85.00 iters/s
+
+running (4m17.0s), 0000/0301 VUs, 152880 complete and 0 interrupted iterations
+load_AMM           [  86% ] 000/043 VUs  4m16.9s/5m0s  85.00 iters/s
+load_DMM           [  86% ] 000/043 VUs  4m16.9s/5m0s  85.00 iters/s
+load_JED           [  86% ] 000/043 VUs  4m16.9s/5m0s  85.00 iters/s
+load_MAD           [  86% ] 000/043 VUs  4m16.9s/5m0s  85.00 iters/s
+load_MEC           [  86% ] 000/043 VUs  4m16.9s/5m0s  85.00 iters/s
+load_OtherCities   [  86% ] 000/043 VUs  4m16.9s/5m0s  85.00 iters/s
+load_RUH           [  86% ] 000/043 VUs  4m16.9s/5m0s  85.00 iters/s
+
+running (4m18.0s), 0000/0301 VUs, 153475 complete and 0 interrupted iterations
+load_AMM           [  86% ] 000/043 VUs  4m17.9s/5m0s  85.00 iters/s
+load_DMM           [  86% ] 000/043 VUs  4m17.9s/5m0s  85.00 iters/s
+load_JED           [  86% ] 000/043 VUs  4m17.9s/5m0s  85.00 iters/s
+load_MAD           [  86% ] 000/043 VUs  4m17.9s/5m0s  85.00 iters/s
+load_MEC           [  86% ] 000/043 VUs  4m17.9s/5m0s  85.00 iters/s
+load_OtherCities   [  86% ] 000/043 VUs  4m17.9s/5m0s  85.00 iters/s
+load_RUH           [  86% ] 000/043 VUs  4m17.9s/5m0s  85.00 iters/s
+
+running (4m19.0s), 0000/0301 VUs, 154070 complete and 0 interrupted iterations
+load_AMM           [  86% ] 000/043 VUs  4m18.9s/5m0s  85.00 iters/s
+load_DMM           [  86% ] 000/043 VUs  4m18.9s/5m0s  85.00 iters/s
+load_JED           [  86% ] 000/043 VUs  4m18.9s/5m0s  85.00 iters/s
+load_MAD           [  86% ] 000/043 VUs  4m18.9s/5m0s  85.00 iters/s
+load_MEC           [  86% ] 000/043 VUs  4m18.9s/5m0s  85.00 iters/s
+load_OtherCities   [  86% ] 000/043 VUs  4m18.9s/5m0s  85.00 iters/s
+load_RUH           [  86% ] 000/043 VUs  4m18.9s/5m0s  85.00 iters/s
+
+running (4m20.0s), 0000/0301 VUs, 154665 complete and 0 interrupted iterations
+load_AMM           [  87% ] 000/043 VUs  4m19.9s/5m0s  85.00 iters/s
+load_DMM           [  87% ] 000/043 VUs  4m19.9s/5m0s  85.00 iters/s
+load_JED           [  87% ] 000/043 VUs  4m19.9s/5m0s  85.00 iters/s
+load_MAD           [  87% ] 000/043 VUs  4m19.9s/5m0s  85.00 iters/s
+load_MEC           [  87% ] 000/043 VUs  4m19.9s/5m0s  85.00 iters/s
+load_OtherCities   [  87% ] 000/043 VUs  4m19.9s/5m0s  85.00 iters/s
+load_RUH           [  87% ] 000/043 VUs  4m19.9s/5m0s  85.00 iters/s
+
+running (4m21.0s), 0000/0301 VUs, 155260 complete and 0 interrupted iterations
+load_AMM           [  87% ] 000/043 VUs  4m20.9s/5m0s  85.00 iters/s
+load_DMM           [  87% ] 000/043 VUs  4m20.9s/5m0s  85.00 iters/s
+load_JED           [  87% ] 000/043 VUs  4m20.9s/5m0s  85.00 iters/s
+load_MAD           [  87% ] 000/043 VUs  4m20.9s/5m0s  85.00 iters/s
+load_MEC           [  87% ] 000/043 VUs  4m20.9s/5m0s  85.00 iters/s
+load_OtherCities   [  87% ] 000/043 VUs  4m20.9s/5m0s  85.00 iters/s
+load_RUH           [  87% ] 000/043 VUs  4m20.9s/5m0s  85.00 iters/s
+
+running (4m22.0s), 0000/0301 VUs, 155855 complete and 0 interrupted iterations
+load_AMM           [  87% ] 000/043 VUs  4m21.9s/5m0s  85.00 iters/s
+load_DMM           [  87% ] 000/043 VUs  4m21.9s/5m0s  85.00 iters/s
+load_JED           [  87% ] 000/043 VUs  4m21.9s/5m0s  85.00 iters/s
+load_MAD           [  87% ] 000/043 VUs  4m21.9s/5m0s  85.00 iters/s
+load_MEC           [  87% ] 000/043 VUs  4m21.9s/5m0s  85.00 iters/s
+load_OtherCities   [  87% ] 000/043 VUs  4m21.9s/5m0s  85.00 iters/s
+load_RUH           [  87% ] 000/043 VUs  4m21.9s/5m0s  85.00 iters/s
+
+running (4m23.0s), 0000/0301 VUs, 156450 complete and 0 interrupted iterations
+load_AMM           [  88% ] 000/043 VUs  4m22.9s/5m0s  85.00 iters/s
+load_DMM           [  88% ] 000/043 VUs  4m22.9s/5m0s  85.00 iters/s
+load_JED           [  88% ] 000/043 VUs  4m22.9s/5m0s  85.00 iters/s
+load_MAD           [  88% ] 000/043 VUs  4m22.9s/5m0s  85.00 iters/s
+load_MEC           [  88% ] 000/043 VUs  4m22.9s/5m0s  85.00 iters/s
+load_OtherCities   [  88% ] 000/043 VUs  4m22.9s/5m0s  85.00 iters/s
+load_RUH           [  88% ] 000/043 VUs  4m22.9s/5m0s  85.00 iters/s
+
+running (4m24.0s), 0000/0301 VUs, 157045 complete and 0 interrupted iterations
+load_AMM           [  88% ] 000/043 VUs  4m23.9s/5m0s  85.00 iters/s
+load_DMM           [  88% ] 000/043 VUs  4m23.9s/5m0s  85.00 iters/s
+load_JED           [  88% ] 000/043 VUs  4m23.9s/5m0s  85.00 iters/s
+load_MAD           [  88% ] 000/043 VUs  4m23.9s/5m0s  85.00 iters/s
+load_MEC           [  88% ] 000/043 VUs  4m23.9s/5m0s  85.00 iters/s
+load_OtherCities   [  88% ] 000/043 VUs  4m23.9s/5m0s  85.00 iters/s
+load_RUH           [  88% ] 000/043 VUs  4m23.9s/5m0s  85.00 iters/s
+
+running (4m25.0s), 0000/0301 VUs, 157640 complete and 0 interrupted iterations
+load_AMM           [  88% ] 000/043 VUs  4m24.9s/5m0s  85.00 iters/s
+load_DMM           [  88% ] 000/043 VUs  4m24.9s/5m0s  85.00 iters/s
+load_JED           [  88% ] 000/043 VUs  4m24.9s/5m0s  85.00 iters/s
+load_MAD           [  88% ] 000/043 VUs  4m24.9s/5m0s  85.00 iters/s
+load_MEC           [  88% ] 000/043 VUs  4m24.9s/5m0s  85.00 iters/s
+load_OtherCities   [  88% ] 000/043 VUs  4m24.9s/5m0s  85.00 iters/s
+load_RUH           [  88% ] 000/043 VUs  4m24.9s/5m0s  85.00 iters/s
+
+running (4m26.0s), 0000/0301 VUs, 158235 complete and 0 interrupted iterations
+load_AMM           [  89% ] 000/043 VUs  4m25.9s/5m0s  85.00 iters/s
+load_DMM           [  89% ] 000/043 VUs  4m25.9s/5m0s  85.00 iters/s
+load_JED           [  89% ] 000/043 VUs  4m25.9s/5m0s  85.00 iters/s
+load_MAD           [  89% ] 000/043 VUs  4m25.9s/5m0s  85.00 iters/s
+load_MEC           [  89% ] 000/043 VUs  4m25.9s/5m0s  85.00 iters/s
+load_OtherCities   [  89% ] 000/043 VUs  4m25.9s/5m0s  85.00 iters/s
+load_RUH           [  89% ] 000/043 VUs  4m25.9s/5m0s  85.00 iters/s
+
+running (4m27.0s), 0000/0301 VUs, 158830 complete and 0 interrupted iterations
+load_AMM           [  89% ] 000/043 VUs  4m26.9s/5m0s  85.00 iters/s
+load_DMM           [  89% ] 000/043 VUs  4m26.9s/5m0s  85.00 iters/s
+load_JED           [  89% ] 000/043 VUs  4m26.9s/5m0s  85.00 iters/s
+load_MAD           [  89% ] 000/043 VUs  4m26.9s/5m0s  85.00 iters/s
+load_MEC           [  89% ] 000/043 VUs  4m26.9s/5m0s  85.00 iters/s
+load_OtherCities   [  89% ] 000/043 VUs  4m26.9s/5m0s  85.00 iters/s
+load_RUH           [  89% ] 000/043 VUs  4m26.9s/5m0s  85.00 iters/s
+
+running (4m28.0s), 0000/0301 VUs, 159425 complete and 0 interrupted iterations
+load_AMM           [  89% ] 000/043 VUs  4m27.9s/5m0s  85.00 iters/s
+load_DMM           [  89% ] 000/043 VUs  4m27.9s/5m0s  85.00 iters/s
+load_JED           [  89% ] 000/043 VUs  4m27.9s/5m0s  85.00 iters/s
+load_MAD           [  89% ] 000/043 VUs  4m27.9s/5m0s  85.00 iters/s
+load_MEC           [  89% ] 000/043 VUs  4m27.9s/5m0s  85.00 iters/s
+load_OtherCities   [  89% ] 000/043 VUs  4m27.9s/5m0s  85.00 iters/s
+load_RUH           [  89% ] 000/043 VUs  4m27.9s/5m0s  85.00 iters/s
+
+running (4m29.0s), 0000/0301 VUs, 160020 complete and 0 interrupted iterations
+load_AMM           [  90% ] 000/043 VUs  4m28.9s/5m0s  85.00 iters/s
+load_DMM           [  90% ] 000/043 VUs  4m28.9s/5m0s  85.00 iters/s
+load_JED           [  90% ] 000/043 VUs  4m28.9s/5m0s  85.00 iters/s
+load_MAD           [  90% ] 000/043 VUs  4m28.9s/5m0s  85.00 iters/s
+load_MEC           [  90% ] 000/043 VUs  4m28.9s/5m0s  85.00 iters/s
+load_OtherCities   [  90% ] 000/043 VUs  4m28.9s/5m0s  85.00 iters/s
+load_RUH           [  90% ] 000/043 VUs  4m28.9s/5m0s  85.00 iters/s
+
+running (4m30.0s), 0005/0301 VUs, 160610 complete and 0 interrupted iterations
+load_AMM           [  90% ] 001/043 VUs  4m29.9s/5m0s  85.00 iters/s
+load_DMM           [  90% ] 000/043 VUs  4m29.9s/5m0s  85.00 iters/s
+load_JED           [  90% ] 001/043 VUs  4m29.9s/5m0s  85.00 iters/s
+load_MAD           [  90% ] 000/043 VUs  4m29.9s/5m0s  85.00 iters/s
+load_MEC           [  90% ] 001/043 VUs  4m29.9s/5m0s  85.00 iters/s
+load_OtherCities   [  90% ] 001/043 VUs  4m29.9s/5m0s  85.00 iters/s
+load_RUH           [  90% ] 001/043 VUs  4m29.9s/5m0s  85.00 iters/s
+
+running (4m31.0s), 0000/0301 VUs, 161210 complete and 0 interrupted iterations
+load_AMM           [  90% ] 000/043 VUs  4m30.9s/5m0s  85.00 iters/s
+load_DMM           [  90% ] 000/043 VUs  4m30.9s/5m0s  85.00 iters/s
+load_JED           [  90% ] 000/043 VUs  4m30.9s/5m0s  85.00 iters/s
+load_MAD           [  90% ] 000/043 VUs  4m30.9s/5m0s  85.00 iters/s
+load_MEC           [  90% ] 000/043 VUs  4m30.9s/5m0s  85.00 iters/s
+load_OtherCities   [  90% ] 000/043 VUs  4m30.9s/5m0s  85.00 iters/s
+load_RUH           [  90% ] 000/043 VUs  4m30.9s/5m0s  85.00 iters/s
+
+running (4m32.0s), 0000/0301 VUs, 161805 complete and 0 interrupted iterations
+load_AMM           [  91% ] 000/043 VUs  4m31.9s/5m0s  85.00 iters/s
+load_DMM           [  91% ] 000/043 VUs  4m31.9s/5m0s  85.00 iters/s
+load_JED           [  91% ] 000/043 VUs  4m31.9s/5m0s  85.00 iters/s
+load_MAD           [  91% ] 000/043 VUs  4m31.9s/5m0s  85.00 iters/s
+load_MEC           [  91% ] 000/043 VUs  4m31.9s/5m0s  85.00 iters/s
+load_OtherCities   [  91% ] 000/043 VUs  4m31.9s/5m0s  85.00 iters/s
+load_RUH           [  91% ] 000/043 VUs  4m31.9s/5m0s  85.00 iters/s
+
+running (4m33.0s), 0000/0301 VUs, 162400 complete and 0 interrupted iterations
+load_AMM           [  91% ] 000/043 VUs  4m32.9s/5m0s  85.00 iters/s
+load_DMM           [  91% ] 000/043 VUs  4m32.9s/5m0s  85.00 iters/s
+load_JED           [  91% ] 000/043 VUs  4m32.9s/5m0s  85.00 iters/s
+load_MAD           [  91% ] 000/043 VUs  4m32.9s/5m0s  85.00 iters/s
+load_MEC           [  91% ] 000/043 VUs  4m32.9s/5m0s  85.00 iters/s
+load_OtherCities   [  91% ] 000/043 VUs  4m32.9s/5m0s  85.00 iters/s
+load_RUH           [  91% ] 000/043 VUs  4m32.9s/5m0s  85.00 iters/s
+
+running (4m34.0s), 0032/0301 VUs, 162963 complete and 0 interrupted iterations
+load_AMM           [  91% ] 005/043 VUs  4m33.9s/5m0s  85.00 iters/s
+load_DMM           [  91% ] 005/043 VUs  4m33.9s/5m0s  85.00 iters/s
+load_JED           [  91% ] 005/043 VUs  4m33.9s/5m0s  85.00 iters/s
+load_MAD           [  91% ] 005/043 VUs  4m33.9s/5m0s  85.00 iters/s
+load_MEC           [  91% ] 004/043 VUs  4m33.9s/5m0s  85.00 iters/s
+load_OtherCities   [  91% ] 005/043 VUs  4m33.9s/5m0s  85.00 iters/s
+load_RUH           [  91% ] 003/043 VUs  4m33.9s/5m0s  85.00 iters/s
+
+running (4m35.0s), 0063/0301 VUs, 163527 complete and 0 interrupted iterations
+load_AMM           [  92% ] 008/043 VUs  4m34.9s/5m0s  85.00 iters/s
+load_DMM           [  92% ] 010/043 VUs  4m34.9s/5m0s  85.00 iters/s
+load_JED           [  92% ] 008/043 VUs  4m34.9s/5m0s  85.00 iters/s
+load_MAD           [  92% ] 010/043 VUs  4m34.9s/5m0s  85.00 iters/s
+load_MEC           [  92% ] 009/043 VUs  4m34.9s/5m0s  85.00 iters/s
+load_OtherCities   [  92% ] 009/043 VUs  4m34.9s/5m0s  85.00 iters/s
+load_RUH           [  92% ] 009/043 VUs  4m34.9s/5m0s  85.00 iters/s
+
+running (4m36.0s), 0044/0301 VUs, 164141 complete and 0 interrupted iterations
+load_AMM           [  92% ] 007/043 VUs  4m35.9s/5m0s  85.00 iters/s
+load_DMM           [  92% ] 008/043 VUs  4m35.9s/5m0s  85.00 iters/s
+load_JED           [  92% ] 006/043 VUs  4m35.9s/5m0s  85.00 iters/s
+load_MAD           [  92% ] 007/043 VUs  4m35.9s/5m0s  85.00 iters/s
+load_MEC           [  92% ] 005/043 VUs  4m35.9s/5m0s  85.00 iters/s
+load_OtherCities   [  92% ] 005/043 VUs  4m35.9s/5m0s  85.00 iters/s
+load_RUH           [  92% ] 006/043 VUs  4m35.9s/5m0s  85.00 iters/s
+
+running (4m37.0s), 0043/0301 VUs, 164737 complete and 0 interrupted iterations
+load_AMM           [  92% ] 007/043 VUs  4m36.9s/5m0s  85.00 iters/s
+load_DMM           [  92% ] 005/043 VUs  4m36.9s/5m0s  85.00 iters/s
+load_JED           [  92% ] 005/043 VUs  4m36.9s/5m0s  85.00 iters/s
+load_MAD           [  92% ] 006/043 VUs  4m36.9s/5m0s  85.00 iters/s
+load_MEC           [  92% ] 007/043 VUs  4m36.9s/5m0s  85.00 iters/s
+load_OtherCities   [  92% ] 006/043 VUs  4m36.9s/5m0s  85.00 iters/s
+load_RUH           [  92% ] 007/043 VUs  4m36.9s/5m0s  85.00 iters/s
+
+running (4m38.0s), 0000/0301 VUs, 165375 complete and 0 interrupted iterations
+load_AMM           [  93% ] 000/043 VUs  4m37.9s/5m0s  85.00 iters/s
+load_DMM           [  93% ] 000/043 VUs  4m37.9s/5m0s  85.00 iters/s
+load_JED           [  93% ] 000/043 VUs  4m37.9s/5m0s  85.00 iters/s
+load_MAD           [  93% ] 000/043 VUs  4m37.9s/5m0s  85.00 iters/s
+load_MEC           [  93% ] 000/043 VUs  4m37.9s/5m0s  85.00 iters/s
+load_OtherCities   [  93% ] 000/043 VUs  4m37.9s/5m0s  85.00 iters/s
+load_RUH           [  93% ] 000/043 VUs  4m37.9s/5m0s  85.00 iters/s
+
+running (4m39.0s), 0000/0301 VUs, 165970 complete and 0 interrupted iterations
+load_AMM           [  93% ] 000/043 VUs  4m38.9s/5m0s  85.00 iters/s
+load_DMM           [  93% ] 000/043 VUs  4m38.9s/5m0s  85.00 iters/s
+load_JED           [  93% ] 000/043 VUs  4m38.9s/5m0s  85.00 iters/s
+load_MAD           [  93% ] 000/043 VUs  4m38.9s/5m0s  85.00 iters/s
+load_MEC           [  93% ] 000/043 VUs  4m38.9s/5m0s  85.00 iters/s
+load_OtherCities   [  93% ] 000/043 VUs  4m38.9s/5m0s  85.00 iters/s
+load_RUH           [  93% ] 000/043 VUs  4m38.9s/5m0s  85.00 iters/s
+
+running (4m40.0s), 0000/0301 VUs, 166565 complete and 0 interrupted iterations
+load_AMM           [  93% ] 000/043 VUs  4m39.9s/5m0s  85.00 iters/s
+load_DMM           [  93% ] 000/043 VUs  4m39.9s/5m0s  85.00 iters/s
+load_JED           [  93% ] 000/043 VUs  4m39.9s/5m0s  85.00 iters/s
+load_MAD           [  93% ] 000/043 VUs  4m39.9s/5m0s  85.00 iters/s
+load_MEC           [  93% ] 000/043 VUs  4m39.9s/5m0s  85.00 iters/s
+load_OtherCities   [  93% ] 000/043 VUs  4m39.9s/5m0s  85.00 iters/s
+load_RUH           [  93% ] 000/043 VUs  4m39.9s/5m0s  85.00 iters/s
+
+running (4m41.0s), 0000/0301 VUs, 167160 complete and 0 interrupted iterations
+load_AMM           [  94% ] 000/043 VUs  4m40.9s/5m0s  85.00 iters/s
+load_DMM           [  94% ] 000/043 VUs  4m40.9s/5m0s  85.00 iters/s
+load_JED           [  94% ] 000/043 VUs  4m40.9s/5m0s  85.00 iters/s
+load_MAD           [  94% ] 000/043 VUs  4m40.9s/5m0s  85.00 iters/s
+load_MEC           [  94% ] 000/043 VUs  4m40.9s/5m0s  85.00 iters/s
+load_OtherCities   [  94% ] 000/043 VUs  4m40.9s/5m0s  85.00 iters/s
+load_RUH           [  94% ] 000/043 VUs  4m40.9s/5m0s  85.00 iters/s
+
+running (4m42.0s), 0000/0301 VUs, 167755 complete and 0 interrupted iterations
+load_AMM           [  94% ] 000/043 VUs  4m41.9s/5m0s  85.00 iters/s
+load_DMM           [  94% ] 000/043 VUs  4m41.9s/5m0s  85.00 iters/s
+load_JED           [  94% ] 000/043 VUs  4m41.9s/5m0s  85.00 iters/s
+load_MAD           [  94% ] 000/043 VUs  4m41.9s/5m0s  85.00 iters/s
+load_MEC           [  94% ] 000/043 VUs  4m41.9s/5m0s  85.00 iters/s
+load_OtherCities   [  94% ] 000/043 VUs  4m41.9s/5m0s  85.00 iters/s
+load_RUH           [  94% ] 000/043 VUs  4m41.9s/5m0s  85.00 iters/s
+
+running (4m43.0s), 0000/0301 VUs, 168350 complete and 0 interrupted iterations
+load_AMM           [  94% ] 000/043 VUs  4m42.9s/5m0s  85.00 iters/s
+load_DMM           [  94% ] 000/043 VUs  4m42.9s/5m0s  85.00 iters/s
+load_JED           [  94% ] 000/043 VUs  4m42.9s/5m0s  85.00 iters/s
+load_MAD           [  94% ] 000/043 VUs  4m42.9s/5m0s  85.00 iters/s
+load_MEC           [  94% ] 000/043 VUs  4m42.9s/5m0s  85.00 iters/s
+load_OtherCities   [  94% ] 000/043 VUs  4m42.9s/5m0s  85.00 iters/s
+load_RUH           [  94% ] 000/043 VUs  4m42.9s/5m0s  85.00 iters/s
+
+running (4m44.0s), 0000/0301 VUs, 168945 complete and 0 interrupted iterations
+load_AMM           [  95% ] 000/043 VUs  4m43.9s/5m0s  85.00 iters/s
+load_DMM           [  95% ] 000/043 VUs  4m43.9s/5m0s  85.00 iters/s
+load_JED           [  95% ] 000/043 VUs  4m43.9s/5m0s  85.00 iters/s
+load_MAD           [  95% ] 000/043 VUs  4m43.9s/5m0s  85.00 iters/s
+load_MEC           [  95% ] 000/043 VUs  4m43.9s/5m0s  85.00 iters/s
+load_OtherCities   [  95% ] 000/043 VUs  4m43.9s/5m0s  85.00 iters/s
+load_RUH           [  95% ] 000/043 VUs  4m43.9s/5m0s  85.00 iters/s
+
+running (4m45.0s), 0000/0301 VUs, 169540 complete and 0 interrupted iterations
+load_AMM           [  95% ] 000/043 VUs  4m44.9s/5m0s  85.00 iters/s
+load_DMM           [  95% ] 000/043 VUs  4m44.9s/5m0s  85.00 iters/s
+load_JED           [  95% ] 000/043 VUs  4m44.9s/5m0s  85.00 iters/s
+load_MAD           [  95% ] 000/043 VUs  4m44.9s/5m0s  85.00 iters/s
+load_MEC           [  95% ] 000/043 VUs  4m44.9s/5m0s  85.00 iters/s
+load_OtherCities   [  95% ] 000/043 VUs  4m44.9s/5m0s  85.00 iters/s
+load_RUH           [  95% ] 000/043 VUs  4m44.9s/5m0s  85.00 iters/s
+
+running (4m46.0s), 0005/0301 VUs, 170130 complete and 0 interrupted iterations
+load_AMM           [  95% ] 001/043 VUs  4m45.9s/5m0s  85.00 iters/s
+load_DMM           [  95% ] 000/043 VUs  4m45.9s/5m0s  85.00 iters/s
+load_JED           [  95% ] 001/043 VUs  4m45.9s/5m0s  85.00 iters/s
+load_MAD           [  95% ] 001/043 VUs  4m45.9s/5m0s  85.00 iters/s
+load_MEC           [  95% ] 001/043 VUs  4m45.9s/5m0s  85.00 iters/s
+load_OtherCities   [  95% ] 000/043 VUs  4m45.9s/5m0s  85.00 iters/s
+load_RUH           [  95% ] 001/043 VUs  4m45.9s/5m0s  85.00 iters/s
+
+running (4m47.0s), 0000/0301 VUs, 170730 complete and 0 interrupted iterations
+load_AMM           [  96% ] 000/043 VUs  4m46.9s/5m0s  85.00 iters/s
+load_DMM           [  96% ] 000/043 VUs  4m46.9s/5m0s  85.00 iters/s
+load_JED           [  96% ] 000/043 VUs  4m46.9s/5m0s  85.00 iters/s
+load_MAD           [  96% ] 000/043 VUs  4m46.9s/5m0s  85.00 iters/s
+load_MEC           [  96% ] 000/043 VUs  4m46.9s/5m0s  85.00 iters/s
+load_OtherCities   [  96% ] 000/043 VUs  4m46.9s/5m0s  85.00 iters/s
+load_RUH           [  96% ] 000/043 VUs  4m46.9s/5m0s  85.00 iters/s
+
+running (4m48.0s), 0000/0301 VUs, 171325 complete and 0 interrupted iterations
+load_AMM           [  96% ] 000/043 VUs  4m47.9s/5m0s  85.00 iters/s
+load_DMM           [  96% ] 000/043 VUs  4m47.9s/5m0s  85.00 iters/s
+load_JED           [  96% ] 000/043 VUs  4m47.9s/5m0s  85.00 iters/s
+load_MAD           [  96% ] 000/043 VUs  4m47.9s/5m0s  85.00 iters/s
+load_MEC           [  96% ] 000/043 VUs  4m47.9s/5m0s  85.00 iters/s
+load_OtherCities   [  96% ] 000/043 VUs  4m47.9s/5m0s  85.00 iters/s
+load_RUH           [  96% ] 000/043 VUs  4m47.9s/5m0s  85.00 iters/s
+
+running (4m49.0s), 0005/0301 VUs, 171915 complete and 0 interrupted iterations
+load_AMM           [  96% ] 001/043 VUs  4m48.9s/5m0s  85.00 iters/s
+load_DMM           [  96% ] 001/043 VUs  4m48.9s/5m0s  85.00 iters/s
+load_JED           [  96% ] 000/043 VUs  4m48.9s/5m0s  85.00 iters/s
+load_MAD           [  96% ] 001/043 VUs  4m48.9s/5m0s  85.00 iters/s
+load_MEC           [  96% ] 001/043 VUs  4m48.9s/5m0s  85.00 iters/s
+load_OtherCities   [  96% ] 000/043 VUs  4m48.9s/5m0s  85.00 iters/s
+load_RUH           [  96% ] 001/043 VUs  4m48.9s/5m0s  85.00 iters/s
+
+running (4m50.0s), 0000/0301 VUs, 172515 complete and 0 interrupted iterations
+load_AMM           [  97% ] 000/043 VUs  4m49.9s/5m0s  85.00 iters/s
+load_DMM           [  97% ] 000/043 VUs  4m49.9s/5m0s  85.00 iters/s
+load_JED           [  97% ] 000/043 VUs  4m49.9s/5m0s  85.00 iters/s
+load_MAD           [  97% ] 000/043 VUs  4m49.9s/5m0s  85.00 iters/s
+load_MEC           [  97% ] 000/043 VUs  4m49.9s/5m0s  85.00 iters/s
+load_OtherCities   [  97% ] 000/043 VUs  4m49.9s/5m0s  85.00 iters/s
+load_RUH           [  97% ] 000/043 VUs  4m49.9s/5m0s  85.00 iters/s
+
+running (4m51.0s), 0000/0301 VUs, 173110 complete and 0 interrupted iterations
+load_AMM           [  97% ] 000/043 VUs  4m50.9s/5m0s  85.00 iters/s
+load_DMM           [  97% ] 000/043 VUs  4m50.9s/5m0s  85.00 iters/s
+load_JED           [  97% ] 000/043 VUs  4m50.9s/5m0s  85.00 iters/s
+load_MAD           [  97% ] 000/043 VUs  4m50.9s/5m0s  85.00 iters/s
+load_MEC           [  97% ] 000/043 VUs  4m50.9s/5m0s  85.00 iters/s
+load_OtherCities   [  97% ] 000/043 VUs  4m50.9s/5m0s  85.00 iters/s
+load_RUH           [  97% ] 000/043 VUs  4m50.9s/5m0s  85.00 iters/s
+
+running (4m52.0s), 0000/0301 VUs, 173705 complete and 0 interrupted iterations
+load_AMM           [  97% ] 000/043 VUs  4m51.9s/5m0s  85.00 iters/s
+load_DMM           [  97% ] 000/043 VUs  4m51.9s/5m0s  85.00 iters/s
+load_JED           [  97% ] 000/043 VUs  4m51.9s/5m0s  85.00 iters/s
+load_MAD           [  97% ] 000/043 VUs  4m51.9s/5m0s  85.00 iters/s
+load_MEC           [  97% ] 000/043 VUs  4m51.9s/5m0s  85.00 iters/s
+load_OtherCities   [  97% ] 000/043 VUs  4m51.9s/5m0s  85.00 iters/s
+load_RUH           [  97% ] 000/043 VUs  4m51.9s/5m0s  85.00 iters/s
+
+running (4m53.0s), 0000/0301 VUs, 174300 complete and 0 interrupted iterations
+load_AMM           [  98% ] 000/043 VUs  4m52.9s/5m0s  85.00 iters/s
+load_DMM           [  98% ] 000/043 VUs  4m52.9s/5m0s  85.00 iters/s
+load_JED           [  98% ] 000/043 VUs  4m52.9s/5m0s  85.00 iters/s
+load_MAD           [  98% ] 000/043 VUs  4m52.9s/5m0s  85.00 iters/s
+load_MEC           [  98% ] 000/043 VUs  4m52.9s/5m0s  85.00 iters/s
+load_OtherCities   [  98% ] 000/043 VUs  4m52.9s/5m0s  85.00 iters/s
+load_RUH           [  98% ] 000/043 VUs  4m52.9s/5m0s  85.00 iters/s
+
+running (4m54.0s), 0000/0301 VUs, 174895 complete and 0 interrupted iterations
+load_AMM           [  98% ] 000/043 VUs  4m53.9s/5m0s  85.00 iters/s
+load_DMM           [  98% ] 000/043 VUs  4m53.9s/5m0s  85.00 iters/s
+load_JED           [  98% ] 000/043 VUs  4m53.9s/5m0s  85.00 iters/s
+load_MAD           [  98% ] 000/043 VUs  4m53.9s/5m0s  85.00 iters/s
+load_MEC           [  98% ] 000/043 VUs  4m53.9s/5m0s  85.00 iters/s
+load_OtherCities   [  98% ] 000/043 VUs  4m53.9s/5m0s  85.00 iters/s
+load_RUH           [  98% ] 000/043 VUs  4m53.9s/5m0s  85.00 iters/s
+
+running (4m55.0s), 0000/0301 VUs, 175490 complete and 0 interrupted iterations
+load_AMM           [  98% ] 000/043 VUs  4m54.9s/5m0s  85.00 iters/s
+load_DMM           [  98% ] 000/043 VUs  4m54.9s/5m0s  85.00 iters/s
+load_JED           [  98% ] 000/043 VUs  4m54.9s/5m0s  85.00 iters/s
+load_MAD           [  98% ] 000/043 VUs  4m54.9s/5m0s  85.00 iters/s
+load_MEC           [  98% ] 000/043 VUs  4m54.9s/5m0s  85.00 iters/s
+load_OtherCities   [  98% ] 000/043 VUs  4m54.9s/5m0s  85.00 iters/s
+load_RUH           [  98% ] 000/043 VUs  4m54.9s/5m0s  85.00 iters/s
+
+running (4m56.0s), 0000/0301 VUs, 176085 complete and 0 interrupted iterations
+load_AMM           [  99% ] 000/043 VUs  4m55.9s/5m0s  85.00 iters/s
+load_DMM           [  99% ] 000/043 VUs  4m55.9s/5m0s  85.00 iters/s
+load_JED           [  99% ] 000/043 VUs  4m55.9s/5m0s  85.00 iters/s
+load_MAD           [  99% ] 000/043 VUs  4m55.9s/5m0s  85.00 iters/s
+load_MEC           [  99% ] 000/043 VUs  4m55.9s/5m0s  85.00 iters/s
+load_OtherCities   [  99% ] 000/043 VUs  4m55.9s/5m0s  85.00 iters/s
+load_RUH           [  99% ] 000/043 VUs  4m55.9s/5m0s  85.00 iters/s
+
+running (4m57.0s), 0000/0301 VUs, 176680 complete and 0 interrupted iterations
+load_AMM           [  99% ] 000/043 VUs  4m56.9s/5m0s  85.00 iters/s
+load_DMM           [  99% ] 000/043 VUs  4m56.9s/5m0s  85.00 iters/s
+load_JED           [  99% ] 000/043 VUs  4m56.9s/5m0s  85.00 iters/s
+load_MAD           [  99% ] 000/043 VUs  4m56.9s/5m0s  85.00 iters/s
+load_MEC           [  99% ] 000/043 VUs  4m56.9s/5m0s  85.00 iters/s
+load_OtherCities   [  99% ] 000/043 VUs  4m56.9s/5m0s  85.00 iters/s
+load_RUH           [  99% ] 000/043 VUs  4m56.9s/5m0s  85.00 iters/s
+
+running (4m58.0s), 0001/0301 VUs, 177274 complete and 0 interrupted iterations
+load_AMM           [  99% ] 001/043 VUs  4m57.9s/5m0s  85.00 iters/s
+load_DMM           [  99% ] 000/043 VUs  4m57.9s/5m0s  85.00 iters/s
+load_JED           [  99% ] 000/043 VUs  4m57.9s/5m0s  85.00 iters/s
+load_MAD           [  99% ] 000/043 VUs  4m57.9s/5m0s  85.00 iters/s
+load_MEC           [  99% ] 000/043 VUs  4m57.9s/5m0s  85.00 iters/s
+load_OtherCities   [  99% ] 000/043 VUs  4m57.9s/5m0s  85.00 iters/s
+load_RUH           [  99% ] 000/043 VUs  4m57.9s/5m0s  85.00 iters/s
+
+running (4m59.0s), 0016/0301 VUs, 177854 complete and 0 interrupted iterations
+load_AMM           [ 100% ] 002/043 VUs  4m58.9s/5m0s  85.00 iters/s
+load_DMM           [ 100% ] 002/043 VUs  4m58.9s/5m0s  85.00 iters/s
+load_JED           [ 100% ] 003/043 VUs  4m58.9s/5m0s  85.00 iters/s
+load_MAD           [ 100% ] 003/043 VUs  4m58.9s/5m0s  85.00 iters/s
+load_MEC           [ 100% ] 002/043 VUs  4m58.9s/5m0s  85.00 iters/s
+load_OtherCities   [ 100% ] 002/043 VUs  4m58.9s/5m0s  85.00 iters/s
+load_RUH           [ 100% ] 002/043 VUs  4m58.9s/5m0s  85.00 iters/s
+
+running (5m00.0s), 0000/0301 VUs, 178465 complete and 0 interrupted iterations
+load_AMM           [ 100% ] 000/043 VUs  4m59.9s/5m0s  85.00 iters/s
+load_DMM           [ 100% ] 000/043 VUs  4m59.9s/5m0s  85.00 iters/s
+load_JED           [ 100% ] 000/043 VUs  4m59.9s/5m0s  85.00 iters/s
+load_MAD           [ 100% ] 000/043 VUs  4m59.9s/5m0s  85.00 iters/s
+load_MEC           [ 100% ] 000/043 VUs  4m59.9s/5m0s  85.00 iters/s
+load_OtherCities   [ 100% ] 000/043 VUs  4m59.9s/5m0s  85.00 iters/s
+load_RUH           [ 100% ] 000/043 VUs  4m59.9s/5m0s  85.00 iters/s
+     ✓ status is 200
+     ✓ has eta
+
+     checks.........................: 100.00% ✓ 357010     ✗ 0     
+     data_received..................: 31 MB   102 kB/s
+     data_sent......................: 69 MB   230 kB/s
+     http_req_blocked...............: avg=8.18µs  min=2.16µs   med=4.57µs  p(90)=6.11µs  p(95)=7.06µs  p(99)=18.48µs max=24.5ms  
+     http_req_connecting............: avg=2.98µs  min=0s       med=0s      p(90)=0s      p(95)=0s      p(99)=0s      max=24.34ms 
+     http_req_duration..............: avg=8.26ms  min=444.14µs med=4.28ms  p(90)=17.76ms p(95)=32.91ms p(99)=75.44ms max=354.05ms
+       { expected_response:true }...: avg=8.26ms  min=444.14µs med=4.28ms  p(90)=17.76ms p(95)=32.91ms p(99)=75.44ms max=354.05ms
+     http_req_failed................: 0.00%   ✓ 0          ✗ 178507
+     http_req_receiving.............: avg=33.06µs min=9.58µs   med=31.37µs p(90)=41.99µs p(95)=47.64µs p(99)=70.96µs max=2.75ms  
+     http_req_sending...............: avg=18.83µs min=7.04µs   med=15.8µs  p(90)=26.23µs p(95)=31.99µs p(99)=59.26µs max=3.69ms  
+     http_req_tls_handshaking.......: avg=0s      min=0s       med=0s      p(90)=0s      p(95)=0s      p(99)=0s      max=0s      
+     http_req_waiting...............: avg=8.21ms  min=326.95µs med=4.23ms  p(90)=17.71ms p(95)=32.85ms p(99)=75.4ms  max=353.99ms
+     http_reqs......................: 178507  594.959704/s
+     iteration_duration.............: avg=8.51ms  min=947.37µs med=4.53ms  p(90)=18.03ms p(95)=33.2ms  p(99)=75.66ms max=354.31ms
+     iterations.....................: 178505  594.953038/s
+     vus............................: 0       min=0        max=62  
+     vus_max........................: 301     min=301      max=301 
+
+=== multicity load ===
+target_rps_total: 595 (85/city × 7)
+attempted_http_rps: 594.96
+successful_http_rps: 594.96
+http_requests: 178507  failed: 0.00%  dropped_iterations: 0
+http_req_duration_ms (successful reqs): avg=8.26 med=4.28 p90=17.76 p95=32.92 p99=75.45 max=354.05
+
+=== capacity (current service config) ===
+service_limit: no — 0% failed HTTP; inference kept up with successful requests.
+successful_rps: 594.96 (target 595)
+
+running (5m00.0s), 0000/0301 VUs, 178505 complete and 0 interrupted iterations
+load_AMM         ✓ [ 100% ] 000/043 VUs  5m0s  85.00 iters/s
+load_DMM         ✓ [ 100% ] 000/043 VUs  5m0s  85.00 iters/s
+load_JED         ✓ [ 100% ] 000/043 VUs  5m0s  85.00 iters/s
+load_MAD         ✓ [ 100% ] 000/043 VUs  5m0s  85.00 iters/s
+load_MEC         ✓ [ 100% ] 000/043 VUs  5m0s  85.00 iters/s
+load_OtherCities ✓ [ 100% ] 000/043 VUs  5m0s  85.00 iters/s
+load_RUH         ✓ [ 100% ] 000/043 VUs  5m0s  85.00 iters/s
