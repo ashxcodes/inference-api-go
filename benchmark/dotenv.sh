@@ -183,7 +183,7 @@ if pod_name:
     attrs = merge_resource_attr(attrs, "service.instance.id", pod_name)
 env["OTEL_RESOURCE_ATTRIBUTES"] = attrs
 
-# Let the pod set HOSTNAME (metadata.name); static .env breaks instance filters in Grafana.
+# Do not override kubelet HOSTNAME (pod name) with a static .env value.
 env.pop("HOSTNAME", None)
 
 items = [{"name": k, "value": env[k]} for k in sorted(env)]

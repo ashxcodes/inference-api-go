@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/google/uuid"
 	"go.opentelemetry.io/contrib/exporters/autoexport"
 	"go.opentelemetry.io/contrib/instrumentation/runtime"
 	"go.opentelemetry.io/contrib/propagators/autoprop"
@@ -16,6 +17,7 @@ import (
 	sdkmetric "go.opentelemetry.io/otel/sdk/metric"
 	"go.opentelemetry.io/otel/sdk/resource"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	semconv "go.opentelemetry.io/otel/semconv/v1.43.0"
 )
 
 const (
@@ -48,6 +50,7 @@ func Start() {
 		resource.WithContainer(),
 		resource.WithHost(),
 		resource.WithFromEnv(),
+		resource.WithAttributes(semconv.ServiceInstanceID(serviceInstanceID())),
 	)
 	if err != nil {
 		log.Printf("telemetry: resource: %v", err)
@@ -140,6 +143,14 @@ func startRuntimeMetrics() {
 
 func sdkDisabled() bool {
 	return strings.EqualFold(strings.TrimSpace(os.Getenv("OTEL_SDK_DISABLED")), "true")
+}
+
+// serviceInstanceID returns HOSTNAME when set (pod name on Kubernetes), otherwise a UUID.
+func serviceInstanceID() string {
+	if host := strings.TrimSpace(os.Getenv("HOSTNAME")); host != "" {
+		return host
+	}
+	return uuid.NewString()
 }
 
 func runtimeMetricsEnabled() bool {

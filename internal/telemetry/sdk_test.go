@@ -1,10 +1,21 @@
 package telemetry
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 )
+
+func TestServiceInstanceID(t *testing.T) {
+	t.Setenv("HOSTNAME", "inference-api-go-7cf57f49fb-7c4z4")
+	require.Equal(t, "inference-api-go-7cf57f49fb-7c4z4", serviceInstanceID())
+
+	t.Setenv("HOSTNAME", "")
+	id := serviceInstanceID()
+	require.Len(t, id, 36)
+	require.Equal(t, 4, strings.Count(id, "-"))
+}
 
 func TestRuntimeMetricsEnabled(t *testing.T) {
 	t.Setenv("OTEL_SDK_DISABLED", "")

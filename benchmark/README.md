@@ -62,7 +62,7 @@ OTEL: set `OTEL_EXPORTER_OTLP_ENDPOINT` in repo `.env` (application config).
 
 **Grafana APM** (`environment=staging`, `service_name=ml-model-go`): keep  
 `OTEL_RESOURCE_ATTRIBUTES=deployment.environment=staging,service.namespace=jeeny,...` in `.env`.  
-The bench deploy sets `service.instance.id` to the pod name (`inference-api-go`).  
+SDK sets `service.instance.id` from `HOSTNAME` (pod name) or a UUID; bench deploy strips a static instance id from `.env`.  
 k6 RPS ≠ Grafana HTTP rate if the dashboard time range, route filter (`/predict`), or  
 OTLP drops under load differ; compare **successful** k6 RPS to server metrics, not the nominal target if `dropped_iterations` > 0.
 
@@ -89,7 +89,7 @@ That matches **Java/Micrometer** naming and **native exponential histograms** (y
 
 If (2) ≈ k6 but (1) ≈ 891, the **dashboard query** is the gap (metric name + native histogram rate math), not the service. Fix: extend `otel-apm.json` with a third `or` branch for `_seconds_count`, or export classic explicit buckets from Go for this dashboard.
 
-**Instance variable:** `instance=$__all` → `service_instance_id=~".+"`. Pod should use `service.instance.id=inference-api-go` (bench deploy). Set **HTTP route** filter to `predict` when comparing `/predict` only.
+**Instance variable:** `instance=$__all` → `service_instance_id=~".+"`. Each replica should appear as its pod name under `service.instance.id`. Set **HTTP route** filter to `predict` when comparing `/predict` only.
 
 ## Local Docker
 
